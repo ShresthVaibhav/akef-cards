@@ -9,4 +9,4 @@ from akef_cards.monument import Event, Monument, Stage
 from akef_cards.roster import Roster
 from akef_cards.templates import TEMPLATES
 
-__version__ = "0.3.0"
+__version__ = "0.3.1"

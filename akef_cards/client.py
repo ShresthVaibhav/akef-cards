@@ -234,16 +234,49 @@ class Cards:
         return [await self._draw(("compare", template, hidden, repr(a), repr(b)), a.urls() + b.urls(), draw, a, b,
                                  hide_uid=hidden) for a, b in pairs]
 
-    async def render_bytes(self, build: Build, *, format: str = "PNG", **kwargs) -> io.BytesIO:
-        image = await self.render(build, **kwargs)
-        out = io.BytesIO()
-        image.save(out, format=format, quality=92)
-        out.seek(0)
-        out.name = f"card.{format.lower()}"
-        return out
+    async def render_bytes(self, data, *, format: str = "PNG", **kwargs):
+        """Draw any card straight to a BytesIO. Takes whatever the matching render_* takes.
+
+        A Build, Live, Roster, Factory, PullHistory, Contracts, ContractDetail or Monument gives one BytesIO.
+        A Player gives a list, one per page. Options like template= and hidden= pass through.
+        """
+        for kind, draw in self._renderers():
+            if isinstance(data, kind[0]):
+                drawn = await draw(data, **kwargs)
+                return _encode(drawn, format, kind[1])
+        raise TypeError(f"don't know how to draw {type(data).__name__}")
+
+    async def render_compare_bytes(self, first, second, characters, *, format: str = "PNG", **kwargs):
+        return _encode(await self.render_compare(first, second, characters, **kwargs), format, "compare")
+
+    async def render_monument_event_bytes(self, monument: Monument, event=None, *, format: str = "PNG", **kwargs):
+        return _encode(await self.render_monument_event(monument, event, **kwargs), format, "monument_event")
+
+    def _renderers(self):
+        return (
+            ((Build, "card"), self.render),
+            ((Live, "live"), self.render_live),
+            ((Roster, "roster"), self.render_roster),
+            ((Factory, "factory"), self.render_factory),
+            ((PullHistory, "pulls"), self.render_pulls),
+            ((Contracts, "contract"), self.render_contract),
+            ((ContractDetail, "contract_detail"), self.render_contract_detail),
+            ((Monument, "monument"), self.render_monument),
+            ((Player, "profile"), self.render_profile),
+        )
 
     async def update(self) -> bool:
         return await self.source.update()
+
+
+def _encode(drawn, format: str, name: str):
+    if isinstance(drawn, list):
+        return [_encode(image, format, f"{name}{i}") for i, image in enumerate(drawn, 1)]
+    out = io.BytesIO()
+    drawn.save(out, format=format, quality=92)
+    out.seek(0)
+    out.name = f"{name}.{format.lower()}"
+    return out
 
 
 def _pick(table, template, what):

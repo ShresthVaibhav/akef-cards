@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "akef-cards"
-version = "0.3.0"
+version = "0.3.1"
 description = "Image cards for Arknights: Endfield, from an Enka UID or a SKPORT account"
 readme = "README.md"
 license = "MIT"

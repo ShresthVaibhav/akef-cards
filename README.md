@@ -298,7 +298,7 @@ growth and profile need it, the other three dont.
 | `grid="3x3"` | profile | 9 operators a page instead of 8 |
 | `lang=` | `Cards(lang="ja")` | names in that language |
 
-`render_bytes()` gives a `BytesIO` with a file name, ready to send if youre making a bot. Every `Build` also has
+`render_bytes()` gives a `BytesIO` with a file name, ready to send if youre making a bot, and works for every card. Every `Build` also has
 the plain numbers: `build.stats.atk`, `build.gear[0].lines`, `build.skills` and so on. Those come from akef,
 see its [Enka and final stats docs](https://github.com/ShresthVaibhav/akef/blob/main/docs/enka.md).
 
@@ -355,7 +355,7 @@ either you get `akef.MissingGameData`. Refresh by hand with `await cards.update(
 | `skport_contract_detail(card, detail)` | contract runs and teams |
 | `wiki(item, index=None)` | a readable wiki page |
 | `render(build, template, art, hidden)` | operator card |
-| `render_bytes(build, format="PNG", ...)` | operator card as a file for bots |
+| `render_bytes(card, format="PNG", ...)` | any card as a file for bots, `render_compare_bytes()` and `render_monument_event_bytes()` for those two |
 | `render_compare(a, b, names, template)` | two players side by side |
 | `render_profile(player, template, grid)` | profile pages |
 | `render_live(live, template)` | live status |

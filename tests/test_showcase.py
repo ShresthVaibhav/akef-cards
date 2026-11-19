@@ -428,3 +428,16 @@ def test_wiki_cards_have_a_dark_style():
 
     assert wiki_board.LIGHT["bg"] != wiki_board.DARK["bg"]
     assert wiki_board.P is wiki_board.LIGHT
+
+
+async def test_render_bytes_takes_every_card(tmp_path):
+    card = akef.Card.model_validate(json.loads((DATA / "card_detail.json").read_text(encoding="utf-8"))["data"]["detail"])
+    cards = akef_cards.Cards(images=akef_cards.ImageCache(tmp_path))
+    live = await cards.render_bytes(cards.skport_live(card))
+    assert live.name == "live.png" and live.read(4)[1:] == b"PNG"
+    roster = await cards.render_bytes(cards.skport_roster(card), format="JPEG")
+    assert roster.name == "roster.jpeg"
+    pages = await cards.render_bytes(cards.skport_player(card), grid="4x2")
+    assert isinstance(pages, list) and pages[0].name == "profile1.png"
+    with pytest.raises(TypeError):
+        await cards.render_bytes("nope")

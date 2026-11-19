@@ -22,8 +22,8 @@ line and its level.
 
 `render_bytes()` takes the same options plus `format` and gives a `BytesIO` with a file name set,
 ready for discord.py and friends. It isn't only for operators: hand it a `Live`, `Roster`, `Factory`,
-`PullHistory`, `Contracts`, `ContractDetail` or `Monument` and you get that card as a file, or a `Player`
-and you get a list with one file a page. `render_compare_bytes()` and `render_monument_event_bytes()` do the
+`PullHistory`, `Contracts`, `ContractDetail` or `Monument` and you get that card as a file, a `Player` or `WikiPage`
+and you get a list with one file a page. `format="JPEG"` works too, smaller files for bots. `render_compare_bytes()` and `render_monument_event_bytes()` do the
 same for those two.
 
 Sources: `cards.enka(uid).builds` or `cards.skport(card, name)`.

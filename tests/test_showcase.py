@@ -441,3 +441,16 @@ async def test_render_bytes_takes_every_card(tmp_path):
     assert isinstance(pages, list) and pages[0].name == "profile1.png"
     with pytest.raises(TypeError):
         await cards.render_bytes("nope")
+
+
+async def test_render_bytes_jpeg_and_wiki(profile, tmp_path):
+    from akef.wiki import WikiPage, WikiSkill
+
+    cards = akef_cards.Cards(images=akef_cards.ImageCache(tmp_path))
+    for fmt in ("JPEG", "jpg"):
+        file = await cards.render_bytes(profile.build("Si"), format=fmt)
+        assert file.read(3) == b"\xff\xd8\xff"
+    page = WikiPage("Arcane", "", "Quote.", "Bio.", [("Race", "Liberi")],
+                    skills=[WikiSkill("Gloompurge", "Ultimate", "", "Boom.")])
+    files = await cards.render_bytes(page, format="JPEG")
+    assert len(files) == len(page.parts) and files[0].name == "wiki1.jpeg"

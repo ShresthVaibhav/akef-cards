@@ -1,0 +1,145 @@
+{
+    "Rarity": 6,
+    "Name": "Artzy Tyrannical",
+    "WeaponType": "Pistol",
+    "Icon": "wpn_pistol_0010",
+    "LevelTemplateId": "weapon_upgrade_curve_6star_1.02",
+    "BreakthroughTemplateId": "weapon_breakthrough_456star_C_2",
+    "TalentTemplateId": "wpn_potential_456star",
+    "SkillList": [
+        1247,
+        1261,
+        2252
+    ],
+    "SkillMap": {
+        "1247": {
+            "Name": "Intellect [L]",
+            "Description": "Intellect <@ba.vup>+{wisd}</>",
+            "TagId": "attr_wisd",
+            "BlackboardLevelMap": {
+                "1": {
+                    "wisd": 20.0
+                },
+                "2": {
+                    "wisd": 36.0
+                },
+                "3": {
+                    "wisd": 52.0
+                },
+                "4": {
+                    "wisd": 68.0
+                },
+                "5": {
+                    "wisd": 84.0
+                },
+                "6": {
+                    "wisd": 100.0
+                },
+                "7": {
+                    "wisd": 116.0
+                },
+                "8": {
+                    "wisd": 132.0
+                },
+                "9": {
+                    "wisd": 156.0
+                }
+            }
+        },
+        "1261": {
+            "Name": "Critical Rate [L]",
+            "Description": "Critical Rate <@ba.vup>+{crirate:0.0%}</>",
+            "TagId": "attr_crirate",
+            "BlackboardLevelMap": {
+                "1": {
+                    "crirate": 0.025
+                },
+                "2": {
+                    "crirate": 0.045
+                },
+                "3": {
+                    "crirate": 0.065
+                },
+                "4": {
+                    "crirate": 0.085
+                },
+                "5": {
+                    "crirate": 0.105
+                },
+                "6": {
+                    "crirate": 0.125
+                },
+                "7": {
+                    "crirate": 0.145
+                },
+                "8": {
+                    "crirate": 0.165
+                },
+                "9": {
+                    "crirate": 0.195
+                }
+            }
+        },
+        "2252": {
+            "Name": "Fracture: Artzy Exaggeration",
+            "Description": "Cryo DMG Dealt <@ba.vup>+{cryst_dmg_up:0.0%}</>.\nAfter the wielder scores a critical hit with a battle skill or combo skill, the wielder gains Cryo DMG Dealt <@ba.vup>+{cryst_dmg_up2:0.0%}</> for {duration:0}s.\n<@ba.info>Max stacks for effects of the same name: {max_stack:0}. Duration of each stack is counted separately. Effect only triggers once every 0.1s.</>",
+            "TagId": "crit",
+            "BlackboardLevelMap": {
+                "1": {
+                    "cryst_dmg_up": 0.16,
+                    "cryst_dmg_up2": 0.14,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "2": {
+                    "cryst_dmg_up": 0.192,
+                    "cryst_dmg_up2": 0.168,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "3": {
+                    "cryst_dmg_up": 0.224,
+                    "cryst_dmg_up2": 0.196,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "4": {
+                    "cryst_dmg_up": 0.256,
+                    "cryst_dmg_up2": 0.224,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "5": {
+                    "cryst_dmg_up": 0.288,
+                    "cryst_dmg_up2": 0.252,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "6": {
+                    "cryst_dmg_up": 0.32,
+                    "cryst_dmg_up2": 0.28,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "7": {
+                    "cryst_dmg_up": 0.352,
+                    "cryst_dmg_up2": 0.308,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "8": {
+                    "cryst_dmg_up": 0.384,
+                    "cryst_dmg_up2": 0.336,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                },
+                "9": {
+                    "cryst_dmg_up": 0.448,
+                    "cryst_dmg_up2": 0.392,
+                    "duration": 30.0,
+                    "max_stack": 3.0
+                }
+            }
+        }
+    }
+}

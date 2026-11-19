@@ -1,0 +1,1587 @@
+{
+ "playerInfo": {
+  "businessCard": {
+   "name": "Endmin",
+   "shortId": "5242",
+   "gender": 2,
+   "businessCardTopicId": 20,
+   "signature": "testing",
+   "userAvatarId": 57,
+   "userAvatarFrameId": 27,
+   "adventureLevel": 60,
+   "worldLevel": 7,
+   "mainMissionId": "e12m5d8",
+   "createTime": 1769704820,
+   "domainDev": {
+    "domains": [
+     {
+      "domainId": "domain_1",
+      "level": 12
+     },
+     {
+      "domainId": "domain_2",
+      "level": 30
+     }
+    ]
+   },
+   "achievement": {
+    "display": [
+     {
+      "key": 3,
+      "value": 63
+     },
+     {
+      "key": 10,
+      "value": 88
+     },
+     {
+      "key": 9,
+      "value": 132
+     },
+     {
+      "key": 6,
+      "value": 101
+     },
+     {
+      "key": 7,
+      "value": 73
+     },
+     {
+      "key": 8,
+      "value": 25
+     },
+     {
+      "key": 4,
+      "value": 147
+     },
+     {
+      "key": 2,
+      "value": 137
+     },
+     {
+      "key": 1,
+      "value": 38
+     },
+     {
+      "key": 5,
+      "value": 61
+     }
+    ],
+    "infoList": [
+     {
+      "achieveNumId": 101,
+      "level": 2,
+      "isPlated": true
+     },
+     {
+      "achieveNumId": 61,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 137,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 88,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 38,
+      "level": 3,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 132,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 63,
+      "level": 2,
+      "isPlated": true
+     },
+     {
+      "achieveNumId": 147,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 73,
+      "level": 2,
+      "isPlated": false
+     },
+     {
+      "achieveNumId": 25,
+      "level": 2,
+      "isPlated": true
+     }
+    ]
+   },
+   "statistic": {
+    "charNum": 29,
+    "weaponNum": 60,
+    "docNum": 344
+   },
+   "charList": [
+    {
+     "templateId": "chr_0036_jsspsi",
+     "level": 90,
+     "potentialLevel": 2
+    },
+    {
+     "templateId": "chr_0035_liino",
+     "level": 90,
+     "potentialLevel": 0
+    },
+    {
+     "templateId": "chr_0032_lizhiyan",
+     "level": 90,
+     "potentialLevel": 0
+    },
+    {
+     "templateId": "chr_0017_yvonne",
+     "level": 90,
+     "potentialLevel": 1
+    }
+   ],
+   "contingencyContractBestRecord": {
+    "activityId": 126,
+    "bestScore": 11
+   },
+   "seasonTowerRecord": {
+    "hide": false,
+    "forceHide": false,
+    "seasonBestRecords": [
+     {
+      "seasonId": 1,
+      "weekId": 2,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower003",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower001",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower004_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "seasonId": 2,
+      "weekId": 1,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower002",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower008_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower007",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0025_ardelia",
+          "level": 63,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "seasonId": 3,
+      "weekId": 2,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower010",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0030_zhuangfy",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0004_pelica",
+          "level": 80,
+          "potential": 5
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0035_liino",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower002",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0030_zhuangfy",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0004_pelica",
+          "level": 80,
+          "potential": 5
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0035_liino",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower007",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0030_zhuangfy",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0004_pelica",
+          "level": 80,
+          "potential": 5
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0035_liino",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "seasonId": 4,
+      "weekId": 2,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower011_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0030_zhuangfy",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0004_pelica",
+          "level": 90,
+          "potential": 5
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0035_liino",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "seasonId": 5,
+      "weekId": 1,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower011_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0036_jsspsi",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0028_wulfa",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower015_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0017_yvonne",
+          "level": 90,
+          "potential": 1
+         },
+         {
+          "templateId": "chr_0036_jsspsi",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0011_seraph",
+          "level": 90,
+          "potential": 5
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower018_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0016_laevat",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0036_jsspsi",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0019_karin",
+          "level": 40,
+          "potential": 5
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "seasonId": 6,
+      "weekId": 2,
+      "gameRecord": [
+       {
+        "gameId": "indie_battletower014_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0030_zhuangfy",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0037_minghe",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0035_liino",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       },
+       {
+        "gameId": "indie_battletower020_s",
+        "completePlusTask": false,
+        "chars": [
+         {
+          "templateId": "chr_0037_minghe",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0032_lizhiyan",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0013_aglina",
+          "level": 90,
+          "potential": 0
+         },
+         {
+          "templateId": "chr_0028_wulfa",
+          "level": 90,
+          "potential": 0
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "platformRoleId": "4000000001",
+   "businessCardExpandFlag": true
+  },
+  "charData": [
+   {
+    "templateId": 54,
+    "level": 90,
+    "exp": 0,
+    "potentialLevel": 2,
+    "equip": [
+     {
+      "key": 3,
+      "value": {
+       "templateid": 3114,
+       "enhance": [
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 80,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 1,
+      "value": {
+       "templateid": 5291,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 3,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 0,
+      "value": {
+       "templateid": 5295,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 2,
+      "value": {
+       "templateid": 5292,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     }
+    ],
+    "weapon": {
+     "templateId": 5114,
+     "exp": 30,
+     "weaponLv": 90,
+     "refineLv": 0,
+     "breakthroughLv": 4,
+     "attachedGem": {
+      "templateId": 1070,
+      "totalCost": 0,
+      "terms": [
+       {
+        "termNumId": 68,
+        "cost": 6
+       },
+       {
+        "termNumId": 76,
+        "cost": 6
+       },
+       {
+        "termNumId": 85,
+        "cost": 3
+       }
+      ],
+      "domainId": 1
+     }
+    },
+    "skillInfo": {
+     "levelInfo": [
+      {
+       "skillId": "chr_0036_jsspsi_NormalAttack",
+       "skillLevel": 9,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 9
+      },
+      {
+       "skillId": "chr_0036_jsspsi_NormalSkill",
+       "skillLevel": 12,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 12
+      },
+      {
+       "skillId": "chr_0036_jsspsi_UltimateSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      },
+      {
+       "skillId": "chr_0036_jsspsi_ComboSkill",
+       "skillLevel": 10,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 10
+      }
+     ],
+     "normalSkill": "chr_0036_jsspsi_NormalSkill",
+     "ultimateSkill": "chr_0036_jsspsi_UltimateSkill",
+     "comboSkill": "chr_0036_jsspsi_ComboSkill",
+     "dispNormalAttackSkill": "chr_0036_jsspsi_NormalAttack"
+    },
+    "equipMedicineId": 1370,
+    "talent": {
+     "latestBreakNode": "charBreak70",
+     "attrNodes": [
+      "chr_0036_jsspsi_1",
+      "chr_0036_jsspsi_3",
+      "chr_0036_jsspsi_5",
+      "chr_0036_jsspsi_7"
+     ],
+     "latestPassiveSkillNodes": [
+      "chr_0036_jsspsi_passive_skill_0_2",
+      "chr_0036_jsspsi_passive_skill_1_2"
+     ],
+     "latestFactorySkillNodes": [
+      "fac_chr_0036_jsspsi_0_2",
+      "fac_chr_0036_jsspsi_1_2"
+     ]
+    },
+    "potentialCg": []
+   },
+   {
+    "templateId": 53,
+    "level": 90,
+    "exp": 0,
+    "potentialLevel": 0,
+    "equip": [
+     {
+      "key": 3,
+      "value": {
+       "templateid": 3009,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 0,
+       "craftCostGoldId": 0
+      }
+     },
+     {
+      "key": 2,
+      "value": {
+       "templateid": 3009,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 80,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 0,
+      "value": {
+       "templateid": 4674,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 2
+        },
+        {
+         "key": 1,
+         "value": 2
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 1,
+      "value": {
+       "templateid": 4652,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     }
+    ],
+    "weapon": {
+     "templateId": 3790,
+     "exp": 7030,
+     "weaponLv": 90,
+     "refineLv": 0,
+     "breakthroughLv": 4,
+     "attachedGem": {
+      "templateId": 1070,
+      "totalCost": 0,
+      "terms": [
+       {
+        "termNumId": 51,
+        "cost": 6
+       },
+       {
+        "termNumId": 87,
+        "cost": 6
+       },
+       {
+        "termNumId": 77,
+        "cost": 3
+       }
+      ],
+      "domainId": 2
+     }
+    },
+    "skillInfo": {
+     "levelInfo": [
+      {
+       "skillId": "chr_0035_liino_NormalAttack",
+       "skillLevel": 9,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 9
+      },
+      {
+       "skillId": "chr_0035_liino_NormalSkill",
+       "skillLevel": 10,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 10
+      },
+      {
+       "skillId": "chr_0035_liino_UltimateSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      },
+      {
+       "skillId": "chr_0035_liino_ComboSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      }
+     ],
+     "normalSkill": "chr_0035_liino_NormalSkill",
+     "ultimateSkill": "chr_0035_liino_UltimateSkill",
+     "comboSkill": "chr_0035_liino_ComboSkill",
+     "dispNormalAttackSkill": "chr_0035_liino_NormalAttack"
+    },
+    "equipMedicineId": 1370,
+    "talent": {
+     "latestBreakNode": "charBreak70",
+     "attrNodes": [
+      "chr_0035_liino_1",
+      "chr_0035_liino_3",
+      "chr_0035_liino_7",
+      "chr_0035_liino_5"
+     ],
+     "latestPassiveSkillNodes": [
+      "chr_0035_liino_passive_skill_0_2",
+      "chr_0035_liino_passive_skill_1_2"
+     ],
+     "latestFactorySkillNodes": [
+      "fac_chr_0035_liino_0_2",
+      "fac_chr_0035_liino_1_2"
+     ]
+    },
+    "potentialCg": []
+   },
+   {
+    "templateId": 48,
+    "level": 90,
+    "exp": 0,
+    "potentialLevel": 0,
+    "equip": [
+     {
+      "key": 1,
+      "value": {
+       "templateid": 4652,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 3,
+      "value": {
+       "templateid": 4654,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 2,
+      "value": {
+       "templateid": 4654,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     },
+     {
+      "key": 0,
+      "value": {
+       "templateid": 4669,
+       "enhance": [
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 3,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 360,
+       "craftCostGoldId": 2219
+      }
+     }
+    ],
+    "weapon": {
+     "templateId": 3789,
+     "exp": 30,
+     "weaponLv": 90,
+     "refineLv": 0,
+     "breakthroughLv": 4,
+     "attachedGem": {
+      "templateId": 1070,
+      "totalCost": 0,
+      "terms": [
+       {
+        "termNumId": 68,
+        "cost": 6
+       },
+       {
+        "termNumId": 79,
+        "cost": 6
+       },
+       {
+        "termNumId": 72,
+        "cost": 3
+       }
+      ],
+      "domainId": 1
+     }
+    },
+    "skillInfo": {
+     "levelInfo": [
+      {
+       "skillId": "chr_0032_lizhiyan_talent1",
+       "skillLevel": 1,
+       "skillMaxLevel": 1,
+       "skillEnhancedLevel": 1
+      },
+      {
+       "skillId": "chr_0032_lizhiyan_talent2",
+       "skillLevel": 1,
+       "skillMaxLevel": 1,
+       "skillEnhancedLevel": 1
+      },
+      {
+       "skillId": "chr_0032_lizhiyan_NormalAttack",
+       "skillLevel": 10,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 10
+      },
+      {
+       "skillId": "chr_0032_lizhiyan_NormalSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      },
+      {
+       "skillId": "chr_0032_lizhiyan_UltimateSkill",
+       "skillLevel": 12,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 12
+      },
+      {
+       "skillId": "chr_0032_lizhiyan_ComboSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      }
+     ],
+     "normalSkill": "chr_0032_lizhiyan_NormalSkill",
+     "ultimateSkill": "chr_0032_lizhiyan_UltimateSkill",
+     "comboSkill": "chr_0032_lizhiyan_ComboSkill",
+     "dispNormalAttackSkill": "chr_0032_lizhiyan_NormalAttack"
+    },
+    "equipMedicineId": 1370,
+    "talent": {
+     "latestBreakNode": "charBreak70",
+     "attrNodes": [
+      "chr_0032_lizhiyan_1",
+      "chr_0032_lizhiyan_3",
+      "chr_0032_lizhiyan_5",
+      "chr_0032_lizhiyan_7"
+     ],
+     "latestPassiveSkillNodes": [
+      "chr_0032_lizhiyan_passive_skill_0_2",
+      "chr_0032_lizhiyan_passive_skill_1_2"
+     ],
+     "latestFactorySkillNodes": [
+      "fac_chr_0032_lizhiyan_0_2",
+      "fac_chr_0032_lizhiyan_1_2"
+     ]
+    },
+    "potentialCg": []
+   },
+   {
+    "templateId": 27,
+    "level": 90,
+    "exp": 0,
+    "potentialLevel": 1,
+    "equip": [
+     {
+      "key": 3,
+      "value": {
+       "templateid": 2943,
+       "enhance": [
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 0,
+       "craftCostGoldId": 0
+      }
+     },
+     {
+      "key": 0,
+      "value": {
+       "templateid": 2814,
+       "enhance": [
+        {
+         "key": 1,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 3,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 0,
+       "craftCostGoldId": 0
+      }
+     },
+     {
+      "key": 2,
+      "value": {
+       "templateid": 2943,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 0,
+       "craftCostGoldId": 0
+      }
+     },
+     {
+      "key": 1,
+      "value": {
+       "templateid": 3109,
+       "enhance": [
+        {
+         "key": 3,
+         "value": 3
+        },
+        {
+         "key": 2,
+         "value": 3
+        },
+        {
+         "key": 1,
+         "value": 3
+        }
+       ],
+       "equipEnhanceData": {
+        "enhanceFailedDataByAttrIndex": [
+         {
+          "key": 2,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 1,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         },
+         {
+          "key": 3,
+          "value": {
+           "enhanceFailedTimesByLevel": []
+          }
+         }
+        ]
+       },
+       "craftCostGoldNum": 0,
+       "craftCostGoldId": 0
+      }
+     }
+    ],
+    "weapon": {
+     "templateId": 3265,
+     "exp": 30,
+     "weaponLv": 90,
+     "refineLv": 0,
+     "breakthroughLv": 4,
+     "attachedGem": {
+      "templateId": 1070,
+      "totalCost": 0,
+      "terms": [
+       {
+        "termNumId": 68,
+        "cost": 6
+       },
+       {
+        "termNumId": 50,
+        "cost": 6
+       },
+       {
+        "termNumId": 73,
+        "cost": 3
+       }
+      ],
+      "domainId": 2
+     }
+    },
+    "skillInfo": {
+     "levelInfo": [
+      {
+       "skillId": "chr_0017_yvonne_talent_1",
+       "skillLevel": 1,
+       "skillMaxLevel": 1,
+       "skillEnhancedLevel": 1
+      },
+      {
+       "skillId": "chr_0017_yvonne_talent_0",
+       "skillLevel": 1,
+       "skillMaxLevel": 1,
+       "skillEnhancedLevel": 1
+      },
+      {
+       "skillId": "chr_0017_yvonne_NormalAttack",
+       "skillLevel": 12,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 12
+      },
+      {
+       "skillId": "chr_0017_yvonne_NormalSkill",
+       "skillLevel": 9,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 9
+      },
+      {
+       "skillId": "chr_0017_yvonne_UltimateSkill",
+       "skillLevel": 12,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 12
+      },
+      {
+       "skillId": "chr_0017_yvonne_ComboSkill",
+       "skillLevel": 11,
+       "skillMaxLevel": 12,
+       "skillEnhancedLevel": 11
+      }
+     ],
+     "normalSkill": "chr_0017_yvonne_NormalSkill",
+     "ultimateSkill": "chr_0017_yvonne_UltimateSkill",
+     "comboSkill": "chr_0017_yvonne_ComboSkill",
+     "dispNormalAttackSkill": "chr_0017_yvonne_NormalAttack"
+    },
+    "equipMedicineId": 1370,
+    "talent": {
+     "latestBreakNode": "charBreak70",
+     "attrNodes": [
+      "chr_0017_yvonne_1",
+      "chr_0017_yvonne_3",
+      "chr_0017_yvonne_5",
+      "chr_0017_yvonne_7"
+     ],
+     "latestPassiveSkillNodes": [
+      "chr_0017_yvonne_passive_skill_0_2",
+      "chr_0017_yvonne_passive_skill_1_2"
+     ],
+     "latestFactorySkillNodes": [
+      "fac_chr_0017_yvonne_0_2",
+      "fac_chr_0017_yvonne_1_2"
+     ]
+    },
+    "potentialCg": []
+   }
+  ]
+ },
+ "uid": "4000000001",
+ "ttl": 60,
+ "region": "ASIA"
+}

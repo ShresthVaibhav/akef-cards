@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "akef-cards"
+version = "0.3.0"
+description = "Image cards for Arknights: Endfield, from an Enka UID or a SKPORT account"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE", "akef_cards/fonts/OFL.txt", "akef_cards/fonts/OFL-FiraSans.txt", "akef_cards/fonts/OFL-Noto.txt"]
+authors = [{ name = "SORA", email = "shresthvaibhav13@gmail.com" }]
+requires-python = ">=3.10"
+dependencies = ["Pillow>=10", "aiohttp>=3.9", "akef>=0.3"]
+keywords = ["arknights", "endfield", "enka", "skport", "card", "image", "pillow"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/ShresthVaibhav/akef-cards"
+Documentation = "https://github.com/ShresthVaibhav/akef-cards/tree/main/docs"
+Issues = "https://github.com/ShresthVaibhav/akef-cards/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.setuptools]
+packages = ["akef_cards", "akef_cards.templates", "akef_cards.sources"]
+
+[tool.setuptools.package-data]
+akef_cards = ["fonts/*.ttf", "fonts/*.txt", "data/*.json", "data/icons/*.png", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

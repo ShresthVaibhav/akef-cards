@@ -1,0 +1,5458 @@
+{
+ "code": 0,
+ "message": "OK",
+ "timestamp": "1794842555",
+ "data": {
+  "detail": {
+   "base": {
+    "serverName": "Asia",
+    "roleId": "4000000001",
+    "name": "Endmin",
+    "createTime": "1769704820",
+    "saveTime": "1794777654",
+    "lastLoginTime": "1794777165",
+    "exp": 343970,
+    "level": 60,
+    "worldLevel": 7,
+    "gender": 2,
+    "avatarUrl": "https://static.skport.com/image/common/20261008/8be7836c55f7fb09784388a17110f0c2.png",
+    "mainMission": {
+     "id": "",
+     "description": "Paint with Fresh Ink"
+    },
+    "charNum": 29,
+    "weaponNum": 60,
+    "docNum": 344
+   },
+   "chars": [
+    {
+     "charData": {
+      "id": "989411af662b6e9b3f0cef53e9d32f1a",
+      "name": "Arcane",
+      "avatarSqUrl": "https://static.skport.com/image/common/20260713/214ab1caf883e6ca4645b518eacd7231.png",
+      "avatarRtUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png",
+      "rarity": {
+       "key": "rarity_6",
+       "value": "6"
+      },
+      "profession": {
+       "key": "profession_caster",
+       "value": "Caster"
+      },
+      "property": {
+       "key": "char_property_natural",
+       "value": "Nature"
+      },
+      "weaponType": {
+       "key": "weapon_type_wand",
+       "value": "Arts Unit"
+      },
+      "skills": [
+       {
+        "id": "bd5e5e34a3bc8fc3df32d546db04fe0b",
+        "name": "Artillery Interdiction",
+        "type": {
+         "key": "skill_type_normal_attack",
+         "value": "Basic Attack"
+        },
+        "property": {
+         "key": "skill_property_natural",
+         "value": "Nature"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/f5f5d5a61369f1b80b2115749bf28161.png",
+        "desc": "BASIC ATTACK: \nAn attack with up to 5 sequences that deals <@ba.natur>Nature DMG</>. As the controlled operator, <#ba.lastcombo>Final Strike</> also deals <@ba.poise>{poise:0}</> Stagger. \n\nDIVE ATTACK: \nBasic attack performed in mid-air becomes a dive attack that deals <@ba.natur>Nature DMG</> to nearby enemies. \n\nFINISHER: \nBasic attack performed near a Staggered enemy becomes a finisher that deals massive <@ba.natur>Nature DMG</> and recovers some SP.",
+        "descParams": {
+         "atb": "17",
+         "atk_scale": "0.9",
+         "display_atk_scale": "0.9",
+         "poise": "17"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.47",
+           "display_atk_scale": "0.47",
+           "poise": "17"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.9",
+           "display_atk_scale": "0.9",
+           "poise": "17"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.98",
+           "display_atk_scale": "0.98",
+           "poise": "17"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atb": "17",
+           "atk_scale": "1.06",
+           "display_atk_scale": "1.06",
+           "poise": "17"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.52",
+           "display_atk_scale": "0.52",
+           "poise": "17"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.56",
+           "display_atk_scale": "0.56",
+           "poise": "17"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.61",
+           "display_atk_scale": "0.61",
+           "poise": "17"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.66",
+           "display_atk_scale": "0.66",
+           "poise": "17"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.71",
+           "display_atk_scale": "0.71",
+           "poise": "17"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.75",
+           "display_atk_scale": "0.75",
+           "poise": "17"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.8",
+           "display_atk_scale": "0.8",
+           "poise": "17"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atb": "17",
+           "atk_scale": "0.85",
+           "display_atk_scale": "0.85",
+           "poise": "17"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "5b34173d060c374d1b5caa51b9617cd4",
+        "name": "Jadecrushing Grid",
+        "type": {
+         "key": "skill_type_normal_skill",
+         "value": "Battle Skill"
+        },
+        "property": {
+         "key": "skill_property_natural",
+         "value": "Nature"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20260713/192e5c63f96b96632cdd127b7f13362b.png",
+        "desc": "Creates a <@ba.key>Jadecrushing Grid</> that deals <@ba.natur>Nature DMG</> and applies <#ba.naturalinflict>Nature Infliction</> to enemies within the area of effect.",
+        "descParams": {
+         "atk_scale_will": "2.77",
+         "atk_scale_wisd": "4.61",
+         "poise": "10"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale_will": "1.33",
+           "atk_scale_wisd": "2.22",
+           "poise": "10"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale_will": "2.57",
+           "atk_scale_wisd": "4.28",
+           "poise": "10"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale_will": "2.77",
+           "atk_scale_wisd": "4.61",
+           "poise": "10"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale_will": "3",
+           "atk_scale_wisd": "5",
+           "poise": "10"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale_will": "1.47",
+           "atk_scale_wisd": "2.45",
+           "poise": "10"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale_will": "1.6",
+           "atk_scale_wisd": "2.67",
+           "poise": "10"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale_will": "1.73",
+           "atk_scale_wisd": "2.89",
+           "poise": "10"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale_will": "1.87",
+           "atk_scale_wisd": "3.11",
+           "poise": "10"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale_will": "2",
+           "atk_scale_wisd": "3.33",
+           "poise": "10"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale_will": "2.13",
+           "atk_scale_wisd": "3.56",
+           "poise": "10"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale_will": "2.27",
+           "atk_scale_wisd": "3.78",
+           "poise": "10"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale_will": "2.4",
+           "atk_scale_wisd": "4",
+           "poise": "10"
+          }
+         }
+        },
+        "forms": [
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WISDOM",
+          "name": "Array Arcana: INT",
+          "iconUrl": "https://static.skport.com/image/common/20260713/192e5c63f96b96632cdd127b7f13362b.png",
+          "descs": [
+           "Creates a <@ba.key>Jadecrushing Grid</> that deals <@ba.natur>Nature DMG</> and applies <#ba.naturalinflict>Nature Infliction</> to enemies within the area of effect.",
+           "<@ba.key>Array Arcana: INT</>:\n- Deals more DMG."
+          ]
+         },
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WILL",
+          "name": "Array Arcana: WILL",
+          "iconUrl": "https://static.skport.com/image/common/20260713/96a70036c5b8e1b0d3579c450db00372.png",
+          "descs": [
+           "Creates a <@ba.key>Jadecrushing Grid</> that deals <@ba.natur>Nature DMG</> and applies <#ba.naturalinflict>Nature Infliction</> to enemies within the area of effect.",
+           "<@ba.key>Array Arcana: WILL</>:\n- When dealing DMG, the array also <@ba.key>pulls in</> enemies within the area of effect."
+          ]
+         }
+        ],
+        "descs": [
+         "Creates a <@ba.key>Jadecrushing Grid</> that deals <@ba.natur>Nature DMG</> and applies <#ba.naturalinflict>Nature Infliction</> to enemies within the area of effect.",
+         "<@ba.key>Array Arcana: INT</>:\n- Deals more DMG."
+        ]
+       },
+       {
+        "id": "b07ec51cd9f61fb230d47ab38d9bd26c",
+        "name": "Yinglung Stance IV",
+        "type": {
+         "key": "skill_type_combo_skill",
+         "value": "Combo Skill"
+        },
+        "property": {
+         "key": "skill_property_natural",
+         "value": "Nature"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20260713/b7167488cb761d32511effd137ba1d07.png",
+        "desc": "",
+        "descParams": {
+         "atk_scale_boom": "1.11",
+         "atk_scale_laser1": "0.55",
+         "atk_scale_laser2": "2.39",
+         "atk_scale_touch": "0.73",
+         "display_atk_scale_laser_wisd": "4.61",
+         "duration": "4",
+         "duration_will": "6",
+         "duration_wisd": "2",
+         "poise_boom": "5",
+         "poise_laser": "0",
+         "poise_touch": "5",
+         "usp": "10"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale_boom": "0.53",
+           "atk_scale_laser1": "0.27",
+           "atk_scale_laser2": "1.15",
+           "atk_scale_touch": "0.35",
+           "display_atk_scale_laser_wisd": "2.22",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale_boom": "1.03",
+           "atk_scale_laser1": "0.51",
+           "atk_scale_laser2": "2.22",
+           "atk_scale_touch": "0.68",
+           "display_atk_scale_laser_wisd": "4.27",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale_boom": "1.11",
+           "atk_scale_laser1": "0.55",
+           "atk_scale_laser2": "2.39",
+           "atk_scale_touch": "0.73",
+           "display_atk_scale_laser_wisd": "4.61",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale_boom": "1.2",
+           "atk_scale_laser1": "0.6",
+           "atk_scale_laser2": "2.6",
+           "atk_scale_touch": "0.8",
+           "display_atk_scale_laser_wisd": "5",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale_boom": "0.59",
+           "atk_scale_laser1": "0.29",
+           "atk_scale_laser2": "1.27",
+           "atk_scale_touch": "0.39",
+           "display_atk_scale_laser_wisd": "2.44",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale_boom": "0.64",
+           "atk_scale_laser1": "0.32",
+           "atk_scale_laser2": "1.38",
+           "atk_scale_touch": "0.42",
+           "display_atk_scale_laser_wisd": "2.66",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale_boom": "0.69",
+           "atk_scale_laser1": "0.35",
+           "atk_scale_laser2": "1.5",
+           "atk_scale_touch": "0.46",
+           "display_atk_scale_laser_wisd": "2.89",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale_boom": "0.75",
+           "atk_scale_laser1": "0.37",
+           "atk_scale_laser2": "1.62",
+           "atk_scale_touch": "0.5",
+           "display_atk_scale_laser_wisd": "3.11",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale_boom": "0.8",
+           "atk_scale_laser1": "0.4",
+           "atk_scale_laser2": "1.73",
+           "atk_scale_touch": "0.53",
+           "display_atk_scale_laser_wisd": "3.33",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale_boom": "0.85",
+           "atk_scale_laser1": "0.43",
+           "atk_scale_laser2": "1.85",
+           "atk_scale_touch": "0.57",
+           "display_atk_scale_laser_wisd": "3.55",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale_boom": "0.91",
+           "atk_scale_laser1": "0.45",
+           "atk_scale_laser2": "1.96",
+           "atk_scale_touch": "0.6",
+           "display_atk_scale_laser_wisd": "3.77",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale_boom": "0.96",
+           "atk_scale_laser1": "0.48",
+           "atk_scale_laser2": "2.08",
+           "atk_scale_touch": "0.64",
+           "display_atk_scale_laser_wisd": "4",
+           "duration": "4",
+           "duration_will": "6",
+           "duration_wisd": "2",
+           "poise_boom": "5",
+           "poise_laser": "0",
+           "poise_touch": "5",
+           "usp": "10"
+          }
+         }
+        },
+        "forms": [
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WISDOM",
+          "name": "Array Arcana: INT",
+          "iconUrl": "https://static.skport.com/image/common/20260713/b7167488cb761d32511effd137ba1d07.png",
+          "descs": [
+           "COMBO TRIGGER: When <#ba.naturalinflict>Nature Infliction</> or at least 2 stacks of <#ba.spellinflict>non-Nature Arts Infliction</> are applied on an enemy.\nArcane charges at the target and sets up 4 <@ba.key>Tactical Doubles</> that apply <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</> and deal <@ba.natur>Nature DMG</> to the target and nearby enemies, and also apply <@ba.key>Imprisonment</> on the said target. When <@ba.key>Imprisonment</> ends, the <@ba.key>Tactical Doubles</> will attack the said target to deal Explosion DMG.\n<@ba.key>Imprisonment</>: A debuff that slows all actions.\n<@ba.key>Array Arcana: INT</>:\n- Hitting an enemy under <@ba.key>Imprisonment</> with Arcane's battle skill <#ba.return>returns</> some SP, ends the <@ba.key>Imprisonment</> early, deals Explosion DMG, applies another instance of <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</>, and deals multiple hits of bonus DMG after a short delay.\n- Combo skill cooldown is shorter."
+          ]
+         },
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WILL",
+          "name": "Array Arcana: WILL",
+          "iconUrl": "https://static.skport.com/image/common/20260713/a2f71a0ef906482b4cdca264649871a4.png",
+          "descs": [
+           "COMBO TRIGGER: When an <#ba.spellinflict>Arts Infliction</> is applied on an enemy.\nArcane charges at the target and sets up 4 <@ba.key>Tactical Doubles</> that deal <@ba.natur>Nature DMG</> and apply another stack of <#ba.spellinflict>Arts Infliction</> of the same element, <#ba.naturalvul>Nature Susceptibility</>, and <#ba.crystvul>Cryo Susceptibility</> to the target and nearby enemies, and also apply <@ba.key>Imprisonment</> on the said target. When <@ba.key>Imprisonment</> ends, the <@ba.key>Tactical Doubles</> will attack the said target to deal Explosion DMG.\n<@ba.key>Imprisonment</>: A debuff that slows all actions.\n<@ba.key>Array Arcana: WILL</>:\n- Applying <@ba.key>Imprisonment</> by casting a combo skill will also slightly <@ba.key>pull in</> enemies near the target.\n- The attribute of Will can further increase the effects of <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</> applied by the combo skill."
+          ]
+         }
+        ],
+        "descs": [
+         "COMBO TRIGGER: When <#ba.naturalinflict>Nature Infliction</> or at least 2 stacks of <#ba.spellinflict>non-Nature Arts Infliction</> are applied on an enemy.\nArcane charges at the target and sets up 4 <@ba.key>Tactical Doubles</> that apply <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</> and deal <@ba.natur>Nature DMG</> to the target and nearby enemies, and also apply <@ba.key>Imprisonment</> on the said target. When <@ba.key>Imprisonment</> ends, the <@ba.key>Tactical Doubles</> will attack the said target to deal Explosion DMG.\n<@ba.key>Imprisonment</>: A debuff that slows all actions.\n<@ba.key>Array Arcana: INT</>:\n- Hitting an enemy under <@ba.key>Imprisonment</> with Arcane's battle skill <#ba.return>returns</> some SP, ends the <@ba.key>Imprisonment</> early, deals Explosion DMG, applies another instance of <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</>, and deals multiple hits of bonus DMG after a short delay.\n- Combo skill cooldown is shorter."
+        ]
+       },
+       {
+        "id": "dffeda5772873aa8669bf4425df1ce04",
+        "name": "Gloompurge",
+        "type": {
+         "key": "skill_type_ultimate_skill",
+         "value": "Ultimate"
+        },
+        "property": {
+         "key": "skill_property_natural",
+         "value": "Nature"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20260713/2a8a73be7a56bd470302c1c324674c03.png",
+        "desc": "Arcane creates a <@ba.key>Gloompurger Array</> that immediately deals <@ba.natur>Nature DMG</> to enemies within the area of effect (AOE).\nWhen hitting an enemy within the <@ba.key>Gloompurger Array</> with a Finisher or a <#ba.lastcombo>Final Strike</> performed by the controlled operator, the <@ba.key>Gloompurger Array</> unleashes a <@ba.key>Cluster Strike</> that deals Area DMG to the said enemy. This effect triggers up to 2 times.\nAfter triggering <@ba.key>Cluster Strike</> 2 times, the ultimate is switched to <@ba.key>Gloompurge Arcana</>.\n<@ba.key>Gloompurge Arcana</>: Deals <@ba.natur>Nature DMG</> to enemies within a large AOE.",
+        "descParams": {
+         "atk_scale": "1.8",
+         "atk_scale_laser": "0.45",
+         "atk_scale_laser_will": "0.45",
+         "display_atk_scale_laser": "3.6",
+         "display_atk_scale_laser_will": "3.6",
+         "duration": "20",
+         "duration2": "15",
+         "laser_count": "8",
+         "poise": "10"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "0.8",
+           "atk_scale_laser": "0.2",
+           "atk_scale_laser_will": "0.2",
+           "display_atk_scale_laser": "1.6",
+           "display_atk_scale_laser_will": "1.6",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "1.54",
+           "atk_scale_laser": "0.38",
+           "atk_scale_laser_will": "0.38",
+           "display_atk_scale_laser": "3.08",
+           "display_atk_scale_laser_will": "3.08",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "1.66",
+           "atk_scale_laser": "0.41",
+           "atk_scale_laser_will": "0.41",
+           "display_atk_scale_laser": "3.32",
+           "display_atk_scale_laser_will": "3.32",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "1.8",
+           "atk_scale_laser": "0.45",
+           "atk_scale_laser_will": "0.45",
+           "display_atk_scale_laser": "3.6",
+           "display_atk_scale_laser_will": "3.6",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "0.88",
+           "atk_scale_laser": "0.22",
+           "atk_scale_laser_will": "0.22",
+           "display_atk_scale_laser": "1.76",
+           "display_atk_scale_laser_will": "1.76",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "0.96",
+           "atk_scale_laser": "0.24",
+           "atk_scale_laser_will": "0.24",
+           "display_atk_scale_laser": "1.92",
+           "display_atk_scale_laser_will": "1.92",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "1.04",
+           "atk_scale_laser": "0.26",
+           "atk_scale_laser_will": "0.26",
+           "display_atk_scale_laser": "2.08",
+           "display_atk_scale_laser_will": "2.08",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "1.12",
+           "atk_scale_laser": "0.28",
+           "atk_scale_laser_will": "0.28",
+           "display_atk_scale_laser": "2.24",
+           "display_atk_scale_laser_will": "2.24",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "1.2",
+           "atk_scale_laser": "0.3",
+           "atk_scale_laser_will": "0.3",
+           "display_atk_scale_laser": "2.4",
+           "display_atk_scale_laser_will": "2.4",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "1.28",
+           "atk_scale_laser": "0.32",
+           "atk_scale_laser_will": "0.32",
+           "display_atk_scale_laser": "2.56",
+           "display_atk_scale_laser_will": "2.56",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "1.36",
+           "atk_scale_laser": "0.34",
+           "atk_scale_laser_will": "0.34",
+           "display_atk_scale_laser": "2.72",
+           "display_atk_scale_laser_will": "2.72",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "1.44",
+           "atk_scale_laser": "0.36",
+           "atk_scale_laser_will": "0.36",
+           "display_atk_scale_laser": "2.88",
+           "display_atk_scale_laser_will": "2.88",
+           "duration": "20",
+           "duration2": "15",
+           "laser_count": "8",
+           "poise": "10"
+          }
+         }
+        },
+        "forms": [
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WISDOM",
+          "name": "Array Arcana: INT",
+          "iconUrl": "https://static.skport.com/image/common/20260713/2a8a73be7a56bd470302c1c324674c03.png",
+          "descs": [
+           "Arcane creates a <@ba.key>Gloompurger Array</> that immediately deals <@ba.natur>Nature DMG</> to enemies within the area of effect (AOE).\nWhen hitting an enemy within the <@ba.key>Gloompurger Array</> with a Finisher or a <#ba.lastcombo>Final Strike</> performed by the controlled operator, the <@ba.key>Gloompurger Array</> unleashes a <@ba.key>Cluster Strike</> that deals Area DMG to the said enemy. This effect triggers up to 2 times.\nAfter triggering <@ba.key>Cluster Strike</> 2 times, the ultimate is switched to <@ba.key>Gloompurge Arcana</>.\n<@ba.key>Gloompurge Arcana</>: Deals <@ba.natur>Nature DMG</> to enemies within a large AOE.",
+           "<@ba.key>Array Arcana: INT</>:\n- When created, the <@ba.key>Gloompurger Array</> also forcibly applies <#ba.corrupt>Corrosion</> to enemies in the AOE."
+          ]
+         },
+         {
+          "type": "CHAR_SKILL_FORM_TYPE_WILL",
+          "name": "Array Arcana: WILL",
+          "iconUrl": "https://static.skport.com/image/common/20260713/402c94b5fc414e4245c921ae373d77e5.png",
+          "descs": [
+           "Arcane creates a <@ba.key>Gloompurger Array</> that immediately deals <@ba.natur>Nature DMG</> to enemies within the area of effect (AOE).\nWhen hitting an enemy within the <@ba.key>Gloompurger Array</> with a Finisher or a <#ba.lastcombo>Final Strike</> performed by the controlled operator, the <@ba.key>Gloompurger Array</> unleashes a <@ba.key>Cluster Strike</> that deals Area DMG to the said enemy. This effect triggers up to 2 times.\nAfter triggering <@ba.key>Cluster Strike</> 2 times, the ultimate is switched to <@ba.key>Gloompurge Arcana</>.\n<@ba.key>Gloompurge Arcana</>: Deals <@ba.natur>Nature DMG</> to enemies within a large AOE.",
+           "<@ba.key>Array Arcana: WILL</>:\n- When created, the <@ba.key>Gloompurger Array</> also targets enemies with <#ba.spellinflict>Arts Infliction</> within its AOE, and applies another <#ba.spellinflict>Arts Infliction</> stack of the same element to them."
+          ]
+         }
+        ],
+        "descs": [
+         "Arcane creates a <@ba.key>Gloompurger Array</> that immediately deals <@ba.natur>Nature DMG</> to enemies within the area of effect (AOE).\nWhen hitting an enemy within the <@ba.key>Gloompurger Array</> with a Finisher or a <#ba.lastcombo>Final Strike</> performed by the controlled operator, the <@ba.key>Gloompurger Array</> unleashes a <@ba.key>Cluster Strike</> that deals Area DMG to the said enemy. This effect triggers up to 2 times.\nAfter triggering <@ba.key>Cluster Strike</> 2 times, the ultimate is switched to <@ba.key>Gloompurge Arcana</>.\n<@ba.key>Gloompurge Arcana</>: Deals <@ba.natur>Nature DMG</> to enemies within a large AOE.",
+         "<@ba.key>Array Arcana: INT</>:\n- When created, the <@ba.key>Gloompurger Array</> also forcibly applies <#ba.corrupt>Corrosion</> to enemies in the AOE."
+        ]
+       }
+      ],
+      "illustrationUrl": "https://static.skport.com/image/common/20260713/c10a0576d966a49f48cfa42ddf6dea26.png",
+      "tags": [
+       "Nature Infliction",
+       "Corrode",
+       "Crowd Control"
+      ],
+      "abilityTalents": [
+       {
+        "id": "chr_0032_lizhiyan_1",
+        "name": "Keen Mind/Stalwart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect and Will +8.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_7",
+        "name": "Keen Mind/Stalwart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect and Will +15.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_3",
+        "name": "Keen Mind/Stalwart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect and Will +10.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_5",
+        "name": "Keen Mind/Stalwart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect and Will +10.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       }
+      ],
+      "combatTalents": [
+       {
+        "id": "chr_0032_lizhiyan_passive_skill_0_1",
+        "name": "Tactical Planning",
+        "iconUrl": "https://static.skport.com/image/common/20260713/7cab50d1e6e4ad6a0e53c8a1e068b625.png",
+        "desc": "When Arcane's Intellect â¥ Will, switch skill type to <@ba.key>Array Arcana: INT</>. If not, then switch to <@ba.key>Array Arcana: WILL</>.\n<@ba.info>Attribute requirements for the 2 types of Array Arcana only include effects from operator levels, talents, potentials, and attribute bonuses provided by equipped gear and weapons.</>",
+        "descParams": {
+         "duration": "10",
+         "enhance_rate": "0",
+         "lv": "1",
+         "spell_vul_rate": "0",
+         "spell_vul_rate_per_will": "0",
+         "spell_vul_rate_potential": "0"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_passive_skill_0_2",
+        "name": "Tactical Planning",
+        "iconUrl": "https://static.skport.com/image/common/20260713/7cab50d1e6e4ad6a0e53c8a1e068b625.png",
+        "desc": "When Arcane's Intellect â¥ Will, switch skill type to <@ba.key>Array Arcana: INT</>. If not, then switch to <@ba.key>Array Arcana: WILL</>.\nUltimate <@ba.key>Gloompurge</> improved:\n<@ba.key>Array Arcana: INT</>:\n- During the ultimate, Arcane gains <@ba.vup>{enhance_rate:0%}</> <#ba.spellenhance>Arts Amp</>.\n<@ba.key>Array Arcana: WILL</>:\n- When <@ba.key>Gloompurger Array</> (ultimate sequence 1) and <@ba.key>Gloompurge Arcana</> (ultimate sequence 2) deal DMG to the enemy, they also apply <@ba.vup>[Will Ã {spell_vul_rate_per_will:0.00%}]</> <#ba.naturalvul>Nature Susceptibility</> and <#ba.crystvul>Cryo Susceptibility</> (max: <@ba.vup>{spell_vul_rate:0.0%}</>) for <@ba.vup>{duration:0}</>s. This effect cannot stack.\n<@ba.info>Attribute requirements for the 2 types of Array Arcana only include effects from operator levels, talents, potentials, and attribute bonuses provided by equipped gear and weapons.</>",
+        "descParams": {
+         "duration": "10",
+         "enhance_rate": "0.24",
+         "lv": "2",
+         "spell_vul_rate": "0.128",
+         "spell_vul_rate_per_will": "0.0002",
+         "spell_vul_rate_potential": "0"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_passive_skill_1_1",
+        "name": "Weapon Honing",
+        "iconUrl": "https://static.skport.com/image/common/20260713/a3b5668ec1f47d8b1245eb47b24a9957.png",
+        "desc": "<#ba.corrupt>Corrosion</> applied by Arcane lasts <@ba.vup>{duration_add:0}</>s longer, and Max Resistance Reduction is increased to <@ba.vup>{1+corrupt_rate:0.00}</> times the original.",
+        "descParams": {
+         "corrupt_rate": "0.05",
+         "duration_add": "5",
+         "lv": "1"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0032_lizhiyan_passive_skill_1_2",
+        "name": "Weapon Honing",
+        "iconUrl": "https://static.skport.com/image/common/20260713/a3b5668ec1f47d8b1245eb47b24a9957.png",
+        "desc": "<#ba.corrupt>Corrosion</> applied by Arcane lasts <@ba.vup>{duration_add:0}</>s longer, and Max Resistance Reduction is increased to <@ba.vup>{1+corrupt_rate:0.0}</> times the original.",
+        "descParams": {
+         "corrupt_rate": "0.1",
+         "duration_add": "10",
+         "lv": "2"
+        },
+        "lockedIconUrl": ""
+       }
+      ],
+      "cultivationTalents": [
+       {
+        "id": "spaceship_skill_chr_0032_lizhiyan_2_2",
+        "name": "Botanophile Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/bea8e57eef88d30996535a3c81937708.png",
+        "desc": "Assign to Growth Chamber to grant vitrified plant growth rate +30%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/e18d7b7f252574dbffb886bf2022e37c.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0032_lizhiyan_2_1",
+        "name": "Botanophile Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/bea8e57eef88d30996535a3c81937708.png",
+        "desc": "Assign to Growth Chamber to grant vitrified plant growth rate +20%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/e18d7b7f252574dbffb886bf2022e37c.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0032_lizhiyan_1_2",
+        "name": "Pluck the Mountain, Boil the Sea Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/7b35c663baba77be12dcce2605ff414c.png",
+        "desc": "Assign to Growth Chamber to grant rare mineral growth rate +30%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/3a8fa6032dc28679fa65ec1b3e2d9e99.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0032_lizhiyan_1_1",
+        "name": "Pluck the Mountain, Boil the Sea Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/7b35c663baba77be12dcce2605ff414c.png",
+        "desc": "Assign to Growth Chamber to grant rare mineral growth rate +20%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/3a8fa6032dc28679fa65ec1b3e2d9e99.png"
+       }
+      ]
+     },
+     "id": "989411af662b6e9b3f0cef53e9d32f1a",
+     "level": 90,
+     "userSkills": {
+      "5b34173d060c374d1b5caa51b9617cd4": {
+       "skillId": "5b34173d060c374d1b5caa51b9617cd4",
+       "level": 11,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_WISDOM"
+      },
+      "b07ec51cd9f61fb230d47ab38d9bd26c": {
+       "skillId": "b07ec51cd9f61fb230d47ab38d9bd26c",
+       "level": 11,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_WISDOM"
+      },
+      "bd5e5e34a3bc8fc3df32d546db04fe0b": {
+       "skillId": "bd5e5e34a3bc8fc3df32d546db04fe0b",
+       "level": 10,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "dffeda5772873aa8669bf4425df1ce04": {
+       "skillId": "dffeda5772873aa8669bf4425df1ce04",
+       "level": 12,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_WISDOM"
+      }
+     },
+     "bodyEquip": {
+      "equipId": "5b7c7c7e86c3c5510e1ac6537abd4c5f",
+      "equipData": {
+       "id": "5b7c7c7e86c3c5510e1ac6537abd4c5f",
+       "name": "Eternal Xiranite Light Armor",
+       "iconUrl": "https://static.skport.com/image/common/20260713/7af6b661ada5d1ff3b5aa03d3d0497dd.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_body",
+        "value": "Armor"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_will",
+        "equip_attr_ultimate_sp_gain_scalar",
+        ""
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "508f82db8e94556f724c4fbbfbf3e0b0",
+        "name": "Eternal Xiranite",
+        "skillId": "passive_equipsuit_usp_02",
+        "skillDesc": "3-piece set effect: Wearer's HP <@ba.vup>+{hp_up}</>.\nAfter the wearer applies <#ba.enhance>Amp</>, <#ba.guard>Protection</>, <#ba.vulnerable>Susceptibility</>, or <#ba.weak>Weakness</>, other teammates gain DMG Dealt <@ba.vup>+{dmg_up:0%}</> for {duration}s. This effect cannot stack.",
+        "skillDescParams": {
+         "dmg_up": "0.16",
+         "duration": "15",
+         "hp_up": "1000"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "Legacy of a \"mad\" Tianshi. \n\"I say it's way too heavy. Look. It's as barebones as the bleached remains of random beasts by the road. One has to travel light, okay? LIGHT!\"",
+       "baseAttrValue": 56,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "armEquip": {
+      "equipId": "3d532a7b2190ee17b4ef42f1ed848bde",
+      "equipData": {
+       "id": "3d532a7b2190ee17b4ef42f1ed848bde",
+       "name": "Eternal Xiranite Wraps",
+       "iconUrl": "https://static.skport.com/image/common/20260713/178d56934b5681b28e603273af7236ce.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_hand",
+        "value": "Gloves"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_will",
+        "equip_attr_wisd",
+        "equip_attr_ultimate_sp_gain_scalar"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "508f82db8e94556f724c4fbbfbf3e0b0",
+        "name": "Eternal Xiranite",
+        "skillId": "passive_equipsuit_usp_02",
+        "skillDesc": "3-piece set effect: Wearer's HP <@ba.vup>+{hp_up}</>.\nAfter the wearer applies <#ba.enhance>Amp</>, <#ba.guard>Protection</>, <#ba.vulnerable>Susceptibility</>, or <#ba.weak>Weakness</>, other teammates gain DMG Dealt <@ba.vup>+{dmg_up:0%}</> for {duration}s. This effect cannot stack.",
+        "skillDescParams": {
+         "dmg_up": "0.16",
+         "duration": "15",
+         "hp_up": "1000"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "Legacy of a \"mad\" Tianshi. \n\"Who the hell wove Xiranite into the fiber? Are you nuts?\"",
+       "baseAttrValue": 42,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "firstAccessory": {
+      "equipId": "1fc492a189b2f7236858d937cbf4bad4",
+      "equipData": {
+       "id": "1fc492a189b2f7236858d937cbf4bad4",
+       "name": "Eternal Xiranite Bracing Slab",
+       "iconUrl": "https://static.skport.com/image/common/20260713/c1e8fc8340e641be879cf9117bcf28e4.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_will",
+        "equip_sub",
+        ""
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "508f82db8e94556f724c4fbbfbf3e0b0",
+        "name": "Eternal Xiranite",
+        "skillId": "passive_equipsuit_usp_02",
+        "skillDesc": "3-piece set effect: Wearer's HP <@ba.vup>+{hp_up}</>.\nAfter the wearer applies <#ba.enhance>Amp</>, <#ba.guard>Protection</>, <#ba.vulnerable>Susceptibility</>, or <#ba.weak>Weakness</>, other teammates gain DMG Dealt <@ba.vup>+{dmg_up:0%}</> for {duration}s. This effect cannot stack.",
+        "skillDescParams": {
+         "dmg_up": "0.16",
+         "duration": "15",
+         "hp_up": "1000"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "Legacy of a \"mad\" Tianshi. \nThe Tianshi responsible for pushing the legacy design to the production floor also realized it was too barebones. Hence, they designed additional protective slabs to supplement the defenses.",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "secondAccessory": {
+      "equipId": "1fc492a189b2f7236858d937cbf4bad4",
+      "equipData": {
+       "id": "1fc492a189b2f7236858d937cbf4bad4",
+       "name": "Eternal Xiranite Bracing Slab",
+       "iconUrl": "https://static.skport.com/image/common/20260713/c1e8fc8340e641be879cf9117bcf28e4.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_will",
+        "equip_sub",
+        ""
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "508f82db8e94556f724c4fbbfbf3e0b0",
+        "name": "Eternal Xiranite",
+        "skillId": "passive_equipsuit_usp_02",
+        "skillDesc": "3-piece set effect: Wearer's HP <@ba.vup>+{hp_up}</>.\nAfter the wearer applies <#ba.enhance>Amp</>, <#ba.guard>Protection</>, <#ba.vulnerable>Susceptibility</>, or <#ba.weak>Weakness</>, other teammates gain DMG Dealt <@ba.vup>+{dmg_up:0%}</> for {duration}s. This effect cannot stack.",
+        "skillDescParams": {
+         "dmg_up": "0.16",
+         "duration": "15",
+         "hp_up": "1000"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "Legacy of a \"mad\" Tianshi. \nThe Tianshi responsible for pushing the legacy design to the production floor also realized it was too barebones. Hence, they designed additional protective slabs to supplement the defenses.",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "tacticalItem": {
+      "tacticalItemId": "9c9da16ef650fa317c8750240276a9bb",
+      "tacticalItemData": {
+       "id": "9c9da16ef650fa317c8750240276a9bb",
+       "name": "Yazhen Powder",
+       "iconUrl": "https://static.skport.com/image/common/20251112/3bd060c323e7ee8d4c5032146033fba5.png",
+       "rarity": {
+        "key": "equip_rarity_2",
+        "value": "Green"
+       },
+       "activeEffectType": {
+        "key": "active_effect_type_heal",
+        "value": "Recovery"
+       },
+       "activeEffect": "Use this to restore <@ba.vup>{triggerheal:0}</> HP per second for <@ba.vup>{duration:0}</>s.",
+       "passiveEffect": "Once equipped, item is automatically used on any operator in the team who falls below <@ba.vup>{param1:0%}</> HP. Max uses per battle: <@ba.vup>{count:0}</>.\n - <@tips.purple>Can support the controlled operator (no limit)</>\n - <@tips.orange>Uses are restored after depletion</>",
+       "activeEffectParams": {
+        "duration": "6",
+        "maxcount": "5",
+        "triggerheal": "218",
+        "value": "0"
+       },
+       "passiveEffectParams": {
+        "count": "3",
+        "param1": "0.5",
+        "param2": "lt"
+       }
+      }
+     },
+     "evolvePhase": 4,
+     "potentialLevel": 0,
+     "weapon": {
+      "weaponData": {
+       "id": "10401d3e48a98592c90191125ad3fa5f",
+       "name": "Type 42: Solemn Phalanx",
+       "iconUrl": "https://static.skport.com/image/common/20260713/a13f27526ecf141f2d572796f87169a7.png",
+       "rarity": {
+        "key": "rarity_6",
+        "value": "6"
+       },
+       "type": {
+        "key": "weapon_type_wand",
+        "value": "Arts Unit"
+       },
+       "function": "A weapon equipped by Endfield operators to significantly boost their combat capabilities.",
+       "description": "A set of standard Arts Units designed and developed by the Hongshan Swordmancers. These weapons are currently issued to members of the Yinglung Special Task Force. They are known for their excellent performance and stability, as well as their reliability in unforgiving environments.",
+       "skills": [
+        {
+         "key": "wpn_attr_wisd_high",
+         "value": "Intellect [L]"
+        },
+        {
+         "key": "wpn_sp_attr_usgs_high",
+         "value": "ULT Efficiency [L]"
+        },
+        {
+         "key": "sk_wpn_funnel_0016",
+         "value": "Detonate: Debilitating Assault"
+        }
+       ],
+       "skillInfos": [
+        {
+         "skill": {
+          "key": "wpn_attr_wisd_high",
+          "value": "Intellect [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_wisd"
+        },
+        {
+         "skill": {
+          "key": "wpn_sp_attr_usgs_high",
+          "value": "ULT Efficiency [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_usp"
+        },
+        {
+         "skill": {
+          "key": "sk_wpn_funnel_0016",
+          "value": "Detonate: Debilitating Assault"
+         },
+         "maxLevel": 4,
+         "gemTagId": "burst"
+        }
+       ]
+      },
+      "level": 90,
+      "refineLevel": 0,
+      "breakthroughLevel": 4,
+      "gem": {
+       "id": "item_gem_rarity_5-da1d46c6913f07865d29ee5aec20299e",
+       "icon": "",
+       "gemData": {
+        "termId": "da1d46c6913f07865d29ee5aec20299e",
+        "name": "Flawless EssenceÂ·Detonate",
+        "icon": "https://static.skport.com/image/common/20260310/cc0a5e418abb3fd951b115b6485a0211.png",
+        "templateId": "item_gem_rarity_5"
+       },
+       "terms": [
+        {
+         "id": "582bc698e5f5399c1725fa734e2562de",
+         "cost": 6,
+         "name": "Intellect"
+        },
+        {
+         "id": "b47b059521f0cee9d42d4a4a2cd077d1",
+         "cost": 6,
+         "name": "ULT Efficiency"
+        },
+        {
+         "id": "da1d46c6913f07865d29ee5aec20299e",
+         "cost": 3,
+         "name": "Detonate"
+        }
+       ]
+      },
+      "wikiItemId": "1045",
+      "skills": [
+       {
+        "key": "wpn_attr_wisd_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "582bc698e5f5399c1725fa734e2562de",
+        "name": "Intellect [L]"
+       },
+       {
+        "key": "wpn_sp_attr_usgs_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "b47b059521f0cee9d42d4a4a2cd077d1",
+        "name": "ULT Efficiency [L]"
+       },
+       {
+        "key": "sk_wpn_funnel_0016",
+        "level": 4,
+        "currentMaxLevel": 4,
+        "currentBaseLevel": 1,
+        "gemTermId": "da1d46c6913f07865d29ee5aec20299e",
+        "name": "Detonate: Debilitating Assault"
+       }
+      ]
+     },
+     "gender": "CHAR_GENDER_FEMALE",
+     "ownTs": "1786695774",
+     "wikiItemId": "1040",
+     "talent": {
+      "latestBreakNode": "charBreak70",
+      "attrNodes": [
+       "chr_0032_lizhiyan_1",
+       "chr_0032_lizhiyan_3",
+       "chr_0032_lizhiyan_5",
+       "chr_0032_lizhiyan_7"
+      ],
+      "latestPassiveSkillNodes": [
+       "chr_0032_lizhiyan_passive_skill_0_2",
+       "chr_0032_lizhiyan_passive_skill_1_2"
+      ],
+      "latestFactorySkillNodes": [
+       "fac_chr_0032_lizhiyan_0_2",
+       "fac_chr_0032_lizhiyan_1_2"
+      ],
+      "latestSpaceshipSkillNodes": [
+       "spaceship_skill_chr_0032_lizhiyan_2_2",
+       "spaceship_skill_chr_0032_lizhiyan_1_2"
+      ]
+     }
+    },
+    {
+     "charData": {
+      "id": "0b199a0eaae5a9b37a5d3c990b6c8bca",
+      "name": "Laevatain",
+      "avatarSqUrl": "https://static.skport.com/image/common/20251112/15a984eaecaf0d7c47d871175ae38937.png",
+      "avatarRtUrl": "https://static.skport.com/image/common/20251121/102edad59937fe1a15131904729c03d2.png",
+      "rarity": {
+       "key": "rarity_6",
+       "value": "6"
+      },
+      "profession": {
+       "key": "profession_assault",
+       "value": "Striker"
+      },
+      "property": {
+       "key": "char_property_fire",
+       "value": "Heat"
+      },
+      "weaponType": {
+       "key": "weapon_type_sword",
+       "value": "Sword"
+      },
+      "skills": [
+       {
+        "id": "b2c072b0b15f8157f0b11da1c955de74",
+        "name": "Flaming Cinders",
+        "type": {
+         "key": "skill_type_normal_attack",
+         "value": "Basic Attack"
+        },
+        "property": {
+         "key": "skill_property_fire",
+         "value": "Heat"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/174d88db2a9d71d2bf74061a9dfd1793.png",
+        "desc": "BASIC ATTACK: \nAn attack with up to 5 sequences that deals <@ba.fire>Heat DMG</>. As the controlled operator, <#ba.lastcombo>Final Strike</> also deals <@ba.poise>{poise:0}</> Stagger. \n\nDIVE ATTACK: \nBasic attack performed in mid-air becomes a dive attack that deals <@ba.fire>Heat DMG</> to nearby enemies. \n\nFINISHER: \nBasic attack performed near a Staggered enemy becomes a finisher that deals massive <@ba.fire>Heat DMG</> and recovers some SP.",
+        "descParams": {
+         "atb": "20",
+         "atk_scale": "0.48",
+         "display_atk_scale": "0.95",
+         "poise": "18"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.27",
+           "display_atk_scale": "0.53",
+           "poise": "18"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.51",
+           "display_atk_scale": "1.02",
+           "poise": "18"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.55",
+           "display_atk_scale": "1.1",
+           "poise": "18"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.6",
+           "display_atk_scale": "1.19",
+           "poise": "18"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.29",
+           "display_atk_scale": "0.58",
+           "poise": "18"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.32",
+           "display_atk_scale": "0.64",
+           "poise": "18"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.34",
+           "display_atk_scale": "0.69",
+           "poise": "18"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.37",
+           "display_atk_scale": "0.74",
+           "poise": "18"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.4",
+           "display_atk_scale": "0.8",
+           "poise": "18"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.42",
+           "display_atk_scale": "0.85",
+           "poise": "18"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.45",
+           "display_atk_scale": "0.9",
+           "poise": "18"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.48",
+           "display_atk_scale": "0.95",
+           "poise": "18"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "3299d991a0f8417c245adc2997263ae6",
+        "name": "Smouldering Fire",
+        "type": {
+         "key": "skill_type_normal_skill",
+         "value": "Battle Skill"
+        },
+        "property": {
+         "key": "skill_property_fire",
+         "value": "Heat"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/78139aefc6b725ed39f7f4b56ad27141.png",
+        "desc": "Summons a Magma Fragment to continuously attack enemies and deal <@ba.fire>Heat DMG</>. Hitting the enemy grants 1 stack of <@ba.key>Melting Flame</>. \nIf Laevatain already has {count:0} stack(s) of <@ba.key>Melting Flame</> when casting the skill, then consume all the stacks and perform 1 additional attack that deals <@ba.fire>Heat DMG</> and forcibly trigger temporary <#ba.burning>Combustion</> to all enemies in a large area.\nWhen the additional attack hits the enemy, restore additional Ultimate Energy.\n<@ba.info>Battle skill effects are enhanced while Laevatain's ultimate is active.</>",
+        "descParams": {
+         "atk_scale": "1.29",
+         "atk_scale_2": "0.13",
+         "atk_scale_3": "7.1",
+         "count": "4",
+         "duration": "5",
+         "extra_usp": "100",
+         "poise": "10",
+         "poise_extra": "10"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "0.62",
+           "atk_scale_2": "0.06",
+           "atk_scale_3": "3.42",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "1.2",
+           "atk_scale_2": "0.12",
+           "atk_scale_3": "6.58",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "1.29",
+           "atk_scale_2": "0.13",
+           "atk_scale_3": "7.1",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "1.4",
+           "atk_scale_2": "0.14",
+           "atk_scale_3": "7.7",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "0.68",
+           "atk_scale_2": "0.07",
+           "atk_scale_3": "3.76",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "0.75",
+           "atk_scale_2": "0.08",
+           "atk_scale_3": "4.1",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "0.81",
+           "atk_scale_2": "0.08",
+           "atk_scale_3": "4.45",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "0.87",
+           "atk_scale_2": "0.09",
+           "atk_scale_3": "4.79",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "0.93",
+           "atk_scale_2": "0.09",
+           "atk_scale_3": "5.13",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "0.99",
+           "atk_scale_2": "0.1",
+           "atk_scale_3": "5.47",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "1.06",
+           "atk_scale_2": "0.11",
+           "atk_scale_3": "5.81",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "1.12",
+           "atk_scale_2": "0.11",
+           "atk_scale_3": "6.16",
+           "count": "4",
+           "duration": "5",
+           "extra_usp": "100",
+           "poise": "10",
+           "poise_extra": "10"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "166d38ccfe9f7486047e9721e7d6adde",
+        "name": "Seethe",
+        "type": {
+         "key": "skill_type_combo_skill",
+         "value": "Combo Skill"
+        },
+        "property": {
+         "key": "skill_property_fire",
+         "value": "Heat"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/adce5ec7ac73c64dea3eaf242b1c71d2.png",
+        "desc": "COMBO TRIGGER: When an enemy suffers <#ba.burning>Combustion</> or <#ba.corrupt>Corrosion</>. \nFire erupts beneath the feet of any enemy with <#ba.burning>Combustion</> or <#ba.corrupt>Corrosion</>, dealing <@ba.fire>Heat DMG</> to them. \nIf the skill hits the enemy, Laevatain gains 1 stack of <@ba.key>Melting Flame</> and further gains Ultimate Energy per enemy hit.",
+        "descParams": {
+         "atk_scale": "4.62",
+         "poise": "10",
+         "usp_1_display": "25",
+         "usp_2_display": "30",
+         "usp_3_display": "35"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "2.4",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "4.62",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "4.98",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "5.4",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "2.64",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "2.88",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "3.12",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "3.36",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "3.6",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "3.84",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "4.08",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "4.32",
+           "poise": "10",
+           "usp_1_display": "25",
+           "usp_2_display": "30",
+           "usp_3_display": "35"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "ff40dad4b22b95c4a2a765bd6b4f2d8e",
+        "name": "Twilight",
+        "type": {
+         "key": "skill_type_ultimate_skill",
+         "value": "Ultimate"
+        },
+        "property": {
+         "key": "skill_property_fire",
+         "value": "Heat"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/a1c14451eae130ac037f9faadb815551.png",
+        "desc": "Laevatain summons her Sviga LÃ¦vi and becomes the controlled operator. \nFor a certain duration, her basic attacks (BATK) are enhanced and the Sviga LÃ¦vi strikes together with Laevatain, with each attack dealing <@ba.fire>Heat DMG</>. BATK sequence 3 also applies <#ba.fireinflict>Heat Infliction</>.\n<@ba.info>Casting the battle skill, Smouldering Fire, or the combo skill, Seethe, does not shorten the duration of the ultimate, Twilight.</>",
+        "descParams": {
+         "atk_scale": "5.6",
+         "count": "4",
+         "duration": "15"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "2.7",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "5.2",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "5.6",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "6.08",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "2.97",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "3.24",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "3.51",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "3.78",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "4.05",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "4.32",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "4.59",
+           "count": "4",
+           "duration": "15"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "4.86",
+           "count": "4",
+           "duration": "15"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       }
+      ],
+      "illustrationUrl": "https://static.skport.com/image/common/20260121/9f814a300f4ae15f620690c839cad5ee.png",
+      "tags": [
+       "Damage Dealer",
+       "Combust"
+      ],
+      "abilityTalents": [
+       {
+        "id": "chr_0016_laevat_3",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +15.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_5",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +15.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_7",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +20.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_1",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +10.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       }
+      ],
+      "combatTalents": [
+       {
+        "id": "chr_0016_laevat_passive_skill_0_2",
+        "name": "Scorching Heart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/bd871534ec4b34b77da8eead85d7a80e.png",
+        "desc": "After the controlled operator's <#ba.lastcombo>Final Strike</> or Finisher hits the enemy, Laevatain <#ba.absorb>absorbs</> <#ba.fireinflict>Heat Infliction</> from nearby enemies. \nEvery stack of <#ba.fireinflict>Heat Infliction</> <#ba.absorb>absorbed</> gives Laevatain 1 stack of <@ba.key>Melting Flame</> (max stacks: {max_stack:0}). \nAfter reaching {max_stack:0} stacks, DMG dealt by Laevatain ignores <@ba.vup>{-ignore_fire_resist:0}</> <@ba.fire>Heat Resistance</> of the enemy for {ignore_fire_resist_duration:0}s. \n<@ba.info>Laevatain also absorbs Heat Infliction from enemies defeated nearby.</>",
+        "descParams": {
+         "ignore_fire_resist": "-15",
+         "ignore_fire_resist_duration": "20",
+         "max_stack": "4"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_passive_skill_0_3",
+        "name": "Scorching Heart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/bd871534ec4b34b77da8eead85d7a80e.png",
+        "desc": "After the controlled operator's <#ba.lastcombo>Final Strike</> or Finisher hits the enemy, Laevatain <#ba.absorb>absorbs</> <#ba.fireinflict>Heat Infliction</> from nearby enemies. \nEvery stack of <#ba.fireinflict>Heat Infliction</> <#ba.absorb>absorbed</> gives Laevatain 1 stack of <@ba.key>Melting Flame</> (max stacks: {max_stack:0}). \nAfter reaching {max_stack:0} stacks, DMG dealt by Laevatain ignores <@ba.vup>{-ignore_fire_resist:0}</> <@ba.fire>Heat Resistance</> of the enemy for {ignore_fire_resist_duration:0}s. \n<@ba.info>Laevatain also absorbs Heat Infliction from enemies defeated nearby.</>",
+        "descParams": {
+         "ignore_fire_resist": "-20",
+         "ignore_fire_resist_duration": "20",
+         "max_stack": "4"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_passive_skill_1_2",
+        "name": "Re-Ignition",
+        "iconUrl": "https://static.skport.com/image/common/20260310/4637978b7e9c12183171aaf492ab09dc.png",
+        "desc": "When HP drops below {hp_threshold:0%}, gain <@ba.vup>{shelter:0%}</> <#ba.guard>Protection</> and restore <@ba.heal>{heal_max_hp:0%}</> Max HP per second for <@ba.vup>{duration:0}</>s. This effect can only trigger once every {cd:0}s.",
+        "descParams": {
+         "cd": "120",
+         "duration": "8",
+         "heal_max_hp": "0.05",
+         "hp_threshold": "0.4",
+         "shelter": "0.9",
+         "shelter_real": "0.9"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_passive_skill_0_1",
+        "name": "Scorching Heart",
+        "iconUrl": "https://static.skport.com/image/common/20260310/bd871534ec4b34b77da8eead85d7a80e.png",
+        "desc": "After the controlled operator's <#ba.lastcombo>Final Strike</> or Finisher hits the enemy, Laevatain <#ba.absorb>absorbs</> <#ba.fireinflict>Heat Infliction</> from nearby enemies. \nEvery stack of <#ba.fireinflict>Heat Infliction</> <#ba.absorb>absorbed</> gives Laevatain 1 stack of <@ba.key>Melting Flame</> (max stacks: {max_stack:0}). \nAfter reaching {max_stack:0} stacks, DMG dealt by Laevatain ignores <@ba.vup>{-ignore_fire_resist:0}</> <@ba.fire>Heat Resistance</> of the enemy for {ignore_fire_resist_duration:0}s. \n<@ba.info>Laevatain also absorbs Heat Infliction from enemies defeated nearby.</>",
+        "descParams": {
+         "ignore_fire_resist": "-10",
+         "ignore_fire_resist_duration": "20",
+         "max_stack": "4"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0016_laevat_passive_skill_1_1",
+        "name": "Re-Ignition",
+        "iconUrl": "https://static.skport.com/image/common/20260310/4637978b7e9c12183171aaf492ab09dc.png",
+        "desc": "When HP drops below {hp_threshold:0%}, gain <@ba.vup>{shelter:0%}</> <#ba.guard>Protection</> and restore <@ba.heal>{heal_max_hp:0%}</> Max HP per second for <@ba.vup>{duration:0}</>s. This effect can only trigger once every {cd:0}s.",
+        "descParams": {
+         "cd": "120",
+         "duration": "4",
+         "heal_max_hp": "0.05",
+         "hp_threshold": "0.4",
+         "shelter": "0.9",
+         "shelter_real": "0.9"
+        },
+        "lockedIconUrl": ""
+       }
+      ],
+      "cultivationTalents": [
+       {
+        "id": "spaceship_skill_chr_0016_laevat_2_2",
+        "name": "Undying Flames Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/7483e402fdd571eb9343bc04ac26c963.png",
+        "desc": "Assign to Manufacturing Cabin to slow Mood Drop of all operators in it by 18%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/adc1398c12344a26244985fe9bc69491.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0016_laevat_1_1",
+        "name": "Memory Crucible Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8b84f8ccea090c7176ef978c76634669.png",
+        "desc": "Assign to Manufacturing Cabin to grant operator EXP material production efficiency +20%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/bbd0f650942cf4940b2e1ecab741c866.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0016_laevat_1_2",
+        "name": "Memory Crucible Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8b84f8ccea090c7176ef978c76634669.png",
+        "desc": "Assign to Manufacturing Cabin to grant operator EXP material production efficiency +30%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/bbd0f650942cf4940b2e1ecab741c866.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0016_laevat_2_1",
+        "name": "Undying Flames Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/7483e402fdd571eb9343bc04ac26c963.png",
+        "desc": "Assign to Manufacturing Cabin to slow Mood Drop of all operators in it by 14%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/adc1398c12344a26244985fe9bc69491.png"
+       }
+      ]
+     },
+     "id": "0b199a0eaae5a9b37a5d3c990b6c8bca",
+     "level": 90,
+     "userSkills": {
+      "166d38ccfe9f7486047e9721e7d6adde": {
+       "skillId": "166d38ccfe9f7486047e9721e7d6adde",
+       "level": 10,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "3299d991a0f8417c245adc2997263ae6": {
+       "skillId": "3299d991a0f8417c245adc2997263ae6",
+       "level": 11,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "b2c072b0b15f8157f0b11da1c955de74": {
+       "skillId": "b2c072b0b15f8157f0b11da1c955de74",
+       "level": 9,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "ff40dad4b22b95c4a2a765bd6b4f2d8e": {
+       "skillId": "ff40dad4b22b95c4a2a765bd6b4f2d8e",
+       "level": 11,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      }
+     },
+     "bodyEquip": {
+      "equipId": "5bbe157c88162db461fa97a606148d4f",
+      "equipData": {
+       "id": "5bbe157c88162db461fa97a606148d4f",
+       "name": "Tide Fall Light Armor",
+       "iconUrl": "https://static.skport.com/image/common/20251121/d41a5a8e5558c89e5b9ca4e4bd80a1f9.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_body",
+        "value": "Armor"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_str",
+        "equip_attr_ultimate_sp_gain_scalar"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "1a4c13870df449ee376d8ed5e8dd9204",
+        "name": "Tide Surge",
+        "skillId": "passive_equipsuit_burst_01",
+        "skillDesc": "3-piece set effect: Wearer's Skill DMG Dealt <@ba.vup>+{skill_dmg_up:0%}</>.\nAfter the wearer applies <@ba.key>{stack_cond}</> or more stacks of <#ba.spellinflict>Arts Infliction</> on the enemy, the wearer gains <@ba.key>Arts DMG Dealt</> <@ba.vup>+{spell_dmg_up:0%}</> for {duration}s. This effect cannot stack.",
+        "skillDescParams": {
+         "duration": "15",
+         "skill_dmg_up": "0.2",
+         "spell_dmg_up": "0.35",
+         "stack_cond": "2"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "Equipment designed by the Bureau of Swordmancers for those working near the Blight Tide. \nThis is a piece of memory about the Blight Tide: The unfeeling surges have always rejected the notion of life.",
+       "baseAttrValue": 56,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "armEquip": {
+      "equipId": "4616080a02fd1181791671b5f394ff58",
+      "equipData": {
+       "id": "4616080a02fd1181791671b5f394ff58",
+       "name": "Hot Work Gauntlets",
+       "iconUrl": "https://static.skport.com/image/common/20251121/b433b276ab125c2f50cfa8be8f2ef506.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_hand",
+        "value": "Gloves"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_str",
+        "equip_fire_and_natural_damage_increase"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "1d6477b5665f05daa36c63ba24b8cf64",
+        "name": "Hot Work",
+        "skillId": "passive_equipsuit_fninflict_01",
+        "skillDesc": "3-piece set effect: Wearer's Arts Intensity <@ba.vup>+{phy_spell_up:0}</>. \nAfter the wearer applies <#ba.burning>Combustion</>, the wearer gains <@ba.fire>Heat DMG</> +<@ba.vup>{fire_dmg_up:0%}</> for {duration}s. After the wearer applies <#ba.corrupt>Corrosion</>, the wearer gains <@ba.natur>Nature DMG</> +<@ba.vup>{nature_dmg_up:0%}</> for {duration2}s. The aforementioned effects cannot stack.",
+        "skillDescParams": {
+         "duration": "10",
+         "duration2": "10",
+         "fire_dmg_up": "0.5",
+         "nature_dmg_up": "0.5",
+         "phy_spell_up": "30"
+        }
+       },
+       "function": "Independently designed by Endfield Industries and assembled by the AIC. This equipment improves the wearer's combat capabilities.",
+       "pkg": "Equipment that features excellent fire resistance rating. \n\"Shh, quiet. You might wake it up.\"",
+       "baseAttrValue": 42,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "firstAccessory": {
+      "equipId": "6c49f67a03261c404fe4c394fdbd7aed",
+      "equipData": {
+       "id": "6c49f67a03261c404fe4c394fdbd7aed",
+       "name": "Hot Work Pyrometer",
+       "iconUrl": "https://static.skport.com/image/common/20251121/ef30af97a801a16cc6c01ec5250b4d6b.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_normal_skill_damage_increase",
+        ""
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "1d6477b5665f05daa36c63ba24b8cf64",
+        "name": "Hot Work",
+        "skillId": "passive_equipsuit_fninflict_01",
+        "skillDesc": "3-piece set effect: Wearer's Arts Intensity <@ba.vup>+{phy_spell_up:0}</>. \nAfter the wearer applies <#ba.burning>Combustion</>, the wearer gains <@ba.fire>Heat DMG</> +<@ba.vup>{fire_dmg_up:0%}</> for {duration}s. After the wearer applies <#ba.corrupt>Corrosion</>, the wearer gains <@ba.natur>Nature DMG</> +<@ba.vup>{nature_dmg_up:0%}</> for {duration2}s. The aforementioned effects cannot stack.",
+        "skillDescParams": {
+         "duration": "10",
+         "duration2": "10",
+         "fire_dmg_up": "0.5",
+         "nature_dmg_up": "0.5",
+         "phy_spell_up": "30"
+        }
+       },
+       "function": "Independently designed by Endfield Industries and assembled by the AIC. This equipment improves the wearer's combat capabilities.",
+       "pkg": "Equipment that features excellent fire resistance rating. \nExtreme heat is not terrifying. However, be wary if a place suddenly experiences an inexplicable change in temperature.",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "secondAccessory": {
+      "equipId": "6c49f67a03261c404fe4c394fdbd7aed",
+      "equipData": {
+       "id": "6c49f67a03261c404fe4c394fdbd7aed",
+       "name": "Hot Work Pyrometer",
+       "iconUrl": "https://static.skport.com/image/common/20251121/ef30af97a801a16cc6c01ec5250b4d6b.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_normal_skill_damage_increase",
+        ""
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "1d6477b5665f05daa36c63ba24b8cf64",
+        "name": "Hot Work",
+        "skillId": "passive_equipsuit_fninflict_01",
+        "skillDesc": "3-piece set effect: Wearer's Arts Intensity <@ba.vup>+{phy_spell_up:0}</>. \nAfter the wearer applies <#ba.burning>Combustion</>, the wearer gains <@ba.fire>Heat DMG</> +<@ba.vup>{fire_dmg_up:0%}</> for {duration}s. After the wearer applies <#ba.corrupt>Corrosion</>, the wearer gains <@ba.natur>Nature DMG</> +<@ba.vup>{nature_dmg_up:0%}</> for {duration2}s. The aforementioned effects cannot stack.",
+        "skillDescParams": {
+         "duration": "10",
+         "duration2": "10",
+         "fire_dmg_up": "0.5",
+         "nature_dmg_up": "0.5",
+         "phy_spell_up": "30"
+        }
+       },
+       "function": "Independently designed by Endfield Industries and assembled by the AIC. This equipment improves the wearer's combat capabilities.",
+       "pkg": "Equipment that features excellent fire resistance rating. \nExtreme heat is not terrifying. However, be wary if a place suddenly experiences an inexplicable change in temperature.",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "tacticalItem": {
+      "tacticalItemId": "9c9da16ef650fa317c8750240276a9bb",
+      "tacticalItemData": {
+       "id": "9c9da16ef650fa317c8750240276a9bb",
+       "name": "Yazhen Powder",
+       "iconUrl": "https://static.skport.com/image/common/20251112/3bd060c323e7ee8d4c5032146033fba5.png",
+       "rarity": {
+        "key": "equip_rarity_2",
+        "value": "Green"
+       },
+       "activeEffectType": {
+        "key": "active_effect_type_heal",
+        "value": "Recovery"
+       },
+       "activeEffect": "Use this to restore <@ba.vup>{triggerheal:0}</> HP per second for <@ba.vup>{duration:0}</>s.",
+       "passiveEffect": "Once equipped, item is automatically used on any operator in the team who falls below <@ba.vup>{param1:0%}</> HP. Max uses per battle: <@ba.vup>{count:0}</>.\n - <@tips.purple>Can support the controlled operator (no limit)</>\n - <@tips.orange>Uses are restored after depletion</>",
+       "activeEffectParams": {
+        "duration": "6",
+        "maxcount": "5",
+        "triggerheal": "218",
+        "value": "0"
+       },
+       "passiveEffectParams": {
+        "count": "3",
+        "param1": "0.5",
+        "param2": "lt"
+       }
+      }
+     },
+     "evolvePhase": 4,
+     "potentialLevel": 0,
+     "weapon": {
+      "weaponData": {
+       "id": "a2fc188efeb10de2af2da9678d333853",
+       "name": "Forgeborn Scathe",
+       "iconUrl": "https://static.skport.com/image/common/20251129/703f5b0563a10737f1a8a9ed2e3f9640.png",
+       "rarity": {
+        "key": "rarity_6",
+        "value": "6"
+       },
+       "type": {
+        "key": "weapon_type_sword",
+        "value": "Sword"
+       },
+       "function": "A weapon equipped by Endfield operators to significantly boost their combat capabilities.",
+       "description": "One of the razor-edged weaponry forged by Witching Hour. Special smelting processes resulted in a wholly red blade. The Arts Unit is actually a special liquefied Originium that resembles a tear of blood shed from a forge.",
+       "skills": [
+        {
+         "key": "wpn_attr_wisd_high",
+         "value": "Intellect [L]"
+        },
+        {
+         "key": "wpn_sp_attr_atk_high",
+         "value": "ATK [L]"
+        },
+        {
+         "key": "sk_wpn_sword_0006",
+         "value": "Twilight: Blazing Wail"
+        }
+       ],
+       "skillInfos": [
+        {
+         "skill": {
+          "key": "wpn_attr_wisd_high",
+          "value": "Intellect [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_wisd"
+        },
+        {
+         "skill": {
+          "key": "wpn_sp_attr_atk_high",
+          "value": "ATK [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_atk"
+        },
+        {
+         "skill": {
+          "key": "sk_wpn_sword_0006",
+          "value": "Twilight: Blazing Wail"
+         },
+         "maxLevel": 4,
+         "gemTagId": "ult"
+        }
+       ]
+      },
+      "level": 90,
+      "refineLevel": 0,
+      "breakthroughLevel": 4,
+      "gem": {
+       "id": "item_gem_rarity_5-8cec1e33f70cdd63fc908d11e472c217",
+       "icon": "",
+       "gemData": {
+        "termId": "8cec1e33f70cdd63fc908d11e472c217",
+        "name": "Flawless EssenceÂ·Twilight",
+        "icon": "https://static.skport.com/image/common/20260310/3aba1bced37bacfc5c7ae6517e58684b.png",
+        "templateId": "item_gem_rarity_5"
+       },
+       "terms": [
+        {
+         "id": "582bc698e5f5399c1725fa734e2562de",
+         "cost": 6,
+         "name": "Intellect"
+        },
+        {
+         "id": "9f17a15db250efaaac4e2f4a0a5ca331",
+         "cost": 6,
+         "name": "ATK"
+        },
+        {
+         "id": "8cec1e33f70cdd63fc908d11e472c217",
+         "cost": 3,
+         "name": "Twilight"
+        }
+       ]
+      },
+      "wikiItemId": "37",
+      "skills": [
+       {
+        "key": "wpn_attr_wisd_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "582bc698e5f5399c1725fa734e2562de",
+        "name": "Intellect [L]"
+       },
+       {
+        "key": "wpn_sp_attr_atk_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "9f17a15db250efaaac4e2f4a0a5ca331",
+        "name": "ATK [L]"
+       },
+       {
+        "key": "sk_wpn_sword_0006",
+        "level": 4,
+        "currentMaxLevel": 4,
+        "currentBaseLevel": 1,
+        "gemTermId": "8cec1e33f70cdd63fc908d11e472c217",
+        "name": "Twilight: Blazing Wail"
+       }
+      ]
+     },
+     "gender": "CHAR_GENDER_FEMALE",
+     "ownTs": "1770231464",
+     "wikiItemId": "11",
+     "talent": {
+      "latestBreakNode": "charBreak70",
+      "attrNodes": [
+       "chr_0016_laevat_1",
+       "chr_0016_laevat_3",
+       "chr_0016_laevat_5",
+       "chr_0016_laevat_7"
+      ],
+      "latestPassiveSkillNodes": [
+       "chr_0016_laevat_passive_skill_0_3",
+       "chr_0016_laevat_passive_skill_1_2"
+      ],
+      "latestFactorySkillNodes": [
+       "fac_chr_0016_laevat_0_2",
+       "fac_chr_0016_laevat_1_2"
+      ],
+      "latestSpaceshipSkillNodes": [
+       "spaceship_skill_chr_0016_laevat_2_2",
+       "spaceship_skill_chr_0016_laevat_1_2"
+      ]
+     }
+    },
+    {
+     "charData": {
+      "id": "38bc410d7e134743ed8ee881d8400833",
+      "name": "Si",
+      "avatarSqUrl": "https://static.skport.com/image/common/20261008/c96349fdafb43227f5a57ac475188c48.png",
+      "avatarRtUrl": "https://static.skport.com/image/common/20261008/a63b0b093bfd921b8df1e6c5ee341a31.png",
+      "rarity": {
+       "key": "rarity_6",
+       "value": "6"
+      },
+      "profession": {
+       "key": "profession_supporter",
+       "value": "Supporter"
+      },
+      "property": {
+       "key": "char_property_cryst",
+       "value": "Cryo"
+      },
+      "weaponType": {
+       "key": "weapon_type_claymores",
+       "value": "Greatsword"
+      },
+      "skills": [
+       {
+        "id": "f1e54c2df7e7e7cf88618d48398e23e0",
+        "name": "Artistic Urge",
+        "type": {
+         "key": "skill_type_normal_attack",
+         "value": "Basic Attack"
+        },
+        "property": {
+         "key": "skill_property_cryst",
+         "value": "Cryo"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20251112/f6a950ca9886437085966cc7c3cbea95.png",
+        "desc": "BASIC ATTACK: \nAn attack with up to 5 sequences that deals <@ba.cryst>Cryo DMG</>. As the controlled operator, <#ba.lastcombo>Final Strike</> also deals <@ba.poise>{poise:0}</> Stagger. \n\nDIVE ATTACK: \nBasic attack performed in mid-air becomes a dive attack that deals <@ba.cryst>Cryo DMG</> to nearby enemies. \n\nFINISHER: \nBasic attack performed near a Staggered enemy becomes a finisher that deals massive <@ba.cryst>Cryo DMG</> and recovers some SP.",
+        "descParams": {
+         "atb": "20",
+         "atk_scale": "1.15",
+         "poise": "18"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.64",
+           "poise": "18"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.23",
+           "poise": "18"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.33",
+           "poise": "18"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.44",
+           "poise": "18"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.7",
+           "poise": "18"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.77",
+           "poise": "18"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.83",
+           "poise": "18"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.9",
+           "poise": "18"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atb": "20",
+           "atk_scale": "0.96",
+           "poise": "18"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.02",
+           "poise": "18"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.09",
+           "poise": "18"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atb": "20",
+           "atk_scale": "1.15",
+           "poise": "18"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "9a67822025131abdada5280c4b9e4d88",
+        "name": "Brushwork Realm",
+        "type": {
+         "key": "skill_type_normal_skill",
+         "value": "Battle Skill"
+        },
+        "property": {
+         "key": "skill_property_cryst",
+         "value": "Cryo"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20261008/4bc028aadaf7eade69d7bde0df83625b.png",
+        "desc": "Si deals <@ba.cryst>Cryo DMG</> and applies <@ba.key>Artful Intent</>, <#ba.static>Immobilization</>, and <#ba.crystinflict>Cryo Infliction</> (or <#ba.fireinflict>Heat Infliction</> if a <@ba.fire>Heat</> element operator is in <@ba.key>Team Position 01</>) on the target. After a target with <@ba.key>Artful Intent</> takes DMG, part of the DMG taken is recorded. When the duration of <@ba.key>Artful Intent</> ends, it bursts and deals <#ba.fixeddamage>Fixed DMG</> equal to the DMG recorded. After casting the skill, Si's battle skill is temporarily changed to <@ba.key>Initial Stroke</>.\n<@ba.key>Initial Stroke</>: Costs <@ba.vup>15</> SP. Si pulls an <@ba.key>Inksoul</> from a target with <@ba.key>Artful Intent</>. All DMG dealt and effects applied to the <@ba.key>Inksoul</> will also be dealt to its host (the said target). The <@ba.key>Inksoul</> lasts as long as the remaining duration of <@ba.key>Artful Intent</>. After casting the skill, Si's battle skill is temporarily changed to <@ba.key>Final Stroke</>.\n<@ba.key>Final Stroke</>: Costs no SP. Makes the <@ba.key>Inksoul</> disappear early. When disappearing, the <@ba.key>Inksoul</> will move to its host and trigger a burst like the ending burst of <@ba.key>Artful Intent</>.\n<@ba.info>When dealing DMG or applying effects to both the Inksoul and the host, only 1 instance of the DMG or effect is dealt/applied. If the host is defeated during the Inksoul's duration, it will link to another enemy in combat and apply Artful Intent to it. This does not reset the duration of Artful Intent. If a target with Artful Intent is defeated without having its Inksoul drawn out of it, the defeated target will drop an Inksoul at its location.</>",
+        "descParams": {
+         "atk_scale": "1",
+         "display_atk_scale": "1",
+         "duration": "20",
+         "ink_boom_poise": "5",
+         "ink_boom_range": "0",
+         "ink_damage_rate": "0.13",
+         "poise": "5",
+         "static_duration": "1"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "0.44",
+           "display_atk_scale": "0.44",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.08",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "0.86",
+           "display_atk_scale": "0.86",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.11",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "0.92",
+           "display_atk_scale": "0.92",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.12",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "1",
+           "display_atk_scale": "1",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.13",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "0.49",
+           "display_atk_scale": "0.49",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.08",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "0.53",
+           "display_atk_scale": "0.53",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.08",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "0.58",
+           "display_atk_scale": "0.58",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.09",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "0.62",
+           "display_atk_scale": "0.62",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.09",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "0.67",
+           "display_atk_scale": "0.67",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.09",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "0.71",
+           "display_atk_scale": "0.71",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.1",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "0.76",
+           "display_atk_scale": "0.76",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.1",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "0.8",
+           "display_atk_scale": "0.8",
+           "duration": "20",
+           "ink_boom_poise": "5",
+           "ink_boom_range": "0",
+           "ink_damage_rate": "0.1",
+           "poise": "5",
+           "static_duration": "1"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "0a85544e6342ee37993dbf6736be39d9",
+        "name": "Fully Envisioned",
+        "type": {
+         "key": "skill_type_combo_skill",
+         "value": "Combo Skill"
+        },
+        "property": {
+         "key": "skill_property_cryst",
+         "value": "Cryo"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20261008/af6fe8ff78ba2603eb9476fbbde202b2.png",
+        "desc": "COMBO TRIGGER: When an enemy's <#ba.crystinflict>Cryo Infliction</> or <#ba.fireinflict>Heat Infliction</> is <#ba.consume>consumed</> or <#ba.absorb>absorbed</>.\nSi summons an <@ba.key>Ink Lung</> that deals <@ba.cryst>Cryo DMG</>. This DMG is based on the highest stacks of Arts Infliction <#ba.consume>consumed</> or <#ba.absorb>absorbed</> from a single target.",
+        "descParams": {
+         "atk_scale": "0.342",
+         "atk_scale2": "2.994",
+         "atk_scale2_1": "0.86",
+         "display_atk_scale": "6.42",
+         "poise": "10",
+         "potential2_base": "0",
+         "potential2_display": "0",
+         "potential2_duration": "0",
+         "potential2_enhance": "0",
+         "usp": "10"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "0.178",
+           "atk_scale2": "1.556",
+           "atk_scale2_1": "0.44",
+           "display_atk_scale": "3.33",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "0.342",
+           "atk_scale2": "2.994",
+           "atk_scale2_1": "0.86",
+           "display_atk_scale": "6.42",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "0.369",
+           "atk_scale2": "3.228",
+           "atk_scale2_1": "0.92",
+           "display_atk_scale": "6.92",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "0.4",
+           "atk_scale2": "3.5",
+           "atk_scale2_1": "1",
+           "display_atk_scale": "7.5",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "0.196",
+           "atk_scale2": "1.711",
+           "atk_scale2_1": "0.49",
+           "display_atk_scale": "3.67",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "0.213",
+           "atk_scale2": "1.867",
+           "atk_scale2_1": "0.53",
+           "display_atk_scale": "4",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "0.231",
+           "atk_scale2": "2.022",
+           "atk_scale2_1": "0.58",
+           "display_atk_scale": "4.33",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "0.249",
+           "atk_scale2": "2.178",
+           "atk_scale2_1": "0.62",
+           "display_atk_scale": "4.67",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "0.267",
+           "atk_scale2": "2.333",
+           "atk_scale2_1": "0.67",
+           "display_atk_scale": "5",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "0.284",
+           "atk_scale2": "2.489",
+           "atk_scale2_1": "0.71",
+           "display_atk_scale": "5.33",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "0.302",
+           "atk_scale2": "2.644",
+           "atk_scale2_1": "0.76",
+           "display_atk_scale": "5.67",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "0.32",
+           "atk_scale2": "2.8",
+           "atk_scale2_1": "0.8",
+           "display_atk_scale": "6",
+           "poise": "10",
+           "potential2_base": "0",
+           "potential2_display": "0",
+           "potential2_duration": "0",
+           "potential2_enhance": "0",
+           "usp": "10"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       },
+       {
+        "id": "27913a55d4845c2d3f671d17a7157d25",
+        "name": "No One Spoils the Fun",
+        "type": {
+         "key": "skill_type_ultimate_skill",
+         "value": "Ultimate"
+        },
+        "property": {
+         "key": "skill_property_cryst",
+         "value": "Cryo"
+        },
+        "iconUrl": "https://static.skport.com/image/common/20261008/33a3406142b47c93d1ac1669e28f72bc.png",
+        "desc": "Si summons a <@ba.key>Giant Ink Lung</> from her painting that deals <@ba.cryst>Cryo DMG</> and grants temporary <#ba.crystenhance>Cryo Amp</> and <#ba.fireenhance>Heat Amp</> to the entire team.",
+        "descParams": {
+         "atk_scale": "0.37",
+         "atk_scale_2": "1.66",
+         "display_atk_scale": "4.61",
+         "display_poise": "0",
+         "enhance_duration": "12",
+         "enhance_final": "0.34",
+         "poise": "0",
+         "poise_2": "20"
+        },
+        "descLevelParams": {
+         "1": {
+          "level": "1",
+          "params": {
+           "atk_scale": "0.18",
+           "atk_scale_2": "0.8",
+           "display_atk_scale": "2.22",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.2",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "10": {
+          "level": "10",
+          "params": {
+           "atk_scale": "0.34",
+           "atk_scale_2": "1.54",
+           "display_atk_scale": "4.28",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.32",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "11": {
+          "level": "11",
+          "params": {
+           "atk_scale": "0.37",
+           "atk_scale_2": "1.66",
+           "display_atk_scale": "4.61",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.34",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "12": {
+          "level": "12",
+          "params": {
+           "atk_scale": "0.4",
+           "atk_scale_2": "1.8",
+           "display_atk_scale": "5",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.36",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "2": {
+          "level": "2",
+          "params": {
+           "atk_scale": "0.2",
+           "atk_scale_2": "0.88",
+           "display_atk_scale": "2.44",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.21",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "3": {
+          "level": "3",
+          "params": {
+           "atk_scale": "0.21",
+           "atk_scale_2": "0.96",
+           "display_atk_scale": "2.67",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.22",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "4": {
+          "level": "4",
+          "params": {
+           "atk_scale": "0.23",
+           "atk_scale_2": "1.04",
+           "display_atk_scale": "2.89",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.24",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "5": {
+          "level": "5",
+          "params": {
+           "atk_scale": "0.25",
+           "atk_scale_2": "1.12",
+           "display_atk_scale": "3.11",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.25",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "6": {
+          "level": "6",
+          "params": {
+           "atk_scale": "0.27",
+           "atk_scale_2": "1.2",
+           "display_atk_scale": "3.33",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.26",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "7": {
+          "level": "7",
+          "params": {
+           "atk_scale": "0.28",
+           "atk_scale_2": "1.28",
+           "display_atk_scale": "3.55",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.28",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "8": {
+          "level": "8",
+          "params": {
+           "atk_scale": "0.3",
+           "atk_scale_2": "1.36",
+           "display_atk_scale": "3.78",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.29",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         },
+         "9": {
+          "level": "9",
+          "params": {
+           "atk_scale": "0.32",
+           "atk_scale_2": "1.44",
+           "display_atk_scale": "4",
+           "display_poise": "0",
+           "enhance_duration": "12",
+           "enhance_final": "0.3",
+           "poise": "0",
+           "poise_2": "20"
+          }
+         }
+        },
+        "forms": [],
+        "descs": []
+       }
+      ],
+      "illustrationUrl": "https://static.skport.com/image/common/20261008/d04e5400593f9c00b65ca9c273745377.png",
+      "tags": [
+       "Amp",
+       "Damage Dealer",
+       "Cryo Infliction"
+      ],
+      "abilityTalents": [
+       {
+        "id": "chr_0036_jsspsi_3",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +15.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_1",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +10.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_5",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +15.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_7",
+        "name": "Keen Mind",
+        "iconUrl": "https://static.skport.com/image/common/20260310/8bd6524509ea7d5b72c1be7b7137a3bb.png",
+        "desc": "Operator Intellect +20.",
+        "descParams": {},
+        "lockedIconUrl": ""
+       }
+      ],
+      "combatTalents": [
+       {
+        "id": "chr_0036_jsspsi_passive_skill_1_1",
+        "name": "Unsoiled Brush",
+        "iconUrl": "https://static.skport.com/image/common/20261009/dae19e035bd5b0ed817a23490daa5d1c.png",
+        "desc": "When the <@ba.key>Inksoul</> disappears, allied operators gain <@ba.vup>{ratio_speed:0%}</> <#ba.speedup>Haste</> for {duration_speedup:0}s.",
+        "descParams": {
+         "duration_speedup": "5",
+         "ratio_speed": "0.15"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_passive_skill_0_1",
+        "name": "Proxy's Patronage",
+        "iconUrl": "https://static.skport.com/image/common/20261009/7f26f4dcb098bb377b39d7d2781f9ea3.png",
+        "desc": "Ultimate skill <@ba.key>No One Spoils the Fun</> improved: After casting, <@ba.key>Team Position 01</> operator's combo skill cooldown length <@ba.vup>{coolDown:0}</>s.",
+        "descParams": {
+         "coolDown": "-10"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_passive_skill_1_2",
+        "name": "Unsoiled Brush",
+        "iconUrl": "https://static.skport.com/image/common/20261009/dae19e035bd5b0ed817a23490daa5d1c.png",
+        "desc": "When the <@ba.key>Inksoul</> disappears, allied operators gain <@ba.vup>{ratio_speed:0%}</> <#ba.speedup>Haste</> for {duration_speedup:0}s.",
+        "descParams": {
+         "duration_speedup": "5",
+         "ratio_speed": "0.3"
+        },
+        "lockedIconUrl": ""
+       },
+       {
+        "id": "chr_0036_jsspsi_passive_skill_0_2",
+        "name": "Proxy's Patronage",
+        "iconUrl": "https://static.skport.com/image/common/20261009/7f26f4dcb098bb377b39d7d2781f9ea3.png",
+        "desc": "Ultimate skill <@ba.key>No One Spoils the Fun</> improved: After casting, <@ba.key>Team Position 01</> operator's combo skill cooldown length <@ba.vup>{coolDown:0}</>s.",
+        "descParams": {
+         "coolDown": "-20"
+        },
+        "lockedIconUrl": ""
+       }
+      ],
+      "cultivationTalents": [
+       {
+        "id": "spaceship_skill_chr_0036_jsspsi_1_2",
+        "name": "Ware is the Geist Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/391c45f4058bf796e6b9b58656706c67.png",
+        "desc": "Assign to Reception Room to grant operator clue collecting efficiency +30%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/182b0ad8d67cfc4c0f2a3335d5528c54.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0036_jsspsi_2_1",
+        "name": "Ink Spirit Aide Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/164e51c8a424c038d2b5a4b42443a3d4.png",
+        "desc": "Assign to Reception Room to slow Mood Drop of all operators in it by 14%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/1afc118138df671fa49003bb52ee48ab.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0036_jsspsi_2_2",
+        "name": "Ink Spirit Aide Î³",
+        "iconUrl": "https://static.skport.com/image/common/20260310/164e51c8a424c038d2b5a4b42443a3d4.png",
+        "desc": "Assign to Reception Room to slow Mood Drop of all operators in it by 18%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/1afc118138df671fa49003bb52ee48ab.png"
+       },
+       {
+        "id": "spaceship_skill_chr_0036_jsspsi_1_1",
+        "name": "Ware is the Geist Î²",
+        "iconUrl": "https://static.skport.com/image/common/20260310/391c45f4058bf796e6b9b58656706c67.png",
+        "desc": "Assign to Reception Room to grant operator clue collecting efficiency +20%",
+        "descParams": {},
+        "lockedIconUrl": "https://static.skport.com/image/common/20260310/182b0ad8d67cfc4c0f2a3335d5528c54.png"
+       }
+      ]
+     },
+     "id": "38bc410d7e134743ed8ee881d8400833",
+     "level": 90,
+     "userSkills": {
+      "0a85544e6342ee37993dbf6736be39d9": {
+       "skillId": "0a85544e6342ee37993dbf6736be39d9",
+       "level": 10,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "27913a55d4845c2d3f671d17a7157d25": {
+       "skillId": "27913a55d4845c2d3f671d17a7157d25",
+       "level": 11,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "9a67822025131abdada5280c4b9e4d88": {
+       "skillId": "9a67822025131abdada5280c4b9e4d88",
+       "level": 12,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      },
+      "f1e54c2df7e7e7cf88618d48398e23e0": {
+       "skillId": "f1e54c2df7e7e7cf88618d48398e23e0",
+       "level": 9,
+       "maxLevel": 12,
+       "skillFormType": "CHAR_SKILL_FORM_TYPE_UNSPECIFIED"
+      }
+     },
+     "bodyEquip": {
+      "equipId": "5b32b95a8338a939ce37c7fb7abb8b04",
+      "equipData": {
+       "id": "5b32b95a8338a939ce37c7fb7abb8b04",
+       "name": "Type 50 Yinglung Soft Armor",
+       "iconUrl": "https://static.skport.com/image/common/20261105/819d6b6e573fcd131342402f097c08c3.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_body",
+        "value": "Armor"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_str",
+        "equip_attr_combo_skill_damage_increase"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "f394fa805de26d20af37b04c5840b1d2",
+        "name": "Type 50 Yinglung",
+        "skillId": "passive_equipsuit_atk_02",
+        "skillDesc": "3-piece set effect: Wearer's ATK <@ba.vup>+{atk_up:0%}</>. \nWhen any operator in the team casts a battle skill, the wearer gains 1 stack of <@ba.key>Yinglung's Edge</> that gives DMG <@ba.vup>+{dmg_up:0%}</> to the wearer's next combo skill. <@ba.key>Yinglung's Edge</> can stack {max_stack:0} time(s).",
+        "skillDescParams": {
+         "atk_up": "0.15",
+         "dmg_up": "0.2",
+         "max_stack": "3"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "A civilian version of Yinglung Special Task Force equipment. The lack of a crucial power component actually improved its compatibility with general users. \nPerhaps people were inspired by the spirit espoused by the very first designer. One after another they committed their ingenuity and designs to the Yinglung equipment series.",
+       "baseAttrValue": 56,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "armEquip": {
+      "equipId": "5f733ed558e3310554cad39eb24ffe1d",
+      "equipData": {
+       "id": "5f733ed558e3310554cad39eb24ffe1d",
+       "name": "Type 50 Yinglung Hands PPE",
+       "iconUrl": "https://static.skport.com/image/common/20261105/77be8193f756a28b53fa31702d6447ae.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_hand",
+        "value": "Gloves"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_str",
+        "equip_attr_combo_skill_damage_increase"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "f394fa805de26d20af37b04c5840b1d2",
+        "name": "Type 50 Yinglung",
+        "skillId": "passive_equipsuit_atk_02",
+        "skillDesc": "3-piece set effect: Wearer's ATK <@ba.vup>+{atk_up:0%}</>. \nWhen any operator in the team casts a battle skill, the wearer gains 1 stack of <@ba.key>Yinglung's Edge</> that gives DMG <@ba.vup>+{dmg_up:0%}</> to the wearer's next combo skill. <@ba.key>Yinglung's Edge</> can stack {max_stack:0} time(s).",
+        "skillDescParams": {
+         "atk_up": "0.15",
+         "dmg_up": "0.2",
+         "max_stack": "3"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "A civilian version of Yinglung Special Task Force equipment. The lack of a crucial power component actually improved its compatibility with general users. \n\"Thus he wondered: if he were the one who had to face that Nefarith amidst the massive tidal wave of Blight, would he have the courage to pick up a weapon?\"",
+       "baseAttrValue": 42,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "firstAccessory": {
+      "equipId": "e4bcb3688398d11b37ee2b57091f559a",
+      "equipData": {
+       "id": "e4bcb3688398d11b37ee2b57091f559a",
+       "name": "Type 50 Yinglung Beacon",
+       "iconUrl": "https://static.skport.com/image/common/20261105/b601168eaab14239fcf226e72d55a82c.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_str",
+        "equip_attr_combo_skill_damage_increase"
+       ],
+       "isAccessory": false,
+       "suit": {
+        "id": "f394fa805de26d20af37b04c5840b1d2",
+        "name": "Type 50 Yinglung",
+        "skillId": "passive_equipsuit_atk_02",
+        "skillDesc": "3-piece set effect: Wearer's ATK <@ba.vup>+{atk_up:0%}</>. \nWhen any operator in the team casts a battle skill, the wearer gains 1 stack of <@ba.key>Yinglung's Edge</> that gives DMG <@ba.vup>+{dmg_up:0%}</> to the wearer's next combo skill. <@ba.key>Yinglung's Edge</> can stack {max_stack:0} time(s).",
+        "skillDescParams": {
+         "atk_up": "0.15",
+         "dmg_up": "0.2",
+         "max_stack": "3"
+        }
+       },
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "A civilian version of Yinglung Special Task Force equipment. The lack of a crucial power component actually improved its compatibility with general users. \nA positioning beacon that can be activated any time. \"We have breached the Miasma itself. More obstacles shall crumble before us.\"",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "canEnhance": true
+     },
+     "secondAccessory": {
+      "equipId": "8728d1d6a3205cabde33016e2960d4b5",
+      "equipData": {
+       "id": "8728d1d6a3205cabde33016e2960d4b5",
+       "name": "Redeemer Seal",
+       "iconUrl": "https://static.skport.com/image/common/20251121/fb6bf720c6514a9a2902091ed795c82c.png",
+       "rarity": {
+        "key": "equip_rarity_5",
+        "value": "Gold"
+       },
+       "type": {
+        "key": "equip_type_edc",
+        "value": "Kit"
+       },
+       "level": {
+        "key": "equip_level_70",
+        "value": "70"
+       },
+       "properties": [
+        "equip_attr_wisd",
+        "equip_attr_ultimate_sp_gain_scalar",
+        ""
+       ],
+       "isAccessory": true,
+       "suit": null,
+       "function": "Designed by Hongshan Swordmancers and assembled by the AIC. This equipment can improve the wearer's combat capabilities.",
+       "pkg": "This piece of gear is the byword for the difficult road ahead. \"The quest is not yet finished, and so the journey is not yet complete.\"",
+       "baseAttrValue": 21,
+       "canEnhance": true
+      },
+      "enhance": {
+       "1": 3,
+       "2": 3
+      },
+      "canEnhance": true
+     },
+     "tacticalItem": {
+      "tacticalItemId": "9c9da16ef650fa317c8750240276a9bb",
+      "tacticalItemData": {
+       "id": "9c9da16ef650fa317c8750240276a9bb",
+       "name": "Yazhen Powder",
+       "iconUrl": "https://static.skport.com/image/common/20251112/3bd060c323e7ee8d4c5032146033fba5.png",
+       "rarity": {
+        "key": "equip_rarity_2",
+        "value": "Green"
+       },
+       "activeEffectType": {
+        "key": "active_effect_type_heal",
+        "value": "Recovery"
+       },
+       "activeEffect": "Use this to restore <@ba.vup>{triggerheal:0}</> HP per second for <@ba.vup>{duration:0}</>s.",
+       "passiveEffect": "Once equipped, item is automatically used on any operator in the team who falls below <@ba.vup>{param1:0%}</> HP. Max uses per battle: <@ba.vup>{count:0}</>.\n - <@tips.purple>Can support the controlled operator (no limit)</>\n - <@tips.orange>Uses are restored after depletion</>",
+       "activeEffectParams": {
+        "duration": "6",
+        "maxcount": "5",
+        "triggerheal": "218",
+        "value": "0"
+       },
+       "passiveEffectParams": {
+        "count": "3",
+        "param1": "0.5",
+        "param2": "lt"
+       }
+      }
+     },
+     "evolvePhase": 4,
+     "potentialLevel": 2,
+     "weapon": {
+      "weaponData": {
+       "id": "d24fe31909793faf478670f89da000eb",
+       "name": "Jade Vessel",
+       "iconUrl": "https://static.skport.com/image/common/20261008/8665c9b0ab3626f59bba07d4410fe248.png",
+       "rarity": {
+        "key": "rarity_6",
+        "value": "6"
+       },
+       "type": {
+        "key": "weapon_type_claymores",
+        "value": "Greatsword"
+       },
+       "function": "A weapon equipped by Endfield operators to significantly boost their combat capabilities.",
+       "description": "A special greatsword produced by Hongshan Swordmancers. It is constructed using special materials and resembles a special jade instrument used in ancient Yanese rituals. The weapon is massive, yet is surprisingly light and allows its wielder to unleash a devastating flurry of attacks.",
+       "skills": [
+        {
+         "key": "wpn_attr_wisd_high",
+         "value": "Intellect [L]"
+        },
+        {
+         "key": "wpn_sp_attr_crystdam_high",
+         "value": "Cryo DMG [L]"
+        },
+        {
+         "key": "sk_wpn_claym_0018",
+         "value": "Efficacy: Dabbles of Ink"
+        }
+       ],
+       "skillInfos": [
+        {
+         "skill": {
+          "key": "wpn_attr_wisd_high",
+          "value": "Intellect [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_wisd"
+        },
+        {
+         "skill": {
+          "key": "wpn_sp_attr_crystdam_high",
+          "value": "Cryo DMG [L]"
+         },
+         "maxLevel": 9,
+         "gemTagId": "attr_icedam"
+        },
+        {
+         "skill": {
+          "key": "sk_wpn_claym_0018",
+          "value": "Efficacy: Dabbles of Ink"
+         },
+         "maxLevel": 4,
+         "gemTagId": "keyword"
+        }
+       ]
+      },
+      "level": 90,
+      "refineLevel": 0,
+      "breakthroughLevel": 4,
+      "gem": {
+       "id": "item_gem_rarity_5-310139abd111050e816e703d94191bd7",
+       "icon": "",
+       "gemData": {
+        "termId": "310139abd111050e816e703d94191bd7",
+        "name": "Flawless EssenceÂ·Efficacy",
+        "icon": "https://static.skport.com/image/common/20260310/99c56b89a6f146647e304314a4791ebd.png",
+        "templateId": "item_gem_rarity_5"
+       },
+       "terms": [
+        {
+         "id": "582bc698e5f5399c1725fa734e2562de",
+         "cost": 6,
+         "name": "Intellect"
+        },
+        {
+         "id": "e371a0e5607be7734d55a2d9974ba7c2",
+         "cost": 6,
+         "name": "Cryo DMG"
+        },
+        {
+         "id": "310139abd111050e816e703d94191bd7",
+         "cost": 3,
+         "name": "Efficacy"
+        }
+       ]
+      },
+      "wikiItemId": "1280",
+      "skills": [
+       {
+        "key": "wpn_attr_wisd_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "582bc698e5f5399c1725fa734e2562de",
+        "name": "Intellect [L]"
+       },
+       {
+        "key": "wpn_sp_attr_crystdam_high",
+        "level": 9,
+        "currentMaxLevel": 9,
+        "currentBaseLevel": 3,
+        "gemTermId": "e371a0e5607be7734d55a2d9974ba7c2",
+        "name": "Cryo DMG [L]"
+       },
+       {
+        "key": "sk_wpn_claym_0018",
+        "level": 4,
+        "currentMaxLevel": 4,
+        "currentBaseLevel": 1,
+        "gemTermId": "310139abd111050e816e703d94191bd7",
+        "name": "Efficacy: Dabbles of Ink"
+       }
+      ]
+     },
+     "gender": "CHAR_GENDER_FEMALE",
+     "ownTs": "1792043554",
+     "wikiItemId": "1278",
+     "talent": {
+      "latestBreakNode": "charBreak70",
+      "attrNodes": [
+       "chr_0036_jsspsi_1",
+       "chr_0036_jsspsi_3",
+       "chr_0036_jsspsi_5",
+       "chr_0036_jsspsi_7"
+      ],
+      "latestPassiveSkillNodes": [
+       "chr_0036_jsspsi_passive_skill_0_2",
+       "chr_0036_jsspsi_passive_skill_1_2"
+      ],
+      "latestFactorySkillNodes": [
+       "fac_chr_0036_jsspsi_0_2",
+       "fac_chr_0036_jsspsi_1_2"
+      ],
+      "latestSpaceshipSkillNodes": [
+       "spaceship_skill_chr_0036_jsspsi_1_2",
+       "spaceship_skill_chr_0036_jsspsi_2_2"
+      ]
+     }
+    }
+   ],
+   "achieve": {
+    "achieveMedals": [
+     {
+      "achievementData": {
+       "id": "f8a8d7f401de0714d8754dab42b9756d",
+       "name": "Steady Sales",
+       "initIcon": "https://static.skport.com/image/common/20260330/6e012251c7bcfc8b7a3852bb52ce4af7.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "https://static.skport.com/image/common/20260330/83a8f33800dd3606d4dc222a7f36d9f8.png",
+       "cateName": "Construction",
+       "canCertify": false,
+       "cate": "achv_type_factory",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": true,
+      "obtainTs": "1771524482"
+     },
+     {
+      "achievementData": {
+       "id": "ec14a870c786f1a65c634c38c288eca7",
+       "name": "\"Blitzcrash's Silent Passing\"",
+       "initIcon": "https://static.skport.com/image/common/20260713/47ed3e3a104236f0fa54add763475659.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Technical",
+       "canCertify": false,
+       "cate": "achv_type_battle",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": false,
+      "obtainTs": "1784625184"
+     },
+     {
+      "achievementData": {
+       "id": "c83662a15fcaf507d936de4fa90e0811",
+       "name": "\"A Fistful of Reflections\"",
+       "initIcon": "https://static.skport.com/image/common/20260604/3ff1ff3af64c5858faba3f7ce1607bfa.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Chapter",
+       "canCertify": false,
+       "cate": "achv_type_quest",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": false,
+      "obtainTs": "1787567496"
+     },
+     {
+      "achievementData": {
+       "id": "f989ebd9dfb6acc081ce735aa709a8c7",
+       "name": "\"Battle of the Four Emperors\"",
+       "initIcon": "https://static.skport.com/image/common/20260330/91e6bf3817807a51e6f1cd3d2db15f35.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Wondrous",
+       "canCertify": false,
+       "cate": "achv_type_hide",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": false,
+      "obtainTs": "1770288684"
+     },
+     {
+      "achievementData": {
+       "id": "952bc3493723a0e68ab164f9d6574383",
+       "name": "Valley Anchorer",
+       "initIcon": "https://static.skport.com/image/common/20260330/34621f74955df6c0d86e7587b0ce9b63.png",
+       "reforge2Icon": "https://static.skport.com/image/common/20260330/3382e915b32b65af913c4c9809e9405f.png",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Regional",
+       "canCertify": false,
+       "cate": "achv_type_adventure",
+       "initLevel": 1
+      },
+      "level": 2,
+      "isPlated": false,
+      "obtainTs": "1770696063"
+     },
+     {
+      "achievementData": {
+       "id": "81bd0021f3ef3d052d52bfc7f636b83d",
+       "name": "Wuling Outpost Builder â ",
+       "initIcon": "https://static.skport.com/image/common/20260416/b172a73501efd5a49ad352c109d76c52.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "https://static.skport.com/image/common/20260416/fd2a74954837a1023d43a9cda165695f.png",
+       "cateName": "Construction",
+       "canCertify": false,
+       "cate": "achv_type_factory",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": true,
+      "obtainTs": "1781531870"
+     },
+     {
+      "achievementData": {
+       "id": "99b08fcb7565c3d0fc306780980ff5e4",
+       "name": "Valley Outpost Builder",
+       "initIcon": "https://static.skport.com/image/common/20260330/a1aac9289dfdc1b57859dce3a3c9de6d.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "https://static.skport.com/image/common/20260330/46cfd601becb6ff43914356d0e063d74.png",
+       "cateName": "Construction",
+       "canCertify": false,
+       "cate": "achv_type_factory",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": true,
+      "obtainTs": "1770793049"
+     },
+     {
+      "achievementData": {
+       "id": "7a7049ad6b48e22b08d786980fb94f8a",
+       "name": "Potential Unleashed",
+       "initIcon": "https://static.skport.com/image/common/20260330/9e04e77315ab8c2083387073514a3886.png",
+       "reforge2Icon": "https://static.skport.com/image/common/20260330/16225c9d5f6f01e487696a2556d911e7.png",
+       "reforge3Icon": "https://static.skport.com/image/common/20260330/1a30d87f7b93f02a77a9d59bcf9c9f2b.png",
+       "platedIcon": "",
+       "cateName": "Progression",
+       "canCertify": true,
+       "cate": "achv_type_growth",
+       "initLevel": 1
+      },
+      "level": 3,
+      "isPlated": false,
+      "obtainTs": "1791238826"
+     },
+     {
+      "achievementData": {
+       "id": "002526a29e9dac1125af25cd5d8c34df",
+       "name": "\"Mega-Beast Subdued\"",
+       "initIcon": "https://static.skport.com/image/common/20260604/4c467107575ec1c638a78d7ddb6c60de.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Technical",
+       "canCertify": false,
+       "cate": "achv_type_battle",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": false,
+      "obtainTs": "1782234557"
+     },
+     {
+      "achievementData": {
+       "id": "bef48ad5538c32f45299ad5f5001b33d",
+       "name": "\"NO MORE KIDNAPPING!\"",
+       "initIcon": "https://static.skport.com/image/common/20260310/b56c5456bba2c95780634aaf11ea7b20.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "",
+       "cateName": "Technical",
+       "canCertify": false,
+       "cate": "achv_type_battle",
+       "initLevel": 2
+      },
+      "level": 1,
+      "isPlated": false,
+      "obtainTs": "1774937959"
+     }
+    ],
+    "display": {
+     "1": "7a7049ad6b48e22b08d786980fb94f8a",
+     "2": "002526a29e9dac1125af25cd5d8c34df",
+     "3": "f8a8d7f401de0714d8754dab42b9756d",
+     "4": "ec14a870c786f1a65c634c38c288eca7",
+     "5": "952bc3493723a0e68ab164f9d6574383",
+     "6": "81bd0021f3ef3d052d52bfc7f636b83d",
+     "7": "f989ebd9dfb6acc081ce735aa709a8c7",
+     "8": "99b08fcb7565c3d0fc306780980ff5e4",
+     "9": "c83662a15fcaf507d936de4fa90e0811",
+     "10": "bef48ad5538c32f45299ad5f5001b33d"
+    },
+    "count": 128
+   },
+   "spaceShip": {
+    "rooms": [
+     {
+      "id": "",
+      "type": 5,
+      "level": 2,
+      "chars": [
+       {
+        "charId": "chr_0025_ardelia",
+        "physicalStrength": 6987.366,
+        "favorability": 315,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/8acdcdaa6c69979a9b01f77281465a0a.png"
+       },
+       {
+        "charId": "chr_0028_wulfa",
+        "physicalStrength": 6987.366,
+        "favorability": 318,
+        "avatarUrl": "https://static.skport.com/image/common/20260311/bb6cca7221225af1ce18c1850d1abb7e.png"
+       }
+      ],
+      "reports": {}
+     },
+     {
+      "id": "",
+      "type": 2,
+      "level": 2,
+      "chars": [
+       {
+        "charId": "chr_0017_yvonne",
+        "physicalStrength": 729.9562,
+        "favorability": 1500,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/bacd477f99daf106e4995acef6c85456.png"
+       },
+       {
+        "charId": "chr_0032_lizhiyan",
+        "physicalStrength": 729.9562,
+        "favorability": 355,
+        "avatarUrl": "https://static.skport.com/image/common/20260713/214ab1caf883e6ca4645b518eacd7231.png"
+       }
+      ],
+      "reports": {}
+     },
+     {
+      "id": "",
+      "type": 1,
+      "level": 3,
+      "chars": [
+       {
+        "charId": "chr_0016_laevat",
+        "physicalStrength": 5378.914,
+        "favorability": 377,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/15a984eaecaf0d7c47d871175ae38937.png"
+       },
+       {
+        "charId": "chr_0013_aglina",
+        "physicalStrength": 5378.034,
+        "favorability": 420,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/f64cf02eebd4b85c59754383588073de.png"
+       },
+       {
+        "charId": "chr_0030_zhuangfy",
+        "physicalStrength": 5378.914,
+        "favorability": 315,
+        "avatarUrl": "https://static.skport.com/image/common/20260416/e6c38b8d6240eaa77a5763f4e855b888.png"
+       }
+      ],
+      "reports": {}
+     },
+     {
+      "id": "",
+      "type": 3,
+      "level": 1,
+      "chars": [],
+      "reports": {}
+     },
+     {
+      "id": "",
+      "type": 0,
+      "level": 4,
+      "chars": [
+       {
+        "charId": "chr_0024_deepfin",
+        "physicalStrength": 7105.714,
+        "favorability": 1500,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/cd332677f9e7fb1f297a7c85c34d8c42.png"
+       },
+       {
+        "charId": "chr_0035_liino",
+        "physicalStrength": 6766.3135,
+        "favorability": 1500,
+        "avatarUrl": "https://static.skport.com/image/common/20260713/5c88d0afcc58b2be7c2feacb5dc45d42.png"
+       },
+       {
+        "charId": "chr_0021_whiten",
+        "physicalStrength": 7423.914,
+        "favorability": 795,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/cc496a068b34e2d8df6b331f55e9ee8e.png"
+       }
+      ],
+      "reports": {}
+     },
+     {
+      "id": "",
+      "type": 1,
+      "level": 3,
+      "chars": [
+       {
+        "charId": "chr_0009_azrila",
+        "physicalStrength": 7105.714,
+        "favorability": 0,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/92856e21b01c0e622b3a110c1345bf9a.png"
+       },
+       {
+        "charId": "chr_0004_pelica",
+        "physicalStrength": 7105.714,
+        "favorability": 105,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/c7d4eaff6c2336b0e9d217e32d208e28.png"
+       },
+       {
+        "charId": "chr_0006_wolfgd",
+        "physicalStrength": 7105.714,
+        "favorability": 0,
+        "avatarUrl": "https://static.skport.com/image/common/20251112/7ddb3b88ce6f0029e143000cfece7b65.png"
+       }
+      ],
+      "reports": {}
+     }
+    ]
+   },
+   "domain": [
+    {
+     "domainId": "domain_1",
+     "level": 12,
+     "settlements": [
+      {
+       "id": "stm_tundra_1",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "2200000",
+       "moneyMax": "2200000",
+       "officerCharIds": "0b199a0eaae5a9b37a5d3c990b6c8bca",
+       "officerCharAvatar": "https://static.skport.com/image/common/20251112/15a984eaecaf0d7c47d871175ae38937.png",
+       "name": "Refugee Camp",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      },
+      {
+       "id": "stm_tundra_2",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "3000000",
+       "moneyMax": "3000000",
+       "officerCharIds": "05047b063867199b953b30ac8df9a853",
+       "officerCharAvatar": "https://static.skport.com/image/common/20251112/bacd477f99daf106e4995acef6c85456.png",
+       "name": "Infra-Station",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      },
+      {
+       "id": "stm_tundra_3",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "3800000",
+       "moneyMax": "3800000",
+       "officerCharIds": "9c4a116d4dba884c3db9b7f46ea7ea20",
+       "officerCharAvatar": "https://static.skport.com/image/common/20251112/9c14933aa23b96d01658caed5a3b9907.png",
+       "name": "Reconstruction HQ",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      }
+     ],
+     "moneyMgr": {
+      "total": "30000000",
+      "count": "14966802"
+     },
+     "collections": [
+      {
+       "levelId": "map01_lv001",
+       "puzzleCount": 43,
+       "trchestCount": 107,
+       "equipTrchestCount": 0,
+       "pieceCount": 0,
+       "blackboxCount": 11,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map01_lv002",
+       "puzzleCount": 14,
+       "trchestCount": 12,
+       "equipTrchestCount": 0,
+       "pieceCount": 0,
+       "blackboxCount": 4,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map01_lv003",
+       "puzzleCount": 17,
+       "trchestCount": 32,
+       "equipTrchestCount": 0,
+       "pieceCount": 1,
+       "blackboxCount": 3,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map01_lv005",
+       "puzzleCount": 30,
+       "trchestCount": 36,
+       "equipTrchestCount": 0,
+       "pieceCount": 1,
+       "blackboxCount": 4,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map01_lv006",
+       "puzzleCount": 39,
+       "trchestCount": 65,
+       "equipTrchestCount": 0,
+       "pieceCount": 2,
+       "blackboxCount": 3,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map01_lv007",
+       "puzzleCount": 23,
+       "trchestCount": 36,
+       "equipTrchestCount": 0,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 0
+      }
+     ],
+     "levels": [
+      {
+       "levelId": "map01_lv001",
+       "name": "The Hub",
+       "puzzleCount": {
+        "count": 43,
+        "total": 43
+       },
+       "trchestCount": {
+        "count": 107,
+        "total": 107
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 11,
+        "total": 11
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map01_lv002",
+       "name": "Valley Pass",
+       "puzzleCount": {
+        "count": 14,
+        "total": 14
+       },
+       "trchestCount": {
+        "count": 12,
+        "total": 12
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 4,
+        "total": 4
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map01_lv003",
+       "name": "Aburrey Quarry",
+       "puzzleCount": {
+        "count": 17,
+        "total": 17
+       },
+       "trchestCount": {
+        "count": 32,
+        "total": 32
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 1,
+        "total": 1
+       },
+       "blackboxCount": {
+        "count": 3,
+        "total": 3
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map01_lv005",
+       "name": "Originium Science Park",
+       "puzzleCount": {
+        "count": 30,
+        "total": 30
+       },
+       "trchestCount": {
+        "count": 36,
+        "total": 36
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 1,
+        "total": 1
+       },
+       "blackboxCount": {
+        "count": 4,
+        "total": 4
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map01_lv006",
+       "name": "Origin Lodespring",
+       "puzzleCount": {
+        "count": 39,
+        "total": 39
+       },
+       "trchestCount": {
+        "count": 65,
+        "total": 65
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 2,
+        "total": 2
+       },
+       "blackboxCount": {
+        "count": 3,
+        "total": 3
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map01_lv007",
+       "name": "Power Plateau",
+       "puzzleCount": {
+        "count": 23,
+        "total": 23
+       },
+       "trchestCount": {
+        "count": 36,
+        "total": 36
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      }
+     ],
+     "factory": null,
+     "name": "Valley IV"
+    },
+    {
+     "domainId": "domain_2",
+     "level": 30,
+     "settlements": [
+      {
+       "id": "stm_hongs_1",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "3178377",
+       "moneyMax": "3200000",
+       "officerCharIds": "26e3cc73ac23deb8f6a875038d2243ff",
+       "officerCharAvatar": "https://static.skport.com/image/common/20251112/7ddb3b88ce6f0029e143000cfece7b65.png",
+       "name": "Sky King Flats Construction Site",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      },
+      {
+       "id": "stm_hongs_2",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "2000000",
+       "moneyMax": "2000000",
+       "officerCharIds": "c2fa8a588cab489795166bed5161fefc",
+       "officerCharAvatar": "https://static.skport.com/image/common/20260416/e6c38b8d6240eaa77a5763f4e855b888.png",
+       "name": "Cardiac Remediation Station",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      },
+      {
+       "id": "stm_hongs_3",
+       "level": 4,
+       "exp": "0",
+       "expToLevelUp": "0",
+       "remainMoney": "2500000",
+       "moneyMax": "2500000",
+       "officerCharIds": "989411af662b6e9b3f0cef53e9d32f1a",
+       "officerCharAvatar": "https://static.skport.com/image/common/20260713/214ab1caf883e6ca4645b518eacd7231.png",
+       "name": "Xiranflow Cloudseeder Station",
+       "lastTickTime": "1794777620",
+       "isFinalMaxLevel": true
+      }
+     ],
+     "moneyMgr": {
+      "total": "50000000",
+      "count": "37497"
+     },
+     "collections": [
+      {
+       "levelId": "map02_lv001",
+       "puzzleCount": 20,
+       "trchestCount": 44,
+       "equipTrchestCount": 4,
+       "pieceCount": 1,
+       "blackboxCount": 6,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv002",
+       "puzzleCount": 61,
+       "trchestCount": 198,
+       "equipTrchestCount": 8,
+       "pieceCount": 1,
+       "blackboxCount": 8,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv003",
+       "puzzleCount": 14,
+       "trchestCount": 36,
+       "equipTrchestCount": 3,
+       "pieceCount": 0,
+       "blackboxCount": 5,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv004",
+       "puzzleCount": 26,
+       "trchestCount": 48,
+       "equipTrchestCount": 3,
+       "pieceCount": 0,
+       "blackboxCount": 4,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "indie_dg007",
+       "puzzleCount": 2,
+       "trchestCount": 4,
+       "equipTrchestCount": 1,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv005",
+       "puzzleCount": 17,
+       "trchestCount": 32,
+       "equipTrchestCount": 0,
+       "pieceCount": 1,
+       "blackboxCount": 2,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv006",
+       "puzzleCount": 15,
+       "trchestCount": 40,
+       "equipTrchestCount": 2,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 0
+      },
+      {
+       "levelId": "map02_lv007",
+       "puzzleCount": 16,
+       "trchestCount": 26,
+       "equipTrchestCount": 2,
+       "pieceCount": 0,
+       "blackboxCount": 4,
+       "trstarCount": 8
+      },
+      {
+       "levelId": "map02_lv008",
+       "puzzleCount": 14,
+       "trchestCount": 55,
+       "equipTrchestCount": 0,
+       "pieceCount": 0,
+       "blackboxCount": 4,
+       "trstarCount": 16
+      },
+      {
+       "levelId": "map02_lv009",
+       "puzzleCount": 13,
+       "trchestCount": 39,
+       "equipTrchestCount": 2,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 8
+      },
+      {
+       "levelId": "indie_dg016",
+       "puzzleCount": 0,
+       "trchestCount": 28,
+       "equipTrchestCount": 0,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 7
+      },
+      {
+       "levelId": "map02_lv010",
+       "puzzleCount": 28,
+       "trchestCount": 101,
+       "equipTrchestCount": 2,
+       "pieceCount": 0,
+       "blackboxCount": 0,
+       "trstarCount": 33
+      }
+     ],
+     "levels": [
+      {
+       "levelId": "map02_lv001",
+       "name": "Jingyu Valley",
+       "puzzleCount": {
+        "count": 20,
+        "total": 20
+       },
+       "trchestCount": {
+        "count": 44,
+        "total": 44
+       },
+       "equipTrchestCount": {
+        "count": 4,
+        "total": 4
+       },
+       "pieceCount": {
+        "count": 1,
+        "total": 1
+       },
+       "blackboxCount": {
+        "count": 6,
+        "total": 6
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv002",
+       "name": "Wuling City",
+       "puzzleCount": {
+        "count": 61,
+        "total": 61
+       },
+       "trchestCount": {
+        "count": 198,
+        "total": 198
+       },
+       "equipTrchestCount": {
+        "count": 8,
+        "total": 8
+       },
+       "pieceCount": {
+        "count": 1,
+        "total": 1
+       },
+       "blackboxCount": {
+        "count": 8,
+        "total": 8
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv003",
+       "name": "Qingbo Stockade",
+       "puzzleCount": {
+        "count": 14,
+        "total": 14
+       },
+       "trchestCount": {
+        "count": 36,
+        "total": 36
+       },
+       "equipTrchestCount": {
+        "count": 3,
+        "total": 3
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 5,
+        "total": 5
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv004",
+       "name": "Marker Stone",
+       "puzzleCount": {
+        "count": 26,
+        "total": 26
+       },
+       "trchestCount": {
+        "count": 48,
+        "total": 48
+       },
+       "equipTrchestCount": {
+        "count": 3,
+        "total": 3
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 4,
+        "total": 4
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "indie_dg007",
+       "name": "Marker Stone Interiors",
+       "puzzleCount": {
+        "count": 2,
+        "total": 2
+       },
+       "trchestCount": {
+        "count": 4,
+        "total": 5
+       },
+       "equipTrchestCount": {
+        "count": 1,
+        "total": 1
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv005",
+       "name": "Test Area",
+       "puzzleCount": {
+        "count": 17,
+        "total": 17
+       },
+       "trchestCount": {
+        "count": 32,
+        "total": 32
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 1,
+        "total": 1
+       },
+       "blackboxCount": {
+        "count": 2,
+        "total": 2
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv006",
+       "name": "Sword Vault Dale",
+       "puzzleCount": {
+        "count": 15,
+        "total": 15
+       },
+       "trchestCount": {
+        "count": 40,
+        "total": 40
+       },
+       "equipTrchestCount": {
+        "count": 2,
+        "total": 2
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 0,
+        "total": 0
+       }
+      },
+      {
+       "levelId": "map02_lv007",
+       "name": "Yinglung Pass",
+       "puzzleCount": {
+        "count": 16,
+        "total": 16
+       },
+       "trchestCount": {
+        "count": 26,
+        "total": 26
+       },
+       "equipTrchestCount": {
+        "count": 2,
+        "total": 2
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 4,
+        "total": 4
+       },
+       "trstarCount": {
+        "count": 8,
+        "total": 8
+       }
+      },
+      {
+       "levelId": "map02_lv008",
+       "name": "North Wuling Exclusion Zone",
+       "puzzleCount": {
+        "count": 14,
+        "total": 28
+       },
+       "trchestCount": {
+        "count": 55,
+        "total": 85
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 4,
+        "total": 4
+       },
+       "trstarCount": {
+        "count": 16,
+        "total": 39
+       }
+      },
+      {
+       "levelId": "map02_lv009",
+       "name": "Snowy Forest",
+       "puzzleCount": {
+        "count": 13,
+        "total": 13
+       },
+       "trchestCount": {
+        "count": 39,
+        "total": 39
+       },
+       "equipTrchestCount": {
+        "count": 2,
+        "total": 2
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 8,
+        "total": 8
+       }
+      },
+      {
+       "levelId": "indie_dg016",
+       "name": "Suiming",
+       "puzzleCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trchestCount": {
+        "count": 28,
+        "total": 28
+       },
+       "equipTrchestCount": {
+        "count": 0,
+        "total": 0
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 7,
+        "total": 7
+       }
+      },
+      {
+       "levelId": "map02_lv010",
+       "name": "Si's Painting",
+       "puzzleCount": {
+        "count": 28,
+        "total": 28
+       },
+       "trchestCount": {
+        "count": 101,
+        "total": 101
+       },
+       "equipTrchestCount": {
+        "count": 2,
+        "total": 2
+       },
+       "pieceCount": {
+        "count": 0,
+        "total": 0
+       },
+       "blackboxCount": {
+        "count": 0,
+        "total": 0
+       },
+       "trstarCount": {
+        "count": 33,
+        "total": 36
+       }
+      }
+     ],
+     "factory": null,
+     "name": "Wuling"
+    }
+   ],
+   "dungeon": {
+    "curStamina": "360",
+    "maxTs": "0",
+    "maxStamina": "360"
+   },
+   "bpSystem": {
+    "curLevel": 60,
+    "maxLevel": 60
+   },
+   "dailyMission": {
+    "dailyActivation": 20,
+    "maxDailyActivation": 100
+   },
+   "weeklyMission": {
+    "score": 0,
+    "total": 10
+   },
+   "config": {
+    "charSwitch": true,
+    "standingsSwitch": false,
+    "charIds": [
+     "989411af662b6e9b3f0cef53e9d32f1a",
+     "0b199a0eaae5a9b37a5d3c990b6c8bca",
+     "38bc410d7e134743ed8ee881d8400833",
+     "3a5f50e8cc825f31214c1ee832a36b97",
+     "0295282ff895bd1b7242d137da99dc94",
+     "c2fa8a588cab489795166bed5161fefc",
+     "395d6ad94f5b166d78c1831263262386",
+     "0e691c08a09d81bc7f8fa14a1cb03561"
+    ],
+    "modules": [
+     {
+      "id": "MODULE_CHAR",
+      "switch": true
+     },
+     {
+      "id": "MODULE_REALTIME",
+      "switch": true
+     },
+     {
+      "id": "MODULE_CRISIS_CONTRACT",
+      "switch": true
+     },
+     {
+      "id": "MODULE_ACHIEVE",
+      "switch": true
+     },
+     {
+      "id": "MODULE_DOMAIN_BUILD",
+      "switch": true
+     },
+     {
+      "id": "MODULE_DOMAIN_EXPLORE",
+      "switch": true
+     },
+     {
+      "id": "MODULE_WAR_ECHOES",
+      "switch": true
+     },
+     {
+      "id": "MODULE_INDIE_HARD",
+      "switch": false
+     },
+     {
+      "id": "MODULE_SPACESHIP",
+      "switch": true
+     }
+    ],
+    "realtimeModules": [
+     {
+      "id": "REALTIME_MODULE_DAILY_MISSION"
+     },
+     {
+      "id": "REALTIME_MODULE_WEEKLY_MISSION"
+     },
+     {
+      "id": "REALTIME_MODULE_BP_SYSTEM"
+     },
+     {
+      "id": "REALTIME_MODULE_WAR_ECHOES"
+     },
+     {
+      "id": "REALTIME_MODULE_CREDIT"
+     },
+     {
+      "id": "REALTIME_MODULE_SEEK_SUSPICION"
+     }
+    ]
+   },
+   "currentTs": "1794842555",
+   "quickaccess": [
+    {
+     "name": "Progression Calculator",
+     "icon": "https://static.skport.com/image/common/20260807/e0455a7e66bb2445b72b904fcb8c4044.png",
+     "link": "skport://web?url=https%3A%2F%2Fgame.skport.com%2Ftools%2Fendfield%2Fcost-calculator%3Fheader%3D0"
+    },
+    {
+     "name": "Build Guide",
+     "icon": "https://static.skport.com/image/common/20260122/edc6138bce71a8e7608bc6b5fe68df73.png",
+     "link": "skport://web?url=https%3A%2F%2Fgame.skport.com%2Ftools%2Fendfield%2Flist%3Fheader%3D0%26ctr_orientation%3Dlandscape%26routeId%3D1%26hg_media%3Dskport%26hg_link_campaign%3Dprotocolterminal"
+    },
+    {
+     "name": "Team Picks",
+     "icon": "https://static.skport.com/image/common/20260122/02aeb7973d91d3ead6b0d31340bb05ae.png",
+     "link": "skport://web?url=https%3A%2F%2Fgame.skport.com%2Ftools%2Fendfield%2Flist%3Fheader%3D0%26ctr_orientation%3Dlandscape%26routeId%3D0%26hg_media%3Dskport%26hg_link_campaign%3Dprotocolterminal"
+    },
+    {
+     "name": "Map Tools",
+     "icon": "https://static.skport.com/image/common/20260122/4cb6fd9afe145009830176cf2c2709ca.png",
+     "link": "skport://web?url=https%3A%2F%2Fgame.skport.com%2Fmap%2Fendfield%3Fheader%3D0%26hg_media%3Dskport%26hg_link_campaign%3Dprotocolterminal"
+    }
+   ],
+   "indieHard": {
+    "indieHardGroups": [
+     {
+      "id": "2d8251dca781f78a8e9c23a74968ff0f",
+      "name": "Murmurs of the Deep Forest",
+      "pic": "https://static.skport.com/image/common/20261019/b4a01c77de4a4189c2de28bf243ff4d2.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "242ad4193299c2d26f5b9b2259077b11",
+         "name": "Critters That Dig",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "62985d0c15da221ce6d55bab707d7498",
+         "name": "Critters That Dig: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "a447d88cf2d8d058f38fa04de51cc1c1",
+         "name": "Shadows That Bind",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "fb4a35a9f9a618d1ce47cdf06fc2d851",
+         "name": "Shadows That Bind: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "647f689cfa08ea8b10ca957551f79f4d",
+         "name": "Woodcrafts That Link",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "8dca819ff321f720e147671a6f85e00d",
+         "name": "Woodcrafts That Link: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "c80b3583a1846a6f2f6a2f7d965d4d64",
+         "name": "Hatred That Sprawls",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "829403bff8d66ad3ba54023e13197c41",
+         "name": "Hatred That Sprawls: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1792641600",
+      "activityEndTs": "0",
+      "activityName": "Murmurs of the Deep Forest",
+      "isInActivity": false
+     },
+     {
+      "id": "c2c04d697965e22f6ad4a1aa642f8fe0",
+      "name": "Marked by Dark Shadows",
+      "pic": "https://static.skport.com/image/common/20260923/af0ca53854291b2b201a2da747406762.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "1fab00d40e9535fc40b6c006ef982d34",
+         "name": "Tri-Aggelated Targeting",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "34278e67b06c0a9ef9d9318dc044cc98",
+         "name": "Tri-Aggelated Targeting: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "9b509d9481c9af4084e9d99089ce34f9",
+         "name": "Feral Carnage of Shadow",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "348fc2a28a1cb2de26f5f6583f88c3cb",
+         "name": "Feral Carnage of Shadow: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "b4d592c36eb7c744f1470d49e1ac2c35",
+         "name": "Sudden Roar of Oblivion",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "b045d273183c65a6a3624bcf3c7804ca",
+         "name": "Sudden Roar of Oblivion: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "b322bca3b9c728c52c7662a6f89a91b8",
+         "name": "Arc of Shadow Flare",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "ce963015b38763c380b0d564580a599f",
+         "name": "Arc of Shadow Flare: Agony",
+         "isPass": true
+        }
+       }
+      ],
+      "activityStartTs": "1791172800",
+      "activityEndTs": "0",
+      "activityName": "Marked by Dark Shadows",
+      "isInActivity": false
+     },
+     {
+      "id": "1a5c11e8e51aa225199b282d3dc3941e",
+      "name": "Howlers of the Crag",
+      "pic": "https://static.skport.com/image/common/20260806/d0d6ce7b77bc4a730132816cfbf9478c.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "bf4064b5784e7429c35bf5d9e9d9d078",
+         "name": "Visitors of Qingbo",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "93273b4e23b8ec1f3a528a3581ce8e70",
+         "name": "Visitors of Qingbo: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "849ec852ed8601b76adfe2ca4dc1c371",
+         "name": "Earthshaking Hazefyre",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "4c88dd150b43783deb3d0e4be9ebb741",
+         "name": "Earthshaking Hazefyre: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "b3fe0f0a89da9879f1fa82738042ca29",
+         "name": "Mangler and Friends",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "92e9284dd32b1dfb787a757998d99062",
+         "name": "Mangler and Friends: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "50d4c903cfa011bc2f8ca2d98a6681dc",
+         "name": "King of the Crag",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "fc2bb6cb45729bca7f3e329d31502969",
+         "name": "King of the Crag: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1785988800",
+      "activityEndTs": "0",
+      "activityName": "Howlers of the Crag",
+      "isInActivity": false
+     },
+     {
+      "id": "bb58be58833298b2dd521ddf13a2f39f",
+      "name": "Contention of Deathly Silences",
+      "pic": "https://static.skport.com/image/common/20260701/17646b9a14ca313bd4cdc2f8bb3e72ff.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "1e43a7c3823c591138f9ca4511ea42c3",
+         "name": "Phalanx of Thorns",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "c2a499266ee045a0a53192b6fd5c38d6",
+         "name": "Phalanx of Thorns: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "bc294e9ec31cd8eb6cc14e89eb9d080a",
+         "name": "Eyes of Solvent-Kind",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "d58ab5ee0640567251525fa21c531e93",
+         "name": "Eyes of Solvent-Kind: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "e7a5e5b662d40790538853693a4df63a",
+         "name": "Ritual Vortex",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "e440ed649b131f44f5b0e01e5d5a8262",
+         "name": "Ritual Vortex: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "a0864c9b6c5d53e5eb0752092b6f65af",
+         "name": "Wading in Raker Turf",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "de8f6850e86fd72675067211055c3b27",
+         "name": "Wading in Raker Turf: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "e9ba004da3db0f67d6cbdc94c714c9d3",
+         "name": "Harrowing Ãthillu",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "c03dfa9d9fced4e0121ae910ca8e1201",
+         "name": "Harrowing Ãthillu: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "61e39dc9e0fee9fd7bea608e2f3ac7c5",
+         "name": "Raging Drummer",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "0e500c1dd58da284639170fecc6d0ae1",
+         "name": "Raging Drummer: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1782964800",
+      "activityEndTs": "0",
+      "activityName": "Contention of Deathly Silences",
+      "isInActivity": false
+     },
+     {
+      "id": "249b8afb6d538d82a83b7d7de54e8b36",
+      "name": "Turbidity Manifest",
+      "pic": "https://static.skport.com/image/common/20260513/0a575c2fa55a2876008511f3220f6287.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "5b73f6d4a76e33917dde444bf21586c7",
+         "name": "Silent Horizon",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "289e3ff2eefc213e5f1d99b6d81669fa",
+         "name": "Silent Horizon: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "0e3a1b3e1dedd6d44ab2318d0f669b36",
+         "name": "Withered Sea",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "05bb04f5ed839757aeb896e751bcb7c3",
+         "name": "Withered Sea: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "bae9d8494170155eaf070e7b2eb6ae61",
+         "name": "Tidal Grief",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "06e2d6ca26d85ef108996e98000c5fec",
+         "name": "Tidal Grief: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "a072d9439a3931db38db48b336d105ac",
+         "name": "Underflow Chasm",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "2bead5a2335b20dc107f602799855bb5",
+         "name": "Underflow Chasm: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "99ba3683b604050a90f70116ee740901",
+         "name": "Blood Debased",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "6aae9e0eb29c3b61d0f9584e57d15806",
+         "name": "Blood Debased: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "73ceb5d9c156612d38405d897e994590",
+         "name": "Cryostatic Connection",
+         "isPass": false
+        },
+        "hardDungeon": {
+         "id": "b31b19da4c7929a6383d78e617eacb93",
+         "name": "Cryostatic Connection: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1778212800",
+      "activityEndTs": "0",
+      "activityName": "Turbidity Manifest",
+      "isInActivity": false
+     },
+     {
+      "id": "b468ab05c1c9a6db51c5a881bb5879b5",
+      "name": "Searing Scars",
+      "pic": "https://static.skport.com/image/common/20260513/ad8520068fa10b2395b678c9d6717210.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "19f5bf18af6adaa1ea49169166bdefd6",
+         "name": "Sea of Loathing",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "78a1e0c9bc3ac92c042e998c17103cdd",
+         "name": "Sea of Loathing: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "48409f8c854898ec291becb3ac593bfd",
+         "name": "Melting Point of Flesh",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "cab75b11fd7820d65a57c8c678fe6ae1",
+         "name": "Melting Point of Flesh: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "0b1c729326054406119086645574ab99",
+         "name": "Howling Flame",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "432241e152f5bc8fcd4649182d3d9878",
+         "name": "Howling Flame: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1774497600",
+      "activityEndTs": "0",
+      "activityName": "Searing Scars",
+      "isInActivity": false
+     },
+     {
+      "id": "1a22a993798b925d527e782a67603fe7",
+      "name": "Inorganic Construct",
+      "pic": "https://static.skport.com/image/common/20260513/bf0002b2e0e984296e33b92d14798f80.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "90f5a41274c6746072a4c7866d94a043",
+         "name": "Bolts and Shadows",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "9f797b0021ade8f5d19f3ae2863a5d7b",
+         "name": "Bolts and Shadows: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "b070b395ae96afa8caba72aed6d4e430",
+         "name": "Rampaging Shields",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "69dbc864f9ae2f2dbdac0c23ee1e6c24",
+         "name": "Rampaging Shields: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "07d384d19a6889fdf9cdf073ff0da908",
+         "name": "Rock Solid",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "75ce78088f75f0809924788d0d384d64",
+         "name": "Rock Solid: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1771732800",
+      "activityEndTs": "0",
+      "activityName": "Inorganic Construct",
+      "isInActivity": false
+     },
+     {
+      "id": "73a436af4d6ea1aadc2805bdaf2f1555",
+      "name": "Those Forsaken by the Land",
+      "pic": "https://static.skport.com/image/common/20260513/da551caa2c0886e9635e9043c06573ef.png",
+      "dungeonGroups": [
+       {
+        "normalDungeon": {
+         "id": "10f6865b91233407110e9813437b6a2f",
+         "name": "Survive the Gas",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "78a9f440312dc3f612eaae728e99dcdf",
+         "name": "Survive the Gas: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "bf6413e8333648bb694eb19daad12aae",
+         "name": "Unorthodox Tactics",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "00ba84c3e93f8eb37c921a2b3a969cfe",
+         "name": "Unorthodox Tactics: Agony",
+         "isPass": false
+        }
+       },
+       {
+        "normalDungeon": {
+         "id": "4682496021f7c8953362991dbaaed43b",
+         "name": "Ballista and Axe",
+         "isPass": true
+        },
+        "hardDungeon": {
+         "id": "d787f96eb28a813559d560cf8e606c3a",
+         "name": "Ballista and Axe: Agony",
+         "isPass": false
+        }
+       }
+      ],
+      "activityStartTs": "1770868800",
+      "activityEndTs": "0",
+      "activityName": "Those Forsaken by the Land",
+      "isInActivity": false
+     }
+    ]
+   },
+   "warEchoes": {
+    "seasons": [
+     {
+      "id": "6",
+      "name": "Season of Fervor",
+      "kvImage": "https://static.skport.com/image/common/20261110/8275af5b15e6c846eaadf2cda38a9e99.png",
+      "headerImage": "https://static.skport.com/image/common/20261110/d3d7581c7a7b50850eab5b28b56260cb.png",
+      "startTs": "1793851200",
+      "endTs": "1795557600",
+      "stars": 4,
+      "allPlusTasks": false,
+      "weeks": [
+       {
+        "id": "2",
+        "name": "Cycle of Fervor â¡",
+        "startTs": "1794427200",
+        "endTs": "1795032000",
+        "stars": 4,
+        "allPlusTasks": false,
+        "dungeonGroups": [
+         {
+          "star": 2,
+          "plusTask": false,
+          "name": "Defense File: Shield"
+         },
+         {
+          "star": 0,
+          "plusTask": false,
+          "name": "Scars of Landbreaking"
+         },
+         {
+          "star": 2,
+          "plusTask": false,
+          "name": "Beastly Schemes"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "activity": {
+     "name": ""
+    }
+   },
+   "seekSuspicion": {
+    "count": 200000,
+    "total": 200000
+   },
+   "crisisContract": [
+    {
+     "id": "2b98d70ff72c60026f5cf697a8aebbe2",
+     "highest": 11,
+     "challengeCount": 4,
+     "achieve": {
+      "achievementData": {
+       "id": "20d3dc68d6511cf0e1e92a2809402334",
+       "name": "\"Indigo Cleansed\"",
+       "initIcon": "https://static.skport.com/image/common/20261103/4c7729a04cc3fa4badf00680e6b3b7cd.png",
+       "reforge2Icon": "",
+       "reforge3Icon": "",
+       "platedIcon": "https://static.skport.com/image/common/20261103/9b400c4e6e69d16b9bf9aee2ceba7d8b.png",
+       "cateName": "Event",
+       "canCertify": false,
+       "cate": "achv_type_event",
+       "initLevel": 3
+      },
+      "level": 0,
+      "isPlated": false,
+      "obtainTs": "0"
+     },
+     "weeklyMission": {
+      "count": 1,
+      "total": 4
+     },
+     "indicatorMission": {
+      "count": 3,
+      "total": 5
+     },
+     "stageMission": {
+      "count": 0,
+      "total": 2
+     },
+     "name": "Contingency Contract: Indigo Experimental Operation",
+     "kvImage": "https://static.skport.com/image/common/20261105/9ced06cf92ca2ad78f6704dbdcf47ef2.png",
+     "startAtTs": "1793851200",
+     "endAtTs": "1796155200",
+     "gameplayEndAtTs": "1795557600",
+     "headerImage": "https://static.skport.com/image/common/20261105/9ced06cf92ca2ad78f6704dbdcf47ef2.png"
+    }
+   ],
+   "credit": {
+    "count": 168,
+    "total": 300,
+    "hasToday": true,
+    "nextRefreshTs": "1794859200"
+   }
+  }
+ }
+}

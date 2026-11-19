@@ -1,0 +1,977 @@
+{
+ "crisisContract": {
+  "status": {
+   "id": "2b98d70ff72c60026f5cf697a8aebbe2",
+   "highest": 11,
+   "challengeCount": 4,
+   "achieve": {
+    "achievementData": {
+     "id": "20d3dc68d6511cf0e1e92a2809402334",
+     "name": "\"Indigo Cleansed\"",
+     "initIcon": "https://static.skport.com/image/common/20261103/4c7729a04cc3fa4badf00680e6b3b7cd.png",
+     "reforge2Icon": "",
+     "reforge3Icon": "",
+     "platedIcon": "https://static.skport.com/image/common/20261103/9b400c4e6e69d16b9bf9aee2ceba7d8b.png",
+     "cateName": "Event",
+     "canCertify": false,
+     "cate": "achv_type_event",
+     "initLevel": 3
+    },
+    "level": 0,
+    "isPlated": false,
+    "obtainTs": "0"
+   },
+   "weeklyMission": {
+    "count": 1,
+    "total": 5
+   },
+   "indicatorMission": {
+    "count": 3,
+    "total": 5
+   },
+   "stageMission": {
+    "count": 0,
+    "total": 2
+   },
+   "name": "Contingency Contract: Indigo Experimental Operation",
+   "kvImage": "https://static.skport.com/image/common/20261105/421ff5ad67fae2eb71051f125d07e36b.png",
+   "startAtTs": "1793851200",
+   "endAtTs": "1796155200",
+   "gameplayEndAtTs": "1795557600",
+   "headerImage": "https://static.skport.com/image/common/20261105/9ced06cf92ca2ad78f6704dbdcf47ef2.png"
+  },
+  "history": {
+   "records": [
+    {
+     "id": "indie_contract002-2004475966_1794477091428-1794477091428",
+     "chars": [
+      {
+       "charId": "05047b063867199b953b30ac8df9a853",
+       "level": 90,
+       "potentialLevel": 1,
+       "avatarUrl": "https://static.skport.com/image/common/20251121/e63ce05be5614dd6df32eff18bb279c7.png"
+      },
+      {
+       "charId": "38bc410d7e134743ed8ee881d8400833",
+       "level": 90,
+       "potentialLevel": 2,
+       "avatarUrl": "https://static.skport.com/image/common/20261008/a63b0b093bfd921b8df1e6c5ee341a31.png"
+      },
+      {
+       "charId": "989411af662b6e9b3f0cef53e9d32f1a",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png"
+      },
+      {
+       "charId": "3839d35948216cc09368cd62167c7368",
+       "level": 90,
+       "potentialLevel": 5,
+       "avatarUrl": "https://static.skport.com/image/common/20251121/d2f6d7a22ba267e07d6ff5302e25921e.png"
+      }
+     ],
+     "ts": "1794477357",
+     "passTs": "255",
+     "isPass": true,
+     "indicatorCount": 11,
+     "passWave": 3,
+     "isBest": true
+    },
+    {
+     "id": "indie_contract002-2004475966_1794173451126-1794173451126",
+     "chars": [
+      {
+       "charId": "c2fa8a588cab489795166bed5161fefc",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260416/85ab92dda70186799065d5a8b541f281.png"
+      },
+      {
+       "charId": "c4cf7541c23c93f991e2e464ee18bb18",
+       "level": 90,
+       "potentialLevel": 5,
+       "avatarUrl": "https://static.skport.com/image/common/20251121/0eaf2403c33d26c729778702ac919650.png"
+      },
+      {
+       "charId": "989411af662b6e9b3f0cef53e9d32f1a",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png"
+      },
+      {
+       "charId": "3a5f50e8cc825f31214c1ee832a36b97",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/3665c8e0d5143c6ac041b8667ebaf20a.png"
+      }
+     ],
+     "ts": "1794173647",
+     "passTs": "188",
+     "isPass": true,
+     "indicatorCount": 0,
+     "passWave": 3,
+     "isBest": false
+    },
+    {
+     "id": "indie_contract002-2004475966_1793864684584-1793864684584",
+     "chars": [
+      {
+       "charId": "c2fa8a588cab489795166bed5161fefc",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260416/85ab92dda70186799065d5a8b541f281.png"
+      },
+      {
+       "charId": "c4cf7541c23c93f991e2e464ee18bb18",
+       "level": 90,
+       "potentialLevel": 5,
+       "avatarUrl": "https://static.skport.com/image/common/20251121/0eaf2403c33d26c729778702ac919650.png"
+      },
+      {
+       "charId": "989411af662b6e9b3f0cef53e9d32f1a",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png"
+      },
+      {
+       "charId": "3a5f50e8cc825f31214c1ee832a36b97",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/3665c8e0d5143c6ac041b8667ebaf20a.png"
+      }
+     ],
+     "ts": "1793865005",
+     "passTs": "312",
+     "isPass": true,
+     "indicatorCount": 10,
+     "passWave": 3,
+     "isBest": false
+    },
+    {
+     "id": "indie_contract002-2004475966_1793864354097-1793864354097",
+     "chars": [
+      {
+       "charId": "c2fa8a588cab489795166bed5161fefc",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260416/85ab92dda70186799065d5a8b541f281.png"
+      },
+      {
+       "charId": "c4cf7541c23c93f991e2e464ee18bb18",
+       "level": 90,
+       "potentialLevel": 5,
+       "avatarUrl": "https://static.skport.com/image/common/20251121/0eaf2403c33d26c729778702ac919650.png"
+      },
+      {
+       "charId": "989411af662b6e9b3f0cef53e9d32f1a",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png"
+      },
+      {
+       "charId": "3a5f50e8cc825f31214c1ee832a36b97",
+       "level": 90,
+       "potentialLevel": 0,
+       "avatarUrl": "https://static.skport.com/image/common/20260713/3665c8e0d5143c6ac041b8667ebaf20a.png"
+      }
+     ],
+     "ts": "1793864612",
+     "passTs": "243",
+     "isPass": true,
+     "indicatorCount": 3,
+     "passWave": 3,
+     "isBest": false
+    }
+   ],
+   "bestRecord": {
+    "id": "indie_contract002-2004475966_1794477091428-1794477091428",
+    "chars": [
+     {
+      "charId": "05047b063867199b953b30ac8df9a853",
+      "level": 90,
+      "potentialLevel": 1,
+      "avatarUrl": "https://static.skport.com/image/common/20251121/e63ce05be5614dd6df32eff18bb279c7.png"
+     },
+     {
+      "charId": "38bc410d7e134743ed8ee881d8400833",
+      "level": 90,
+      "potentialLevel": 2,
+      "avatarUrl": "https://static.skport.com/image/common/20261008/a63b0b093bfd921b8df1e6c5ee341a31.png"
+     },
+     {
+      "charId": "989411af662b6e9b3f0cef53e9d32f1a",
+      "level": 90,
+      "potentialLevel": 0,
+      "avatarUrl": "https://static.skport.com/image/common/20260713/0a2be2c9d6990a3054fed768d3e0cce2.png"
+     },
+     {
+      "charId": "3839d35948216cc09368cd62167c7368",
+      "level": 90,
+      "potentialLevel": 5,
+      "avatarUrl": "https://static.skport.com/image/common/20251121/d2f6d7a22ba267e07d6ff5302e25921e.png"
+     }
+    ],
+    "ts": "1794477357",
+    "passTs": "255",
+    "isPass": true,
+    "indicatorCount": 11,
+    "passWave": 3,
+    "isBest": true
+   }
+  },
+  "indicators": [
+   {
+    "id": "5db50e183f1f1045499df6815c70db07",
+    "icon": "https://static.skport.com/image/common/20261105/4847ddd17ea09aeef87253a107227cd8.png",
+    "name": "Edit: Thrill",
+    "desc": "DMG Dealt by enemies <color=#cc9900>+{dmg_up:0%}</color>/+{@899e5b70d0ad9dd9aef2224cf79488c8@dmg_up:0%}.",
+    "descParams": {
+     "dmg_up": "0.3"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "899e5b70d0ad9dd9aef2224cf79488c8",
+    "icon": "https://static.skport.com/image/common/20261105/51909ea3bfd602413cc33b5c3686c393.png",
+    "name": "Edit: Thrill",
+    "desc": "DMG Dealt by enemies +{@5db50e183f1f1045499df6815c70db07@dmg_up:0%}/<color=#cc9900>+{dmg_up:0%}</color>.",
+    "descParams": {
+     "dmg_up": "0.8"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "f824ea3cd7cea49116eda11b5d23f9b0",
+    "icon": "https://static.skport.com/image/common/20261105/8318d893e220ad0365ef0eb72338cdc9.png",
+    "name": "Ambient: Withering",
+    "desc": "No Healing Masses are generated between waves.",
+    "descParams": {
+     "num": "-3"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "a495d6bed9585d27450e30585c4c732d",
+    "icon": "https://static.skport.com/image/common/20261105/6c84aedba4ae66756c9d031aee855056.png",
+    "name": "Ambient: Silence",
+    "desc": "SP Regen Rate <color=#cc9900>+{recover_ratio:0%}</color>. \nSP Recovery from skills <color=#cc9900>+{skill_ratio:0%}</color>. \nAll operators must cast their battle skills once before any operator can cast their battle skill again. \nOnly applies to the first sequence of a battle skill.",
+    "descParams": {
+     "recover_ratio": "0.3",
+     "skill_ratio": "1"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "1977a1127b403587321b5a520907930f",
+    "icon": "https://static.skport.com/image/common/20261105/755e517f4f5a14c0122290eea5be0c47.png",
+    "name": "Team: Lethargy",
+    "desc": "Enemy HP <color=#cc9900>+{hp_up:0%}</color>. Operator Battle Skill DMG Dealt <color=#cc9900>-{-dmg_scale:0%}</color>.",
+    "descParams": {
+     "dmg_scale": "-0.6",
+     "hp_up": "1.2"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "5ccc5c3a652f20d0b829f72db08c7ed4",
+    "icon": "https://static.skport.com/image/common/20261105/aa53636b292565db20ec7fe896c599d5.png",
+    "name": "Ambient: Echombo",
+    "desc": "Combo skills cost <color=#cc9900>{atb:0}</color> SP to cast. After casting an operator's combo skill, immediately reset the operator's combo skill cooldown and unconditionally trigger 1 combo skill casting that uses no SP. The combo cooldown only starts after casting the free combo skill.",
+    "descParams": {
+     "atb": "50"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "126ad03316db7675164e3f0c8be270e9",
+    "icon": "https://static.skport.com/image/common/20261105/6cf1bda55d5658121e12c45493927adf.png",
+    "name": "Team: Decapitate",
+    "desc": "DMG Taken by the controlled operator <color=#cc9900>+{dmg_scale:0%}</color>/+{@507c9dcd6538b05090d22c4b73c535a7@dmg_scale:0%}.",
+    "descParams": {
+     "dmg_scale": "0.5"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "507c9dcd6538b05090d22c4b73c535a7",
+    "icon": "https://static.skport.com/image/common/20261105/3ac43d815f391789d89c669702df6dcd.png",
+    "name": "Team: Decapitate",
+    "desc": "DMG Taken by the controlled operator +{@126ad03316db7675164e3f0c8be270e9@dmg_scale:0%}/<color=#cc9900>+{dmg_scale:0%}</color>.",
+    "descParams": {
+     "dmg_scale": "1"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "c0a667df8f0d6ee98dda972b0870fabf",
+    "icon": "https://static.skport.com/image/common/20261105/716f0cd488daba30cb673906d23508a9.png",
+    "name": "Ambient: Volatile Gains",
+    "desc": "After an operator casts an ultimate, reset Ultimate Energy of the entire team to ZERO.",
+    "descParams": {},
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "2c9178234fa28415cc927b52f852fcf6",
+    "icon": "https://static.skport.com/image/common/20261105/d519c5fcb8bc8b73a2cce0598cee9247.png",
+    "name": "Team: Myolysis",
+    "desc": "At 0.1s after an operator consumes <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color>, DMG Dealt <color=#cc9900>-{-dmg_scale:0%}</color>/-{@e7ed39de54a0f6629b05facfdc7a9a5d@-dmg_scale:0%} for <color=#cc9900>{duration:0}</color>s.",
+    "descParams": {
+     "dmg_scale": "-0.3",
+     "duration": "10"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "e7ed39de54a0f6629b05facfdc7a9a5d",
+    "icon": "https://static.skport.com/image/common/20261105/bf27c71875a5c247a1ea39c2e81ca5a1.png",
+    "name": "Team: Myolysis",
+    "desc": "At 0.1s after an operator consumes <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color>, DMG Dealt -{@2c9178234fa28415cc927b52f852fcf6@-dmg_scale:0%}/<color=#cc9900>-{-dmg_scale:0%}</color> for <color=#cc9900>{duration:0}</color>s.",
+    "descParams": {
+     "dmg_scale": "-0.8",
+     "duration": "10"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "2468e9f3bf3cfbfe907664a20caa8e32",
+    "icon": "https://static.skport.com/image/common/20261105/135c5a41370dc5c04b3f3bf40fcc5e4e.png",
+    "name": "Edit: Blood Rush",
+    "desc": "If an enemy has no <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> stacks on it for <color=#cc9900>{countdown:0}</color>s, the enemy gains HP regen equal to <color=#cc9900>{hp_ratio:0%}</color>/{@498383df83f2a9bc95d12d0f6e2a891d@hp_ratio:0%} Max HP per second.",
+    "descParams": {
+     "countdown": "5",
+     "hp_ratio": "0.03"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "498383df83f2a9bc95d12d0f6e2a891d",
+    "icon": "https://static.skport.com/image/common/20261105/e1206223da1a3f72a9291cea9bf62eba.png",
+    "name": "Edit: Blood Rush",
+    "desc": "If an enemy has no <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> stacks on it for <color=#cc9900>{countdown:0}</color>s, the enemy gains HP regen equal to {@2468e9f3bf3cfbfe907664a20caa8e32@hp_ratio:0%}/<color=#cc9900>{hp_ratio:0%}</color> Max HP per second.",
+    "descParams": {
+     "countdown": "5",
+     "hp_ratio": "0.1"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "62a8f236810c77450fafcdff6ad5fd26",
+    "icon": "https://static.skport.com/image/common/20261105/8395b27960bfd8ac6fff5b758e23d3d1.png",
+    "name": "Ambient: Binding",
+    "desc": "The operators' stamina bar is replaced with <color=#cc9900>{dash_count:0}</color> Stamina Points. Each dodge consumes 1 Stamina Point. For every <color=#cc9900>{interval:0}</color>s, regenerate <color=#cc9900>{recover_count:0}</color> Stamina Point(s).",
+    "descParams": {
+     "dash_count": "5",
+     "interval": "8",
+     "recover_count": "1"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "19196fbe2dd30db625660d39695b5f89",
+    "icon": "https://static.skport.com/image/common/20261105/f90dab9c61270ee00a2d3b28c872644d.png",
+    "name": "Ambient: Binding",
+    "desc": "Dodging cannot be performed.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "9c95fafecc492115959c5a2dc0143020",
+    "icon": "https://static.skport.com/image/common/20261105/bdccb71c0482268a6ed512c8aa2e895c.png",
+    "name": "Ambient: Partition",
+    "desc": "Cannot switch controlled operator once battle begins.",
+    "descParams": {},
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "5c189c8af264bcf258bf18cd0a8328eb",
+    "icon": "https://static.skport.com/image/common/20261105/3f5d9f3861864a675820ce01fd3a29b5.png",
+    "name": "Team: Whittle Down",
+    "desc": "DMG dealt by enemies ignores <color=#1da6e0>shields</color>. <color=#cc9900>{hp_down_ratio:0%}</color> of DMG dealt by enemies to the operator is converted to Max HP Reduction. \nAfter the controlled operator takes DMG, their HP Treatment will be reduced by <color=#cc9900>{-heal_scale:0%}</color> for <color=#cc9900>{countdown:0}</color>s.",
+    "descParams": {
+     "countdown": "4",
+     "heal_scale": "-0.4",
+     "hp_down_ratio": "0.2",
+     "hp_down_ratio_melee": "0.2"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "02f931a5fd1b2102d1a8d35e98f15efc",
+    "icon": "https://static.skport.com/image/common/20261105/a94b7b08c018f0319d7965aee4691ddd.png",
+    "name": "Team: Whittle Down",
+    "desc": "DMG dealt by enemies ignores <color=#1da6e0>shields</color>. <color=#cc9900>{hp_down_ratio:0%}</color> of DMG dealt by enemies to the operator is converted to Max HP Reduction. After the controlled operator takes DMG, their HP Treatment will be reduced by <color=#cc9900>{-heal_scale:0%}</color> for <color=#cc9900>{countdown:0}</color>s.",
+    "descParams": {
+     "countdown": "6",
+     "heal_scale": "-0.9",
+     "hp_down_ratio": "0.5",
+     "hp_down_ratio_melee": "0.5"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "b2947bf9e562e082dea757de204be1b5",
+    "icon": "https://static.skport.com/image/common/20261105/e05f3d7b2219cc2e4a7ae27a4cd81202.png",
+    "name": "Edit: Solid Body",
+    "desc": "Interrupting an enemy's charging state requires <color=#cc9900>{interrupt_times:0}</color> interrupting hits. A skill cast by an operator counts as only 1 interrupting hit.",
+    "descParams": {
+     "interrupt_times": "2"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "5adcdfc2d615fed345aa641df9bdb1ab",
+    "icon": "https://static.skport.com/image/common/20261105/f3cbaec58e7e23d77577281008a0a757.png",
+    "name": "Team: Blunted Weapons",
+    "desc": "Enemy HP <color=#cc9900>+{hp_up:0%}</color>. Operator Basic Attack DMG Dealt <color=#cc9900>-{-dmg_scale:0%}</color>.",
+    "descParams": {
+     "dmg_scale": "-0.7",
+     "hp_up": "1.2"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "037828de1f600d6551a8eabb9bf61f95",
+    "icon": "https://static.skport.com/image/common/20261105/d831a1c9e587dd51d5ae6e4f2d1e1bbc.png",
+    "name": "Edit: Team Mangler",
+    "desc": "When the Armored Mangler enters battle, and when it is at 50% HP, its next skill will be a channeling skill that can only be interrupted after a while.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "7305c48ab516e5b46fb59449d268caab",
+    "icon": "https://static.skport.com/image/common/20261105/34798550a324fbdb86fb0ba198f34cab.png",
+    "name": "Edit: Team Mangler",
+    "desc": "When the Armored Mangler enters battle, and when it is at 50% HP, its next skill will be a channeling skill that can only be interrupted after a while. An additional Armored Mangler already down to 50% HP will appear.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "62aae889ebeff7e93bc17f2cc6c78bea",
+    "icon": "https://static.skport.com/image/common/20261105/1a0c9cc0ef5c4aab179207a7e1823087.png",
+    "name": "Edit: Skyfall",
+    "desc": "When the Cloud Obliterator enters battle, and when it is at 50% HP, its next skill will be a special skill.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "c63126bbe825360a645a55ef80c9845c",
+    "icon": "https://static.skport.com/image/common/20261105/0936e46dc12f7fed07378cb398ad1189.png",
+    "name": "Edit: Skyfall",
+    "desc": "Upon entering battle, the Cloud Obliterator casts a special skill. At 50% HP, it will cast a special skill and dispel all <color=#a68360>Vulnerability</color>, <color=#1da6e0>Arts Inflictions</color>, Physical Statuses, and Arts Reactions from itself. The dispel effect does not trigger again.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "d6c5f1627ae5248ab4d83a59578449c2",
+    "icon": "https://static.skport.com/image/common/20261105/4ec64029e3903ea81d9ff8924c0c6b2e.png",
+    "name": "Edit: Reactive Formula",
+    "desc": "The Cloud Obliterator's missiles will create a corrosion pool when it hits the ground. The pool applies Corrosion on operators in its area of effect.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "e922f601420a8515909db8e147c66691",
+    "icon": "https://static.skport.com/image/common/20261105/597c1c92485f9f471507c365686aa8f7.png",
+    "name": "Ambient: Aggro Focus",
+    "desc": "Enemies attack the controlled operator more often.",
+    "descParams": {},
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "1cc2cdffe7a2039f88bc72fca3f6395c",
+    "icon": "https://static.skport.com/image/common/20261105/bae50275c6f075e36ae7a79f26084ba6.png",
+    "name": "Edit: Fruity Slippers",
+    "desc": "On-looking Rockhowlers (that cannot be attacked) will occasionally throw Banana Peels into the arena. Banana Peel: Up to <color=#cc9900>5</color> can exist, each lasts <color=#cc9900>15</color>s.",
+    "descParams": {},
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "22b7d2a87d878ad735cd4425cc460e4f",
+    "icon": "https://static.skport.com/image/common/20261105/1690d626690f50cbe69e470a81aa250e.png",
+    "name": "Edit: Light Protection",
+    "desc": "Enemy resistance to all elements is now <color=#cc9900>{resist:0}</color>/{@d252189cde7e4df752b767449f37b749@resist:0}.",
+    "descParams": {
+     "resist": "25"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "d252189cde7e4df752b767449f37b749",
+    "icon": "https://static.skport.com/image/common/20261105/d032275d04a5a7e755561ae163ca278b.png",
+    "name": "Edit: Light Protection",
+    "desc": "Enemy resistance to all elements is now {@22b7d2a87d878ad735cd4425cc460e4f@resist:0}/<color=#cc9900>{resist:0}</color>.",
+    "descParams": {
+     "resist": "60"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "b28554d34de6b772a2a8a32ea846c815",
+    "icon": "https://static.skport.com/image/common/20261105/28304f1d9be573fee6249073199b41a6.png",
+    "name": "Edit: Control Shield",
+    "desc": "Enemies are immune to crowd control effects of Lift, Knock Down, <color=#009cad>Solidification</color>, and Immobilization.",
+    "descParams": {},
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "33340bfccdf73c83d6d7acb2b9c11af5",
+    "icon": "https://static.skport.com/image/common/20261105/8e775590bfb52db2a6551705ea27df43.png",
+    "name": "Team: Apathy",
+    "desc": "If the controlled operator does not perform a final strike or finisher within <color=#cc9900>{countdown:0}</color>s, all operators suffer <color=#cc9900>{weak_rate:0%}</color> Weakness (this can reach <color=#cc9900>{max_stack:0}</color> stacks). Use the controlled operator to perform a final strike or finisher to remove all stacks.",
+    "descParams": {
+     "countdown": "10",
+     "max_stack": "3",
+     "weak_rate": "0.3"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "0137c1dddc32655568db9ef29728470d",
+    "icon": "https://static.skport.com/image/common/20261105/772d968ca3c84da2099f1f598772a584.png",
+    "name": "Edit: Dueling Circle",
+    "desc": "There is a circle around the final set of enemies of each wave. When the controlled operator is outside this circle, all operators deal <color=#cc9900>-{-dmg_taken_down:0%}</color> DMG to enemies.",
+    "descParams": {
+     "dmg_taken_down": "-0.9"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "feb653027f00e66c864bd45e99b38c84",
+    "icon": "https://static.skport.com/image/common/20261105/d4a370c0893067b88af82187c8edc7e5.png",
+    "name": "Ambient: Combo Lock",
+    "desc": "Combo Skill DMG Dealt <color=#cc9900>+{dmg_add:0%}</color> \nWhile not affected by a Combo Lock, for every <color=#cc9900>{max_stack:0}</color> combo skill(s) cast, a <color=#cc9900>{duration:0}</color>s Combo Lock that prevents subsequent combo skill casting is applied to the combo skill queue.",
+    "descParams": {
+     "dmg_add": "0.5",
+     "duration": "10",
+     "max_stack": "2"
+    },
+    "hasAward": false,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "5ab5941ad4b1772e584d6c60afb3fd46",
+    "icon": "https://static.skport.com/image/common/20261105/89ef615a2fdec97d4da8a7403a4f3ff8.png",
+    "name": "Edit: Hard Stacks",
+    "desc": "When an enemy is defeated, all other enemies in the arena gain <color=#cc9900>{add_layers:0}</color> <color=#1da6e0>shield stack(s)</color>. These <color=#1da6e0>shield stacks</color> do not protect enemies from <color=#a68360>Vulnerability</color>, <color=#1da6e0>Arts Inflictions</color>, Physical Statuses, and Arts Reactions.",
+    "descParams": {
+     "add_layers": "3"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "215e8f02e529b5c1d549705d36e34765",
+    "icon": "https://static.skport.com/image/common/20261105/9e126f2352bec38b4c795b047a3bb55b.png",
+    "name": "Edit: Encasement",
+    "desc": "For each <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> stack that an enemy has, the said enemy receives DMG Taken (of the corresponding element) <color=#cc9900>-{-dmg_scale:0%}</color>/-{@427b6c3fa22a8b08981e0092c94f9c84@-dmg_scale:0%} \nThis effect is removed 0.1s after the <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> ends.",
+    "descParams": {
+     "dmg_scale": "-0.1"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "427b6c3fa22a8b08981e0092c94f9c84",
+    "icon": "https://static.skport.com/image/common/20261105/792cc6e7471323f8498cf9aa4081f811.png",
+    "name": "Edit: Encasement",
+    "desc": "For each <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> stack that an enemy has, the said enemy receives DMG Taken (of the corresponding element) -{@215e8f02e529b5c1d549705d36e34765@-dmg_scale:0%}/<color=#cc9900>-{-dmg_scale:0%}</color> \nThis effect is removed 0.1s after the <color=#a68360>Vulnerability</color> or <color=#1da6e0>Arts Infliction</color> ends.",
+    "descParams": {
+     "dmg_scale": "-0.2"
+    },
+    "hasAward": false,
+    "type": 2,
+    "depends": [
+     "a495d6bed9585d27450e30585c4c732d",
+     "5ccc5c3a652f20d0b829f72db08c7ed4",
+     "feb653027f00e66c864bd45e99b38c84"
+    ],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "90bf44a0ebee7ab985a50c4655568af5",
+    "icon": "https://static.skport.com/image/common/20261105/f134ce0805238cef225001e5cb369765.png",
+    "name": "Ambient: Time Limit",
+    "desc": "Timer <color=#cc9900>-{-time:0}</color>s.",
+    "descParams": {
+     "time": "-45"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 1,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "ba80c2f4e5c78dabfc1bffc4d2f7d830",
+    "icon": "https://static.skport.com/image/common/20261105/b63c5da996767ed5493e7e30a9c11330.png",
+    "name": "Ambient: Time Limit",
+    "desc": "Timer <color=#cc9900>-{-time:0}</color>s.",
+    "descParams": {
+     "time": "-90"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 2,
+    "isUnlock": true,
+    "unlockScore": 0
+   },
+   {
+    "id": "2282f074144a175df764041f99fbf297",
+    "icon": "https://static.skport.com/image/common/20261105/283ae6e13571e143d1f8c1bc2a42e0ab.png",
+    "name": "Ambient: Time Limit",
+    "desc": "Timer <color=#cc9900>-{-time:0}</color>s.",
+    "descParams": {
+     "time": "-180"
+    },
+    "hasAward": true,
+    "type": 1,
+    "depends": [],
+    "openTs": "0",
+    "score": 3,
+    "isUnlock": true,
+    "unlockScore": 0
+   }
+  ],
+  "dungeon": {
+   "id": "e5397c2a22d6f953472499f22a6a77ed",
+   "name": "Contingency Contract",
+   "desc": "- The operation comprises 3 consecutive enemy waves to fight. Defeat all enemy waves to complete the operation.\n- Healing Masses will be dropped between the waves. Touch them to restore HP to every teammate.\n- There is a resting session between waves, during which the operators are still considered to be in battle.\n- The operation has a countdown timer. Once the timer ends or all operators in the team are reduced to ZERO HP, the operation is interrupted.\n- Tacticals and consumables cannot be used.",
+   "feature": "",
+   "enemies": [
+    {
+     "id": "a9695b0ca6908887b8d56d813f6d3559",
+     "name": "Tuskbeast Blightshade",
+     "desc": "A manifestation of residual Æther energy that projects the outward form of a tuskbeast. Although this is but a \"lingering shadow\", its sharp fangs are still capable of tearing through armor and protective gear.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/1a38f345ee62300f334cd8d51b6abb7b.png",
+     "ability": "Some attacks can activate Blightshade Energy they hit."
+    },
+    {
+     "id": "f5c861b76af39596488603d8bb9d3bf3",
+     "name": "Quillbeast Blightshade",
+     "desc": "A manifestation of residual Æther energy that projects the outward form of a quillbeast. This blightshade seems to exhibit far more aggressive rolling and bouncing attacks than its living counterpart, though it may just be a matter of imagination.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/5cdcbd925e7835cc626eb24053064c5a.png",
+     "ability": "After a short charge-up, the Quillbeast Blightshade can summon multiple bolts of lightning and activate Blightshade Energy within a large area. Interrupt the beast quickly when it starts charging up."
+    },
+    {
+     "id": "f28a6dd638c56e9ad01543556576b564",
+     "name": "YSTF Captain Blightshade",
+     "desc": "A manifestation of residual Æther energy that projects the outward form of a YSTF Captain. Only veterans who have demonstrated gifts for command, exceptional combat prowess, and achieved true valor in war will receive the chance of becoming a YSTF Captain.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/1c4cce58f6e899f262f949a9089b1844.png",
+     "ability": "After dissipating, this enemy can blink next to an operator and attack. Try to dodge.\nThe YSTF Captain Blightshade can use its weapon to call down thunderbolts. A Blightshade Energy entity is activated when hit by a thunderbolt."
+    },
+    {
+     "id": "7499f1db9bce62ea1d15fee30fe2643c",
+     "name": "Rockhowler",
+     "desc": "Rockhowlers can live in the natural wilderness. These intelligent yet mischievous creatures often prepare \"traps\" and \"dangers\" for hapless travelers. They seem to enjoy the sight of humans frustrated by their antics. Please deal with them patiently.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260716/a19000b845ca84e52c8bf32535bc9537.png",
+     "ability": "This enemy typically roams around in packs. The controlled operator or Rockhowler that steps on discarded banana peels will slip and fall."
+    },
+    {
+     "id": "3a1d2e6a62a4d583ad572ca3722dd8a9",
+     "name": "Woodcraft Wanderer",
+     "desc": "A small battle puppet created by a Snowpriestess. It is in charge of keeping the Snowy Forest safe. Do not underestimate its fists of wood, for they can smash through stone with hardly any effort.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/f93541a7e9550d1e10d7dd29b3abfed4.png",
+     "ability": "A Woodcraft Wanderer with zero shield stacks will trap operators to absorb their energy and restore its shield stacks.\nWoodcraft Wanderers will work with each other when attacking."
+    },
+    {
+     "id": "0af1aae5442a54cc8ba5644011021f94",
+     "name": "Armored Manglerbeast",
+     "desc": "A variant of manglerbeasts that evolved specifically on Talos-II. These unique manglers are armored in extremely thick scales and share a mutualistic symbiosis with rockhowlers. The former species provides the bulwark and muscle while the latter offers keen senses and warns against trespassers.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/10b9267da95a5fe2889ad36b33fe7be5.png",
+     "ability": "The Rockhowler riding on the Armored Manglerbeast's back can throw banana peels.\nDrops Rockhowlers when knocked down. Attack the Rockhowlers to deal even more DMG."
+    },
+    {
+     "id": "906a72c71ddaeef6db00efcc0d1e604f",
+     "name": "Cloud Obliterator",
+     "desc": "A criminal equipped with heavy weaponry. Obliteration is no small feat. Only the strongest smashers armed with quadruple rocket launchers can achieve the title of Cloud Obliterator.",
+     "level": 60,
+     "imageUrl": "https://static.skport.com/image/common/20260831/216d4787aa01407a93f6ba25f1168538.png",
+     "ability": "Uses the heavy rocket launcher as a melee weapon. Also shoots fireworks for its ranged attacks. Getting rammed and lifted by its horns might set off some super fireworks!\nDon't try to backstab it. It has a powerful hind kick!"
+    }
+   ],
+   "recommendLevel": 0,
+   "featureParams": {},
+   "originalId": "indie_contract002"
+  }
+ }
+}

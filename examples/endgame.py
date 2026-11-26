@@ -19,7 +19,7 @@ async def main():
         monument = cards.skport_monument(card, await client.monument())
         (await cards.render_monument(monument)).save(OUT / "monument.png")
 
-        # nothing passed = latest event, a name or a list works too
+        # no event = latest, a name or list works too
         (await cards.render_monument_event(monument, template=2)).save(OUT / "monument_latest.png")
         for i, image in enumerate(await cards.render_monument_event(monument, ["Searing Scars", 0])):
             image.save(OUT / f"monument_event_{i}.png")

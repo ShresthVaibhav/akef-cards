@@ -1,12 +1,10 @@
-from __future__ import annotations
-
 import json
 from pathlib import Path
 
-# enka's splashes are 2048x2048 scenes with the operator somewhere inside.
-# this is the part we show: (center x, top, bottom) as 0..1 of the square
+# enka splashes are 2048x2048 scenes with the operator somewhere in them.
+# the part we show: (center x, top, bottom), 0 to 1
 SPLASH_FOCUS = (0.5, 0.12, 1.0)
-# for profile tiles: face x and y as 0..1 of the splash, crop width as a share of its height
+# profile tiles: face x and y (0 to 1) and crop width relative to height
 FACES = json.loads((Path(__file__).parent / "data" / "faces.json").read_text(encoding="utf-8"))
 GENERAL_CROP = (0.5, 0.25, 0.42)
 GRIDS = {"4x2": (4, 2), "3x3": (3, 3)}

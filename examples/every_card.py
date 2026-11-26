@@ -14,7 +14,6 @@ OUT.mkdir(exist_ok=True)
 
 
 async def main():
-    # draws every card in every template, handy to pick the look you like
     async with akef.Client(TOKEN) as client, akef_cards.Cards() as cards:
         card = await client.card()
         jobs = {

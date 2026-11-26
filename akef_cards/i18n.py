@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import json
 import logging
 import re
@@ -38,7 +36,7 @@ def _raw() -> dict:
 
 
 def supported() -> list[str]:
-    # a language joins this list in text.json once every label in it has been translated
+    # a language goes in this list in text.json once all its labels are translated
     return list(_raw().get("_complete", ["en"]))
 
 
@@ -71,7 +69,7 @@ def duration(text: str, lang: str | None = None) -> str:
     found = re.fullmatch(r"(?:(\d+)d)?\s*(?:(\d+)h)?\s*(?:(\d+)m)?", text.strip(), re.IGNORECASE)
     if not found or not any(found.groups()):
         return text
-    # a lone "2M" is two million, not two minutes
+    # "2M" alone is 2 million, not 2 minutes
     if not found.group(1) and not found.group(2) and not text.strip().endswith("m"):
         return text
     return "".join(f"{n}{u}" for n, u in zip(found.groups(), units) if n).strip()

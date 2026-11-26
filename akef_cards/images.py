@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import asyncio
 import io
 import ipaddress
@@ -60,10 +58,8 @@ class ImageCache:
     def _stats(self) -> list[tuple[Path, os.stat_result]]:
         found = []
         for file in self.path.glob("*.img"):
-            try:
+            with suppress(FileNotFoundError):
                 found.append((file, file.stat()))
-            except FileNotFoundError:
-                pass
         return found
 
     def size(self) -> int:
@@ -177,7 +173,7 @@ class ImageCache:
 
 
 def name_of(url: str) -> str:
-    # keyed by the file's own name: links can move to a new folder, host or signed query and still be the same art
+    # keyed by file name, the host or folder in the link can change for the same art
     name = os.path.basename(urlparse(url).path) or url
     return re.sub(r"[^A-Za-z0-9._-]", "_", name)[:150]
 
@@ -208,14 +204,14 @@ def _check_url(url: URL) -> None:
     except ValueError:
         return
     if not ok:
-        raise CardError("art url points to a private address, nope")
+        raise CardError("art url points to a private address")
 
 
 class _PublicResolver(ThreadedResolver):
     async def resolve(self, host, port=0, family=socket.AF_INET):
         found = await super().resolve(host, port, family)
         if not all(_is_public(r["host"]) for r in found):
-            raise CardError("art url points to a private address, nope")
+            raise CardError("art url points to a private address")
         return found
 
 
@@ -267,10 +263,10 @@ async def art_bytes(art, *, allow_remote: bool = False, allow_local: bool = Fals
         if not allow_local:
             raise CardError("file paths as text are off by default, pass allow_local=True or use pathlib.Path "
                             "(only for paths you trust)")
-    return await asyncio.to_thread(_read_limited, Path(art))
+    return await asyncio.to_thread(_read_capped, Path(art))
 
 
-def _read_limited(path: Path) -> bytes:
+def _read_capped(path: Path) -> bytes:
     with path.open("rb") as file:
         data = file.read(MAX_ART_BYTES + 1)
     if len(data) > MAX_ART_BYTES:
@@ -283,17 +279,5 @@ async def load_art(art, *, allow_remote: bool = False, allow_local: bool = False
         return None
     if isinstance(art, Image.Image):
         return await asyncio.to_thread(art.convert, "RGBA")
-    if isinstance(art, (bytes, bytearray)):
-        return await asyncio.to_thread(_open_art, io.BytesIO(art))
-    if isinstance(art, os.PathLike):
-        return await asyncio.to_thread(_open_art, art)
-    text = str(art)
-    if text.lower().startswith(("http://", "https://")):
-        if not allow_remote:
-            raise CardError("art urls are off by default, pass allow_remote=True if you trust it")
-        data = await _download_art(text)
-        return await asyncio.to_thread(_open_art, io.BytesIO(data))
-    if not allow_local:
-        raise CardError("file paths as text are off by default, pass allow_local=True or use pathlib.Path "
-                        "(only for paths you trust)")
-    return await asyncio.to_thread(_open_art, text)
+    data = await art_bytes(art, allow_remote=allow_remote, allow_local=allow_local)
+    return await asyncio.to_thread(_open_art, io.BytesIO(data))

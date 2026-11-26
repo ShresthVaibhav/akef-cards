@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
@@ -29,7 +27,6 @@ class Trained:
 
     @property
     def progress(self) -> float:
-        # equal parts level, promotion, skills, weapon and gear
         parts = [
             self.level / MAX_LEVEL,
             self.promotion / MAX_PROMOTION,

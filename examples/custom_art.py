@@ -32,12 +32,11 @@ async def main():
         for template in (1, 2):
             (await cards.render(gilberta, art=PIGEON, template=template)).save(OUT / f"pigeonfight99_{template}.png")
 
-        # raw bytes, like an attachment your bot got
         data = PANA.read_bytes()
         for template in (1, 2):
             (await cards.render(gilberta, art=data, template=template)).save(OUT / f"kisaragi_pana_{template}.png")
 
-        # a pillow image, so you can edit it first. here its just mirrored
+        # a pillow image, so you can edit it first. here its mirrored
         mirrored = ImageOps.mirror(Image.open(PANA))
         (await cards.render(gilberta, art=mirrored)).save(OUT / "kisaragi_pana_mirrored.png")
 

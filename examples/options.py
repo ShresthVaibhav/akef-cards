@@ -16,14 +16,14 @@ async def main():
     async with akef_cards.Cards() as cards:
         build = (await cards.enka(4727743200)).builds[0]
 
-        # hidden blurs the uid, nice for screenshots
+        # blurs the uid, nice for screenshots
         (await cards.render(build, hidden=True)).save(OUT / "hidden.png")
 
-        # bots: render_bytes gives a BytesIO with a name, ready to send
+        # for bots: a BytesIO with a file name
         file = await cards.render_bytes(build, format="PNG")
         print("ready to send:", file.name, len(file.getvalue()), "bytes")
 
-    # names follow the language, labels we didnt get translated yet stay english and get logged
+    # names follow the language, labels that arent translated yet stay english and get logged
     async with akef_cards.Cards(lang="ja") as cards:
         build = (await cards.enka(4727743200)).builds[0]
         (await cards.render(build, template=2)).save(OUT / "japanese.png")

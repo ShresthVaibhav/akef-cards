@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from datetime import datetime, timezone
 
 from akef.enka.build import ELEMENT, PROFESSION, element_icon
@@ -115,7 +113,7 @@ def exploration_from_skport(card) -> Exploration:
                        factory_from_skport(card).regions)
 
 
-# skport only sends a number per cabin, we match it to the cabins its crew's base skills name
+# skport only gives a number per cabin, match it using the crew's base skills
 CABINS = {0: "Control Nexus", 1: "Manufacturing Cabin", 2: "Growth Chamber", 5: "Reception Room"}
 
 
@@ -183,7 +181,7 @@ def pulls_from_skport(data: GameData, card, pulls, after=None) -> PullHistory:
     operators.sort(key=lambda h: h.when or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
     weapons.sort(key=lambda h: h.when or datetime.min.replace(tzinfo=timezone.utc), reverse=True)
 
-    # pity needs every pull, the date only narrows what the card lists and counts
+    # pity needs every pull, `after` only filters whats listed
     def recent(items, when):
         return [i for i in items if after is None or (when(i) and when(i) >= after)]
 

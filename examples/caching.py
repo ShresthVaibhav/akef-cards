@@ -15,7 +15,6 @@ async def timed(label, call):
 
 
 async def main():
-    # art and icons are kept on disk (15 MB by default), the last few cards in memory
     async with akef_cards.Cards(cache_mb=50, kept_cards=16) as cards:
         profile = await timed("enka", cards.enka(4727743200))
         build = profile.builds[0]

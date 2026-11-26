@@ -13,7 +13,7 @@ def save(image, path):
     try:
         image.save(path)
     except OSError:
-        # windows won't overwrite a file that's open in a viewer
+        # windows wont overwrite a file thats open in a viewer
         path = path.with_stem(f"{path.stem}_{datetime.now():%H%M%S}")
         image.save(path)
     print(path)

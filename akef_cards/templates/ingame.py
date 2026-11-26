@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw, ImageFilter
 
 from akef.enka.build import Build
@@ -12,12 +10,10 @@ from akef_cards.templates.talents import draw_tree
 from akef_cards.templates.showcase import ELEMENT, RARITY, SIGNAL, _item_tile, _pip
 
 
-def _cut(canvas, box, fill=(26, 28, 34, 235), outline=(72, 75, 86), cut=18, tab=SIGNAL):
+def _cut(canvas, box, fill=(26, 28, 34, 235), outline=(72, 75, 86), cut=18):
     x0, y0, x1, y1 = box
     pts = [(x0, y0), (x1 - cut, y0), (x1, y0 + cut), (x1, y1), (x0 + cut, y1), (x0, y1 - cut)]
     shape(canvas, "poly", pts, fill=fill, outline=outline, width=2)
-    if tab:
-        ImageDraw.Draw(canvas).rectangle((x0, y0, x0 + 42, y0 + 4), fill=tab)
 
 
 DIM = (140, 144, 154)
@@ -26,7 +22,7 @@ DIM = (140, 144, 154)
 def _gear(canvas, d, build: Build, images, x, y, w):
     set_name, count = build.gear_set
     if set_name:
-        _cut(canvas, (x, y, x + w, y + 48), cut=12, tab=None)
+        _cut(canvas, (x, y, x + w, y + 48), cut=12)
         d.text((x + 18, y + 11), shorten(d, set_name, font(21, "semibold"), w - 200), font=font(21, "semibold"),
                fill=(240, 240, 244))
         label = f"{count}/4 equipped"
@@ -157,23 +153,21 @@ def render(build: Build, images, *, art=None, hide_uid=False) -> Image.Image:
 
         rx, rw = 1330, 710
         y = 60
-        def head(c, dd, x, yy, ww, title):
-            dd.rectangle((x, yy + 6, x + 6, yy + 24), fill=SIGNAL)
-            dd.text((x + 16, yy + 2), title.upper(), font=font(20, "bold"), fill=(236, 237, 240))
-            end = x + 30 + dd.textlength(title.upper(), font=font(20, "bold"))
-            dd.line([(end, yy + 15), (x + ww, yy + 15)], fill=(60, 63, 72), width=2)
-            return yy + 44
-        y = boxed(canvas, _cut, rx, head(canvas, d, rx, y, rw, "Skills"), rw, 20,
+
+        def head(top, title):
+            d.rectangle((rx, top + 6, rx + 6, top + 24), fill=SIGNAL)
+            d.text((rx + 16, top + 2), title.upper(), font=font(20, "bold"), fill=(236, 237, 240))
+            end = rx + 30 + d.textlength(title.upper(), font=font(20, "bold"))
+            d.line([(end, top + 15), (rx + rw, top + 15)], fill=(60, 63, 72), width=2)
+            return top + 44
+
+        y = boxed(canvas, _cut, rx, head(y, "Skills"), rw, 20,
                    lambda c, cd, xx, yy, ww: skills_block(c, cd, build, images, xx, yy, ww, p, cols=2)) + 24
-        y = boxed(canvas, _cut, rx, head(canvas, d, rx, y, rw, "Weapon"), rw, 22,
+        y = boxed(canvas, _cut, rx, head(y, "Weapon"), rw, 22,
                    lambda c, cd, xx, yy, ww: weapon_block(c, cd, build, images, xx, yy, ww, p)) + 24
-        y = _gear(canvas, d, build, images, rx, head(canvas, d, rx, y, rw, "Gear"), rw) + 30
+        y = _gear(canvas, d, build, images, rx, head(y, "Gear"), rw) + 30
         bottom = max(y + 50, left_end + 30, 1200)
         footer(d, build, hide_uid, rx, rx + rw, bottom - 46, (120, 124, 134))
-        corners = ((22, 22, 1, 1), (w - 22, 22, -1, 1), (22, bottom - 22, 1, -1), (w - 22, bottom - 22, -1, -1))
-        for cx, cy, sx, sy in corners:
-            d.line([(cx, cy), (cx + 40 * sx, cy)], fill=SIGNAL, width=3)
-            d.line([(cx, cy), (cx, cy + 40 * sy)], fill=SIGNAL, width=3)
         return canvas, bottom
 
     return two_pass(paint)

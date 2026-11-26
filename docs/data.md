@@ -19,6 +19,7 @@ akef's SKPORT models, and you can read them without drawing anything.
 | `Roster` | everyone owned with level, promotion, skills, weapon and gear, and how trained they are |
 | `Monument` | `events`, each with `stages`, `cleared` (normal, agony), `fastest`, medal info. `monument.event(name)` |
 | `Factory` | `regions` with `posts` (settlements), `areas` and `explored`, plus `cabins` |
+| `Exploration` | `regions` and `areas`, each area with `kinds` (found, total), plus `found`, `total` and `kind_totals()` |
 | `PullHistory` | six stars per banner with pity, luck and the time range |
 | `Contracts`, `ContractDetail` | the contract summary, and runs with teams, buffs and enemies |
 

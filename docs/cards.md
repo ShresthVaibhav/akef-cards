@@ -36,19 +36,58 @@ Sources: `cards.enka(uid).builds` or `cards.skport(card, name)`.
 card = await cards.render_animated(build, Path("art.gif"), format="WEBP", fit="contain", width=1000)
 ```
 
-The operator card with a moving gif or webp as the art. Returns a `BytesIO` w/ a file name.
+The operator card with a moving gif or webp as the art. Returns a `BytesIO` with a file name.
 
 | Option | |
 | --- | --- |
 | `template` | `1` light (default), `2` dark in-game style |
 | `format` | `"WEBP"` (default) or `"GIF"`, GIF is a lot bigger and only has 256 colours |
-| `fit` | `"contain"` whole animation on a blurred backdrop, `"cover"` fill and crop |
+| `fit` | `"contain"` (default) whole animation on a blurred backdrop, `"cover"` fill and crop, `"auto"` covers if that cuts under 20%, else contains |
+| `focus` | `(x, y)` from 0 to 1, which part `cover` keeps. `(0.5, 0.5)` is the middle |
 | `width` | output width in px, never upscales the card |
 | `quality` | webp quality |
 | `frame_step` | `2` by default, drops every 2nd frame. `1` keeps them all, bigger and slower |
 | `hidden`, `allow_local`, `allow_remote` | same as the still card |
 
 If that still leaves over 120 frames it skips more. The loop stays the same length either way. Very big animations get a `CardError`.
+
+### Editing before export
+
+`animated_card()` takes the same options (not `format` / `quality`) and gives an `AnimatedCard`. It draws once,
+every edit returns a new one without redrawing, so you can export as many versions as you like.
+
+```py
+info = await cards.animation_info(Path("art.gif"))     # width, height, frames, duration, fit
+card = await cards.animated_card(build, Path("art.gif"), template=2, fit="auto")
+
+edit = card.trim(0.2, 1.4).speed(1.5).bounce()
+await edit.save("card.webp")
+file = await edit.to_bytes("GIF")
+small = await card.fit_under(1.0)                      # under 1 MB
+thumb = card.still(0.5)                                # Pillow image
+```
+
+| Method | Does |
+| --- | --- |
+| `trim(start, end)` | keep that part, in seconds |
+| `speed(factor)` | `2` twice as fast, `0.5` half speed |
+| `reverse()` | plays backwards |
+| `bounce()` | forward then back, hides a jumpy loop |
+| `hold(seconds, at="end")` | freeze on the last (or `"start"`) frame |
+| `loops(n)` | play n times, `0` forever |
+| `resize(width)` | output width, never upscales |
+| `still(at)` | the frame at that second as a Pillow image |
+| `await to_bytes(format, quality)` | `BytesIO` with a file name |
+| `await save(path, quality)` | `.webp` or `.gif`, from the extension |
+| `await fit_under(max_mb, format, min_width)` | shrinks till it fits |
+
+`duration`, `frame_count` and `size` tell you what you've got.
+
+`fit_under` tries, in order: lower webp quality, half the frames, then smaller widths down to `min_width`. The file
+it returns has `.settings` with what it used, and you get a `CardError` if it cant fit. Each try is a full export,
+so tight limits take a while. Exports run in threads and count toward `max_renders`.
+
+Frames that end up under 20ms get dropped, many players play those way too slow.
 
 ## Compare card
 
@@ -197,6 +236,8 @@ Needs `client.contract()` from akef. `template` is `1` light or `2` dark.
 
 ## Exploration
 
+SKPORT only.
+
 ```py
 image = await cards.render_exploration(cards.skport_exploration(card), template=1, hidden=False)
 ```
@@ -207,6 +248,6 @@ Every area per region with puzzles, chests, gear chests, fragments, blackboxes a
 | --- | --- |
 | `1` | to-do: unfinished areas get big boxes with a row per kind, fewest left first. Cleared ones stay compact |
 | `2` | dark, a ring plus all six counts for every area |
-| `3` | compact yellow poster, 3 areas a row. The top banner shows what each icon means, kinds w/ stuff left are blacked out |
+| `3` | compact yellow poster, 3 areas a row. The top banner shows what each icon means, kinds with stuff left are blacked out |
 
 All three show the six counts for every area. 1 and 2 also total them per region.

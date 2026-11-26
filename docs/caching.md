@@ -9,7 +9,8 @@ it straight away instead of drawing it, which takes a few hundred ms otherwise. 
 data, the template or `hidden` draws a fresh one.
 
 Not kept: cards where an icon failed to download (so a network blip doesn't stick), and cards with
-custom `art=`, any kind. The art is loaded fresh each time, icons still come from the cache.
+custom `art=`, any kind. The art is loaded fresh each time, icons still come from the cache. Animated cards
+are never kept either, hold on to the `AnimatedCard` if you want more exports from the same one.
 
 ## Render limit
 
@@ -20,7 +21,7 @@ set a lower one, the rest wait their turn:
 cards = akef_cards.Cards(max_renders=3)
 ```
 
-It's per `Cards` and only covers drawing, not downloads or loading custom art. It lowers how much runs at
+It's per `Cards` and covers drawing and animated card exports, not downloads or loading custom art. It lowers how much runs at
 once, it doesn't make a card draw faster.
 
 ## Enka players (memory)
@@ -55,6 +56,10 @@ cards = akef_cards.Cards(cache_mb=None)   # no limit
 
 The last 200 images are also kept in memory, so a busy bot doesn't read them from disk again.
 Art you pass with `art=` is never cached.
+
+Cards that need the same image at the same time share one download. Files are written to a temp file first
+then renamed, so nothing reads half an image, and disk reads and writes run in threads so a slow drive
+doesn't freeze your bot.
 
 ## Game data (disk)
 

@@ -12,8 +12,10 @@ This one only draws. If you just want the numbers, use akef on its own.
 pip install akef-cards
 ```
 
-Pulls in akef too. Python 3.10+. Longer docs in [`docs/`](https://github.com/ShresthVaibhav/akef-cards/blob/main/docs/README.md), runnable scripts in
-[`examples/`](https://github.com/ShresthVaibhav/akef-cards/tree/main/examples).
+Pulls in akef too. Python 3.10+. Longer docs in [`docs/`](https://github.com/ShresthVaibhav/akef-cards/blob/main/docs/README.md)
+(also on [the docs site](https://shresthvaibhav.github.io/akef-cards/)), runnable scripts in
+[`examples/`](https://github.com/ShresthVaibhav/akef-cards/tree/main/examples) and bot recipes plus a FAQ in the
+[wiki](https://github.com/ShresthVaibhav/akef-cards/wiki).
 
 ## Quick start
 
@@ -136,13 +138,24 @@ WEBP is the default, its much smaller and looks better than GIF. `fit="contain"`
 animation with a blurred copy filling the rest, `fit="cover"` fills the panel and crops. `width=` sets the output
 width (1000 by default). Every 2nd frame is dropped to keep it small, same speed, just a bit less smooth.
 `frame_step=1` keeps them all. Text urls and paths need `allow_remote` / `allow_local` same as `art=`. Takes a few
-seconds and isnt cached. [`animated.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/animated.py)
+seconds and isnt cached. Bad or still files give a `CardError`.
+
+For more control, `animated_card()` gives you a card you can trim, speed up, reverse, bounce, loop or shrink
+to a size limit before exporting, see [animated card docs](https://github.com/ShresthVaibhav/akef-cards/blob/main/docs/cards.md#animated-card).
+
+```py
+card = await cards.animated_card(build, Path("art.gif"), fit="auto")
+await card.speed(1.25).bounce().save("card.webp")
+small = await card.fit_under(1.0)    # under 1 MB
+```
+
+[`animated.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/animated.py)
 
 <details>
 <summary>Animated, template 1 and 2</summary>
 
 ![animated operator light](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/animated_1.webp)
-![animated operator dark](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/animated_2.webp)
+![animated operator dark](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/animated_2.gif)
 </details>
 
 ## Compare
@@ -378,13 +391,14 @@ On by default, nothing to set up.
 | game data tables | disk | until a patch needs new ones |
 
 Images are saved by their file name, not the link, so when SKPORT moves a link it still hits the cache. Art you
-pass with `art=` is never saved.
+pass with `art=` is never saved, and animated cards arent cached at all.
+Cards that need the same image at once share one download.
 
 ```py
 cards = akef_cards.Cards(cache_mb=100, kept_cards=32)   # more room
 cards = akef_cards.Cards(cache_mb=None)                 # no size limit
 cards = akef_cards.Cards(cache=False)                   # always fetch and draw fresh
-cards = akef_cards.Cards(max_renders=3)                 # draw max 3 at once, off by default
+cards = akef_cards.Cards(max_renders=3)                 # draw/export max 3 at once, off by default
 cards.clear_cache()
 ```
 
@@ -415,7 +429,9 @@ either you get `akef.MissingGameData`. Refresh by hand with `await cards.update(
 | `skport_contract_detail(card, detail)` | contract runs and teams |
 | `wiki(item, index=None)` | a readable wiki page |
 | `render(build, template, art, hidden)` | operator card |
-| `render_animated(build, art, template, ...)` | operator card w/ moving art, gives a file |
+| `render_animated(build, art, template, ...)` | operator card with moving art, gives a file |
+| `animated_card(build, art, template, ...)` | same card as an `AnimatedCard` you can edit and export |
+| `animation_info(art)` | size, frames, length and suggested fit of an animation |
 | `render_bytes(card, format="PNG", ...)` | any card as a file for bots, `render_compare_bytes()` and `render_monument_event_bytes()` for those two |
 | `render_compare(a, b, names, template)` | two players side by side |
 | `render_profile(player, template, grid)` | profile pages |
@@ -458,6 +474,15 @@ and logged so you can see whats missing. Translators welcome, see [Languages](ht
 | [`options.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/options.py) | hidden uid, bytes for bots, languages |
 
 Scripts that need SKPORT read the token from `SKPORT_TOKEN` or `~/.skport_token`.
+
+## Running the tests
+
+```
+pip install -e .[dev]
+pytest
+```
+
+They run offline on saved data in `tests/data`, split by card type.
 
 ## License
 

@@ -12,7 +12,7 @@ Python 3.10 or newer.
 | --- | --- | --- |
 | Needs | just the UID | the player's [akef](https://github.com/ShresthVaibhav/akef) token |
 | Operators | the ones in the in-game showcase | every operator on the account |
-| Cards | character, profile | character, profile, live status, monument, factory |
+| Cards | character (still or animated), compare, profile | everything except compare, like live status, roster, exploration, pulls and endgame |
 
 ## From a UID
 
@@ -68,6 +68,9 @@ async def on_card_command(uid, name):
 ```
 
 Drawing runs in a worker thread, so the bot keeps answering other messages while a card is made.
+For a busy bot `Cards(max_renders=3)` caps how many draw at once. Animated cards from an upload work the
+same way, `render_animated(build, attachment_bytes)` gives a file too, and `animated_card(...).fit_under(10)`
+keeps it under an upload limit.
 
 ## Languages
 

@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image
 
 from akef_cards.i18n import long_date, short_date
-from akef_cards.draw import canvas_draw, cover, fit, font, number, shorten
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, shorten
 from akef_cards.gacha import Hit, PullHistory, Track
 from akef_cards.templates.live_parts import bar, ring, round_avatar
 from akef_cards.templates.profile import _round_mask
@@ -161,6 +159,5 @@ def render(h: PullHistory, images, *, hide_uid: bool = False) -> Image.Image:
         d.rounded_rectangle((lx, height - 48, lx + 18, height - 30), 5, fill=color)
         d.text((lx + 26, height - 51), text, font=font(17), fill=MUTED)
         lx += 40 + d.textlength(text, font=font(17)) + 20
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), height - 50), "akef",
-           font=font(18, "semibold"), fill=MUTED)
+    brand(d, W - PAD, height - 50, MUTED)
     return canvas.convert("RGB")

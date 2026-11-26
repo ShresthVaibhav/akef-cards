@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from PIL import Image, ImageChops, ImageDraw
 
 from akef_cards.i18n import short_date

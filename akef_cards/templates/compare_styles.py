@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw, ImageFilter
 
 from akef.enka.build import Build
-from akef_cards.draw import canvas_draw, class_badge, fit, font, icon, number, potential_mark, shorten, stars
+from akef_cards.draw import brand, canvas_draw, class_badge, fit, font, icon, number, potential_mark, shorten, stars
 from akef_cards.templates import showcase as base
 from akef_cards.templates.compare import _rows
 from akef_cards.templates.parts import element_badge, fade, fit_name, palette, shape, splash, two_pass
@@ -134,7 +132,7 @@ def _skill_icon(canvas, d, images, skill, x, y, size, tile):
 
 
 def _footer(d, w, y, p):
-    d.text((w - 40 - d.textlength("akef", font=font(16, "semibold")), y), "akef", font=font(16, "semibold"), fill=p["dim"])
+    brand(d, w - 40, y, p["dim"], 16)
 
 
 

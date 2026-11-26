@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 import math
 
 from PIL import Image, ImageChops, ImageDraw
 
-from akef_cards.draw import canvas_draw, class_badge, cover, fit, font, number, shorten, stars
+from akef_cards.draw import brand, canvas_draw, class_badge, cover, fit, font, number, shorten, stars
 from akef.enka import Player, Rostered
 
 from akef_cards.framing import GRIDS, pages as split_pages
@@ -164,5 +162,5 @@ def render(player: Player, images, *, grid: str = "4x2", page: int = 0, hide_uid
         _tile(canvas, d, op, images, PAD + c * (tw + GAP), y + r * (th + GAP), tw, th)
     source = "enka.network" if player.source == "enka" else "skport"
     d.text((PAD, h - 54), f"via {source}", font=font(19), fill=DIM)
-    d.text((w - PAD - d.textlength("akef", font=font(19, "semibold")), h - 54), "akef", font=font(19, "semibold"), fill=DIM)
+    brand(d, w - PAD, h - 54, DIM, 19)
     return canvas.convert("RGB")

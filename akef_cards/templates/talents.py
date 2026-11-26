@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw
 
 from akef.enka.build import Build, Talent

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw
 
 from akef_cards.draw import canvas_draw, class_badge, cover, fit, font, number, potential_mark, shorten, stars

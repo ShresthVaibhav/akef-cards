@@ -1,12 +1,12 @@
-from __future__ import annotations
-
 from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 from akef.enka.build import Build
 from akef_cards.framing import splash_focus
 from akef_cards.i18n import t as tr
 from akef_cards.templates.talents import draw_row, row_width
-from akef_cards.draw import _runs, body_x, canvas_draw, class_badge, stand, icon, potential_mark, stat_label, cover, fit, font, number, shorten, stars
+from akef_cards.draw import (
+    _runs, body_x, brand, canvas_draw, class_badge, cover, fit, font, icon, number, potential_mark, shorten, stand, stars, stat_label,
+)
 
 W, H = 2000, 1490
 BG = (242, 241, 236)
@@ -208,7 +208,7 @@ def _headline(canvas, d, build: Build, images, x0, width):
     if name_w + size + 20 <= width:
         mark = potential_mark(size, build.potential, SIGNAL, (196, 194, 186))
         canvas.alpha_composite(mark, (int(x0 + name_w + 14), int(84 + nf.size * 0.62 - size / 2)))
-    # cjk glyphs sit lower than latin ones at the same size, so measure what was drawn
+    # cjk sits lower than latin, measure it
     bottom = max(f.getbbox(chunk)[3] for chunk, f in _runs(tr(build.name), nf))
     y = 84 + max(nf.size + 8, bottom) + 14
     glyph = images.get(build.element_icon)
@@ -505,7 +505,7 @@ def _footer(d, build: Build, hide_uid):
     y = H - 46
     uid = f"UID {o.uid}"
     d.text((1000, y), f"{o.name}  ·  {uid}  ·  Authority {o.level}", font=font(20), fill=MUTED)
-    d.text((1930 - d.textlength("akef", font=font(20, "semibold")), y), "akef", font=font(20, "semibold"), fill=MUTED)
+    brand(d, 1930, y, MUTED, 20)
 
 
 def render(build: Build, images, *, art=None, hide_uid=False) -> Image.Image:

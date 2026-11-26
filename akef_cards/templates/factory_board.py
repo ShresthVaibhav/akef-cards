@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 from dataclasses import dataclass
 
 from PIL import Image
 
-from akef_cards.draw import canvas_draw, cover, font, number, shorten
+from akef_cards.draw import brand, canvas_draw, cover, font, number, shorten
 from akef_cards.factory import Factory, Region, money
 from akef_cards.templates.live_parts import bar, ring, round_avatar
 from akef_cards.templates.profile import _round_mask
@@ -160,8 +158,7 @@ def render(f: Factory, images, *, theme: Theme = LIGHT, hide_uid: bool = False) 
         bottom = max(bottom, _region(canvas, d, r, images, theme, PAD + i * (cw + GAP), 200, cw))
     _cabins(canvas, d, f, images, theme, bottom + 36)
     d.text((PAD, h - 44), "via skport", font=font(18), fill=theme.muted)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), h - 44), "akef", font=font(18, "semibold"),
-           fill=theme.muted)
+    brand(d, W - PAD, h - 44, theme.muted)
     return canvas.convert("RGB")
 
 

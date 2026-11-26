@@ -1,31 +1,11 @@
-from __future__ import annotations
-
-import threading
-
 from PIL import Image, ImageChops
 
-from akef_cards.draw import canvas_draw, cover, fit, font, number
-from akef_cards.templates.showcase import BG, CARD, HAIR, MUTED, SIGNAL, SLATE, TEXT, _wrap
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number
+from akef_cards.templates.showcase import BG, SIGNAL, SLATE
+from akef_cards.templates.wiki_board import LIGHT, themed, wrap_lines as _lines
 from akef.wiki import Cost, Node, WikiPage
 
-LIGHT = {"bg": BG, "card": CARD, "line": HAIR, "text": TEXT, "dim": MUTED}
-DARK = {"bg": (15, 16, 20), "card": (26, 28, 34), "line": (44, 47, 56), "text": (240, 241, 245), "dim": (140, 144, 154)}
 P = LIGHT
-_lock = threading.Lock()
-
-
-def _themed(draw):
-    def run(page, images, *, hide_uid=False, dark=False):
-        global P
-        with _lock:
-            P = DARK if dark else LIGHT
-            try:
-                return draw(page, images, hide_uid=hide_uid)
-            finally:
-                P = LIGHT
-    run.__name__ = draw.__name__
-    return run
-
 CHIP = BG
 
 
@@ -33,14 +13,6 @@ W = 2000
 PAD = 56
 HEAD = 200
 AMBER = (176, 126, 0)
-
-
-def _lines(d, text, f, room, limit=99):
-    out = []
-    for para in text.splitlines():
-        if para.strip() and len(out) < limit:
-            out += _wrap(d, para.strip(), f, room, limit - len(out))
-    return out[:limit]
 
 
 def _canvas(page: WikiPage, images, title: str, height: int):
@@ -57,8 +29,7 @@ def _canvas(page: WikiPage, images, title: str, height: int):
     d.text((PAD, 46), title.upper(), font=font(20, "bold"), fill=SIGNAL)
     d.text((PAD - 3, 72), page.name, font=number(84), fill=P["text"])
     d.line([(PAD, HEAD), (W - PAD, HEAD)], fill=P["line"], width=2)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), height - 46), "akef", font=font(18, "semibold"),
-           fill=P["dim"])
+    brand(d, W - PAD, height - 46, P["dim"])
     d.text((PAD, height - 46), "via skport wiki", font=font(18), fill=P["dim"])
     return canvas, d
 
@@ -278,16 +249,16 @@ def _render_lore(page: WikiPage, images, *, hide_uid: bool = False) -> Image.Ima
     return canvas.convert("RGB")
 
 
-render_skills = _themed(_render_skills)
+render_skills = themed(_render_skills)
 
 
-render_talents = _themed(_render_talents)
+render_talents = themed(_render_talents)
 
 
-render_growth = _themed(_render_growth)
+render_growth = themed(_render_growth)
 
 
-render_profile = _themed(_render_profile)
+render_profile = themed(_render_profile)
 
 
-render_lore = _themed(_render_lore)
+render_lore = themed(_render_lore)

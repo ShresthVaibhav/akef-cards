@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import math
 
 from PIL import Image, ImageDraw
@@ -14,7 +12,7 @@ STAGE_STARS = 3
 def ring(size, share, color, track, width, scale=4):
     big = Image.new("RGBA", (size * scale, size * scale))
     d = ImageDraw.Draw(big)
-    # pillow grows the arc inwards from the box, so the stroke's middle sits half a width inside the edge
+    # pillow draws arc strokes inward, so the middle of the line is half a width in
     box = (0, 0, size * scale - 1, size * scale - 1)
     d.arc(box, 0, 360, fill=track, width=width * scale)
     if share > 0:

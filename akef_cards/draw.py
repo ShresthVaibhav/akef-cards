@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import math
 import re
 from contextvars import ContextVar
@@ -15,8 +13,8 @@ UID = re.compile(r"(?<=UID )\d[\d ]{3,}\d")
 
 WEIGHTS = {"regular": "Regular", "medium": "Medium", "semibold": "SemiBold", "bold": "Bold"}
 AXIS = {"regular": 400, "medium": 500, "semibold": 600, "bold": 700}
-# barlow is latin only: fira sans covers greek/cyrillic names like "Brr-Brr-Bomb β",
-# the noto fonts cover japanese, korean, chinese and thai (sc only for rare characters tc lacks)
+# barlow is latin only. fira sans covers greek/cyrillic (Brr-Brr-Bomb β),
+# noto covers jp, kr, cn and thai (sc only for chars tc doesnt have)
 FALLBACKS = ("FiraSans", "NotoSansJP", "NotoSansKR", "NotoSansTC", "NotoSansSC", "NotoSansThai")
 ROMAN = {chr(0x2160 + i): v for i, v in enumerate(("I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"))}
 _fallback: dict[int, list[ImageFont.FreeTypeFont]] = {}
@@ -121,6 +119,11 @@ def canvas_draw(image: Image.Image) -> Draw:
     return d
 
 
+def brand(d, right, y, fill, size=18):
+    f = font(size, "semibold")
+    d.text((right - d.textlength("akef", font=f), y), "akef", font=f, fill=fill)
+
+
 def number(size: int) -> ImageFont.FreeTypeFont:
     return font(size, "semibold")
 
@@ -132,8 +135,8 @@ def fit(img: Image.Image, w: int, h: int) -> Image.Image:
 
 
 def stand(img: Image.Image, height: int, max_width: int) -> Image.Image:
-    # skport art is one canvas size for everyone, so slim poses come out tiny if fitted whole.
-    # trim to the figure and size it by height instead
+    # skport art all has the same canvas size, so thin poses end up tiny.
+    # crop to the figure and scale by height
     img = img.convert("RGBA")
     box = img.getchannel("A").point(lambda v: 255 if v > 20 else 0).getbbox()
     if box:
@@ -270,10 +273,6 @@ def stat_label(d, x, y, name, f, fill, size=None) -> float:
         x += glyph.width + 6
     d.text((x, y), name, font=f, fill=fill)
     return x + d.textlength(name, font=f)
-
-
-def lerp(a, b, t: float):
-    return tuple(int(a[i] + (b[i] - a[i]) * t) for i in range(3))
 
 
 @lru_cache(maxsize=64)

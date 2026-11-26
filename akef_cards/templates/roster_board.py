@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 import math
 
 from PIL import Image
 
-from akef_cards.draw import canvas_draw, cover, fit, font, number, shorten, stars
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, shorten, stars
 from akef_cards.roster import MAX_GEAR, MAX_SKILL, Roster, Trained
 from akef_cards.templates.live_parts import bar, round_avatar
 from akef_cards.templates.profile import _round_mask
@@ -124,6 +122,5 @@ def render(r: Roster, images, *, hide_uid: bool = False) -> Image.Image:
         c, row = divmod(i, rows)
         _row(canvas, d, op, images, PAD + c * (cw + GAP), 200 + row * ROW, cw)
     d.text((PAD, height - 50), "via skport", font=font(18), fill=MUTED)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), height - 50), "akef", font=font(18, "semibold"),
-           fill=MUTED)
+    brand(d, W - PAD, height - 50, MUTED)
     return canvas.convert("RGB")

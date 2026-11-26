@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 import math
 
 from PIL import Image, ImageDraw, ImageOps
 
-from akef_cards.draw import canvas_draw, cover, fit, font, number, shorten
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, shorten
 from akef_cards.monument import Event, Monument, clock
 from akef_cards.templates.live_parts import round_avatar
 from akef_cards.templates.showcase import BG, CARD, HAIR, MUTED, SIGNAL, SLATE, TEXT
@@ -112,4 +110,4 @@ def render_overview(mon: Monument, images, *, hide_uid: bool = False) -> Image.I
 
 def _footer(d, h):
     d.text((PAD, h - 44), "via skport", font=font(18), fill=MUTED)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), h - 44), "akef", font=font(18, "semibold"), fill=MUTED)
+    brand(d, W - PAD, h - 44, MUTED)

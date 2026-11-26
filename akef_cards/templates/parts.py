@@ -1,9 +1,9 @@
-from __future__ import annotations
-
 from PIL import Image, ImageChops, ImageDraw
 
 from akef.enka.build import Build
-from akef_cards.draw import body_x, canvas_draw, cover, fit, stand, font, icon, number, potential_mark, shorten, stars
+from akef_cards.draw import (
+    body_x, brand, canvas_draw, cover, fit, font, icon, number, potential_mark, shorten, stand, stars,
+)
 from akef_cards.framing import splash_focus
 from akef_cards.templates import showcase as base
 from akef_cards.templates.showcase import ELEMENT_DMG, EXTRA_STATS, RARITY, SIGNAL
@@ -215,11 +215,6 @@ def boxed(canvas, box_fn, x, y, w, pad, draw_fn):
     return bottom + pad
 
 
-def owner(build, hide_uid):
-    o = build.owner
-    return o.name, f"UID {o.uid}", o.level
-
-
 def mix(a, b, k):
     return tuple(int(a[i] + (b[i] - a[i]) * k) for i in range(3))
 
@@ -268,9 +263,9 @@ def fade(img, left=0, right=0, top=0, bottom=0):
 
 
 def footer(d, build, hide_uid, x, right, y, color):
-    name, uid, level = owner(build, hide_uid)
-    d.text((x, y), f"{name}  ·  {uid}  ·  Authority {level}", font=font(18), fill=color)
-    d.text((right - d.textlength("akef", font=font(18, "semibold")), y), "akef", font=font(18, "semibold"), fill=color)
+    o = build.owner
+    d.text((x, y), f"{o.name}  ·  UID {o.uid}  ·  Authority {o.level}", font=font(18), fill=color)
+    brand(d, right, y, color)
 
 
 def fit_name(d, text, start, room, low=40):
@@ -281,7 +276,7 @@ def fit_name(d, text, start, room, low=40):
 
 
 def ink_bottom(text, f):
-    # cjk and thai fall back to other fonts that sit lower, so measure the drawn name instead of trusting its size
+    # cjk and thai fallback fonts sit lower, so measure the drawn text
     probe = canvas_draw(Image.new("L", (1, 1)))
     img = Image.new("L", (int(probe.textlength(text, font=f)) + 20, int(f.size * 2)))
     canvas_draw(img).text((0, 0), text, font=f, fill=255)

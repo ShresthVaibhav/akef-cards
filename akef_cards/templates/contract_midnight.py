@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image, ImageChops
 
 from akef_cards.contract import Contracts
-from akef_cards.draw import canvas_draw, cover, fit, font, number
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number
 from akef_cards.templates.contract_board import medal_image, time_left
 from akef_cards.templates.live_parts import round_avatar
 from akef_cards.templates.profile_midnight import DIM, LINE, NIGHT, PANEL, WHITE, _gradient
@@ -76,6 +74,5 @@ def render(cs: Contracts, images, *, hide_uid: bool = False) -> Image.Image:
         my += 100
     status = (f"MEDAL LV {c.medal_level}" + (" · PLATED" if c.plated else "")) if c.medal_level else "MEDAL NOT EARNED YET"
     d.text((mx + 32, H - 124), status, font=font(18, "bold"), fill=SIGNAL if c.medal_level else DIM)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), H - 50), "akef", font=font(18, "semibold"),
-           fill=DIM)
+    brand(d, W - PAD, H - 50, DIM)
     return canvas.convert("RGB")

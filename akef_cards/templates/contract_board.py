@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image, ImageChops, ImageOps
 
 from akef_cards.contract import Contract, Contracts
-from akef_cards.draw import canvas_draw, cover, fit, font, number, shorten
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, shorten
 from akef_cards.live import until
 from akef_cards.templates.live_parts import ring, round_avatar
 from akef_cards.templates.profile import _round_mask
@@ -120,6 +118,5 @@ def render(cs: Contracts, images, *, hide_uid: bool = False) -> Image.Image:
     if cs.past:
         names = ", ".join(f"{p.name} ({p.best})" for p in cs.past[:3])
         d.text((PAD, H - 60), shorten(d, f"Past: {names}", font(18), W - PAD * 2 - 80), font=font(18), fill=MUTED)
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), H - 50), "akef", font=font(18, "semibold"),
-           fill=MUTED)
+    brand(d, W - PAD, H - 50, MUTED)
     return canvas.convert("RGB")

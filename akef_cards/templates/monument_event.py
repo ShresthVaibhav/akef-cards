@@ -1,8 +1,6 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw, ImageFilter
 
-from akef_cards.draw import canvas_draw, cover, fit, font, number, shorten
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, shorten
 from akef_cards.i18n import short_date
 from akef_cards.monument import Event, Monument, Stage, clock
 from akef_cards.templates.flex import member
@@ -21,7 +19,7 @@ DARK = {"bg": (15, 16, 20), "card": (26, 28, 34), "line": (44, 47, 56), "text": 
 
 
 def _poster(img, w, h, fill):
-    # some posters carry a half transparent green edge from their cutout, it shows up once they're scaled
+    # some posters have a faint green edge from the cutout, it shows when scaled
     img = img.convert("RGBA")
     img.putalpha(img.getchannel("A").point(lambda v: 255 if v > 180 else 0))
     out = Image.new("RGBA", (w, h), fill + (255,))
@@ -96,8 +94,7 @@ def _rules(d, event: Event, x, y, w, p, limit=4):
 
 def _footer(d, w, y, p):
     d.text((PAD, y), "via skport", font=font(18), fill=p["dim"])
-    d.text((w - PAD - d.textlength("akef", font=font(18, "semibold")), y), "akef", font=font(18, "semibold"),
-           fill=p["dim"])
+    brand(d, w - PAD, y, p["dim"])
 
 
 def _stage(canvas, d, s: Stage, images, x, y, w, p, art_h):

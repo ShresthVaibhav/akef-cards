@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw, ImageFilter
 
 from akef.enka.build import Build
-from akef_cards.draw import canvas_draw, class_badge, fit, font, icon, number, potential_mark, shorten, stars
+from akef_cards.draw import brand, canvas_draw, class_badge, fit, font, icon, number, potential_mark, shorten, stars
 from akef_cards.templates.parts import (
     boxed, element_badge, face_crop, fade, fit_name, gear_block, ink_bottom, palette, two_pass, weapon_block,
 )
@@ -211,7 +209,7 @@ def render(a: Build, b: Build, images, *, hide_uid=False) -> Image.Image:
             y = _skills(canvas, d, a, b, images, x0, x1, _head(d, x0, x1, y, "Skills"))
         ends = [y, _loadout(canvas, d, a, images, left, 258), _loadout(canvas, d, b, images, right - SIDE, 258)]
         y = max(ends) + 20
-        d.text((right - d.textlength("akef", font=font(18, "semibold")), y), "akef", font=font(18, "semibold"), fill=MUTED)
+        brand(d, right, y, MUTED)
         return canvas, y + 40
 
     return two_pass(paint)

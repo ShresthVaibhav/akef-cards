@@ -1,10 +1,9 @@
-from __future__ import annotations
-
+import sys
 import threading
 
 from PIL import Image, ImageChops, ImageDraw
 
-from akef_cards.draw import canvas_draw, cover, fit, font, number
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number
 from akef_cards.templates.showcase import BG, CARD, HAIR, MUTED, SIGNAL, SLATE, TEXT, _wrap
 from akef.wiki import WikiPage
 
@@ -14,17 +13,18 @@ P = LIGHT
 _lock = threading.Lock()
 
 
-def _themed(draw):
+def themed(draw):
+    module = sys.modules[draw.__module__]
+
     def run(page, images, *, hide_uid=False, dark=False):
-        global P
         with _lock:
-            P = DARK if dark else LIGHT
+            module.P = DARK if dark else LIGHT
             try:
                 return draw(page, images, hide_uid=hide_uid)
             finally:
-                P = LIGHT
-    run.__name__ = draw.__name__
+                module.P = LIGHT
     return run
+
 
 CHIP = BG
 
@@ -49,14 +49,11 @@ def _art(canvas, page: WikiPage, images):
     canvas.alpha_composite(img, (max(0, (ART_W - img.width) // 2), H - img.height))
 
 
-def _lines(d, text, f, room, limit):
+def wrap_lines(d, text, f, room, limit=99):
     out = []
     for para in text.splitlines():
-        if not para.strip():
-            continue
-        out += _wrap(d, para.strip(), f, room, limit - len(out))
-        if len(out) >= limit:
-            break
+        if para.strip() and len(out) < limit:
+            out += _wrap(d, para.strip(), f, room, limit - len(out))
     return out[:limit]
 
 
@@ -89,11 +86,11 @@ def _render(page: WikiPage, images, *, hide_uid: bool = False) -> Image.Image:
 
     if page.quote:
         d.rounded_rectangle((x0, y, x0 + 6, y + 34), 3, fill=SIGNAL)
-        for line in _lines(d, f"“{page.quote}”", font(26, "semibold"), room - 24, 2):
+        for line in wrap_lines(d, f"“{page.quote}”", font(26, "semibold"), room - 24, 2):
             d.text((x0 + 22, y), line, font=font(26, "semibold"), fill=P["text"])
             y += 36
         y += 10
-    for line in _lines(d, page.bio, font(20), room, 3):
+    for line in wrap_lines(d, page.bio, font(20), room, 3):
         d.text((x0, y), line, font=font(20), fill=P["dim"])
         y += 29
     y += 24
@@ -119,13 +116,13 @@ def _render(page: WikiPage, images, *, hide_uid: bool = False) -> Image.Image:
             d.text((kx + 10, y + 23), kind, font=font(14, "bold"), fill=SLATE)
             ty = y + 52
             limit = max(1, (sh - 62) // 26)
-            for line in _lines(d, skill.text, font(18), right - tx - 20, limit):
+            for line in wrap_lines(d, skill.text, font(18), right - tx - 20, limit):
                 d.text((tx, ty), line, font=font(18), fill=P["dim"])
                 ty += 26
             y += sh + 12
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), H - 46), "akef", font=font(18, "semibold"), fill=P["dim"])
+    brand(d, W - PAD, H - 46, P["dim"])
     d.text((x0, H - 46), "via skport wiki", font=font(18), fill=P["dim"])
     return canvas.convert("RGB")
 
 
-render = _themed(_render)
+render = themed(_render)

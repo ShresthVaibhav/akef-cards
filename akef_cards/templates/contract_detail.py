@@ -1,9 +1,7 @@
-from __future__ import annotations
-
 from PIL import Image, ImageDraw
 
 from akef_cards.contract import ContractDetail, Run
-from akef_cards.draw import canvas_draw, cover, fit, font, number, rarity_mark
+from akef_cards.draw import brand, canvas_draw, cover, fit, font, number, rarity_mark
 from akef_cards.i18n import long_date
 from akef_cards.live import until
 from akef_cards.monument import clock
@@ -124,8 +122,7 @@ def _render(cd: ContractDetail, images, p) -> Image.Image:
     for i, r in enumerate(runs):
         _battle(canvas, d, r, i + 1, images, PAD + (i % cols) * (bw + 30), y + (i // cols) * (bh + 30), bw, bh, p)
     d.text((PAD, h - 44), "via skport", font=font(18), fill=p["dim"])
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), h - 44), "akef", font=font(18, "semibold"),
-           fill=p["dim"])
+    brand(d, W - PAD, h - 44, p["dim"])
     return canvas.convert("RGB")
 
 

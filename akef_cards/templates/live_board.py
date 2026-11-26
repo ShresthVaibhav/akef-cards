@@ -1,10 +1,8 @@
-from __future__ import annotations
-
 import threading
 
 from PIL import Image
 
-from akef_cards.draw import canvas_draw, cover, font, number, shorten, star
+from akef_cards.draw import brand, canvas_draw, cover, font, number, shorten, star
 from akef_cards.live import Live, until
 from akef_cards.templates.live_parts import STAGE_STARS, bar, meter_text, ring, round_avatar, sanity_note, stamp
 from akef_cards.templates.profile import _round_mask
@@ -148,7 +146,7 @@ def _render(live: Live, images, hide_uid) -> Image.Image:
     _echoes(d, live, PAD, by, bw, 250)
     _contract(canvas, d, live, images, PAD + bw + 24, by, bw, 250)
     d.text((PAD, H - 44), "via skport", font=font(18), fill=P["dim"])
-    d.text((W - PAD - d.textlength("akef", font=font(18, "semibold")), H - 44), "akef", font=font(18, "semibold"), fill=P["dim"])
+    brand(d, W - PAD, H - 44, P["dim"])
     return canvas.convert("RGB")
 
 

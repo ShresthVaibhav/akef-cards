@@ -1,6 +1,7 @@
 from akef_cards.client import Cards
 from akef_cards.contract import ContractDetail, Contracts
 from akef_cards.errors import CardError
+from akef_cards.exploration import Exploration
 from akef_cards.factory import Factory
 from akef_cards.gacha import PullHistory
 from akef_cards.images import ImageCache

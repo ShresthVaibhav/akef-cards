@@ -9,6 +9,7 @@ from akef.errors import MissingGameData
 
 from akef_cards.contract import Contract as ContractCard
 from akef_cards.contract import Buff, ContractDetail, Contracts, Fighter, Foe, Run
+from akef_cards.exploration import Exploration
 from akef_cards.factory import Area, Cabin, Factory, Post, Region
 from akef_cards.gacha import Hit, PullHistory, Track
 from akef_cards.live import Contract, Echoes, Live, Meter, until
@@ -108,6 +109,12 @@ def monument_from_skport(card, monument) -> Monument:
     return Monument(base.name, base.uid, base.level, base.server_name, base.avatar_url, events, now)
 
 
+def exploration_from_skport(card) -> Exploration:
+    base = card.base
+    return Exploration(base.name, base.uid, base.level, base.server_name, base.avatar_url,
+                       factory_from_skport(card).regions)
+
+
 # skport only sends a number per cabin, we match it to the cabins its crew's base skills name
 CABINS = {0: "Control Nexus", 1: "Manufacturing Cabin", 2: "Growth Chamber", 5: "Reception Room"}
 
@@ -121,7 +128,8 @@ def factory_from_skport(card) -> Factory:
         areas = []
         for a in d.areas:
             counts = [a.puzzle_count, a.trchest_count, a.equip_trchest_count, a.piece_count, a.blackbox_count, a.trstar_count]
-            areas.append(Area(a.name, sum(c.count for c in counts), sum(c.total for c in counts)))
+            areas.append(Area(a.name, sum(c.count for c in counts), sum(c.total for c in counts),
+                              [(c.count, c.total) for c in counts]))
         regions.append(Region(d.name, d.level, d.money.count, d.money.total, posts, areas))
     cabins = [Cabin(r.type, r.level, [c.avatar_url for c in r.chars], CABINS.get(r.type, "Cabin"))
               for r in card.space_ship.rooms]

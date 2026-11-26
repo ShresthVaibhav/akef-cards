@@ -39,7 +39,7 @@ dev = ["pytest>=8", "pytest-asyncio>=0.23"]
 packages = ["akef_cards", "akef_cards.templates", "akef_cards.sources"]
 
 [tool.setuptools.package-data]
-akef_cards = ["fonts/*.ttf", "fonts/*.txt", "data/*.json", "data/icons/*.png", "py.typed"]
+akef_cards = ["fonts/*.ttf", "fonts/*.txt", "data/*.json", "data/icons/*.png", "data/icons/*.txt", "py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

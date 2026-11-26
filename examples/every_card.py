@@ -22,6 +22,7 @@ async def main():
             "live": (cards.render_live, cards.skport_live(card), (1, 2)),
             "roster": (cards.render_roster, cards.skport_roster(card), (None,)),
             "factory": (cards.render_factory, cards.skport_factory(card), (1, 2)),
+            "exploration": (cards.render_exploration, cards.skport_exploration(card), (1, 2, 3)),
             "contract": (cards.render_contract, cards.skport_contract(card), (1, 2)),
             "pulls": (cards.render_pulls, await cards.skport_pulls(card, await client.pulls()), (1, 2)),
         }

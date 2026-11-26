@@ -29,6 +29,7 @@ class Area:
     name: str
     found: int
     total: int
+    kinds: list[tuple[int, int]] = field(default_factory=list)
 
     @property
     def share(self) -> float:

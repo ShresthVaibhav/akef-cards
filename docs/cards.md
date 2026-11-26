@@ -17,16 +17,38 @@ line and its level.
 | Option | |
 | --- | --- |
 | `template` | `1` light showcase, `2` dark in-game style with angled panels |
-| `art` | your own art instead of the splash: a Pillow image, bytes, a file path or a URL |
+| `art` | your own art instead of the splash: a Pillow image, bytes, a `Path`, or a path / URL string |
+| `allow_local` | needed for a path as a string, never turn it on for user input |
+| `allow_remote` | needed for a URL, private and local addresses stay blocked |
 | `hidden` | blur the UID number |
 
 `render_bytes()` takes the same options plus `format` and gives a `BytesIO` with a file name set,
-ready for discord.py and friends. It isn't only for operators: hand it a `Live`, `Roster`, `Factory`,
+ready for discord.py and friends. It isn't only for operators: hand it a `Live`, `Roster`, `Factory`, `Exploration`,
 `PullHistory`, `Contracts`, `ContractDetail` or `Monument` and you get that card as a file, a `Player` or `WikiPage`
 and you get a list with one file a page. `format="JPEG"` works too, smaller files for bots. `render_compare_bytes()` and `render_monument_event_bytes()` do the
 same for those two.
 
 Sources: `cards.enka(uid).builds` or `cards.skport(card, name)`.
+
+## Animated card
+
+```py
+card = await cards.render_animated(build, Path("art.gif"), format="WEBP", fit="contain", width=1000)
+```
+
+The operator card with a moving gif or webp as the art. Returns a `BytesIO` w/ a file name.
+
+| Option | |
+| --- | --- |
+| `template` | `1` light (default), `2` dark in-game style |
+| `format` | `"WEBP"` (default) or `"GIF"`, GIF is a lot bigger and only has 256 colours |
+| `fit` | `"contain"` whole animation on a blurred backdrop, `"cover"` fill and crop |
+| `width` | output width in px, never upscales the card |
+| `quality` | webp quality |
+| `frame_step` | `2` by default, drops every 2nd frame. `1` keeps them all, bigger and slower |
+| `hidden`, `allow_local`, `allow_remote` | same as the still card |
+
+If that still leaves over 120 frames it skips more. The loop stays the same length either way. Very big animations get a `CardError`.
 
 ## Compare card
 
@@ -172,3 +194,19 @@ image = await cards.render_contract_detail(detail, template=2)
 Your current Contingency Contract on one card: a banner with the best risk, attempts and missions,
 then your best 4 battles by risk, each with its team as big portraits, the time, wave and date.
 Needs `client.contract()` from akef. `template` is `1` light or `2` dark.
+
+## Exploration
+
+```py
+image = await cards.render_exploration(cards.skport_exploration(card), template=1, hidden=False)
+```
+
+Every area per region with puzzles, chests, gear chests, fragments, blackboxes and aurylenes.
+
+| `template` | |
+| --- | --- |
+| `1` | to-do: unfinished areas get big boxes with a row per kind, fewest left first. Cleared ones stay compact |
+| `2` | dark, a ring plus all six counts for every area |
+| `3` | compact yellow poster, 3 areas a row. The top banner shows what each icon means, kinds w/ stuff left are blacked out |
+
+All three show the six counts for every area. 1 and 2 also total them per region.

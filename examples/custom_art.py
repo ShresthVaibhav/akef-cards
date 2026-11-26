@@ -23,11 +23,12 @@ async def main():
 
         # python custom_art.py my_art.png  (or a url)
         if len(sys.argv) > 1:
-            (await cards.render(gilberta, art=sys.argv[1])).save(OUT / "custom_art.png")
+            card = await cards.render(gilberta, art=sys.argv[1], allow_local=True, allow_remote=True)
+            card.save(OUT / "custom_art.png")
             print("saved", OUT / "custom_art.png")
             return
 
-        # a file path (a url works the same, its just a string too)
+        # a Path just works, strings need allow_local / allow_remote
         for template in (1, 2):
             (await cards.render(gilberta, art=PIGEON, template=template)).save(OUT / f"pigeonfight99_{template}.png")
 

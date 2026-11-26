@@ -9,7 +9,19 @@ it straight away instead of drawing it, which takes a few hundred ms otherwise. 
 data, the template or `hidden` draws a fresh one.
 
 Not kept: cards where an icon failed to download (so a network blip doesn't stick), and cards with
-`art=` given as a Pillow image or bytes. Art given as a path or URL is fine.
+custom `art=`, any kind. The art is loaded fresh each time, icons still come from the cache.
+
+## Render limit
+
+Off by default, so only Python's own thread pool limits how many cards draw at once. For a busy bot you can
+set a lower one, the rest wait their turn:
+
+```py
+cards = akef_cards.Cards(max_renders=3)
+```
+
+It's per `Cards` and only covers drawing, not downloads or loading custom art. It lowers how much runs at
+once, it doesn't make a card draw faster.
 
 ## Enka players (memory)
 

@@ -10,14 +10,16 @@ from akef.enka import Build, Enka, EnkaProfile, GameData, Player
 from akef.enka.gamedata import language as language_code
 from akef.wiki import WikiPage, WikiPart, wiki_page
 
+from akef_cards import animate
 from akef_cards.contract import ContractDetail, Contracts
 from akef_cards.draw import blur_uid
 from akef_cards.errors import CardError
+from akef_cards.exploration import Exploration
 from akef_cards.factory import Factory
 from akef_cards.framing import pages
 from akef_cards.gacha import PullHistory
 from akef_cards.i18n import language, supported
-from akef_cards.images import DEFAULT_MB, ImageCache, load_art
+from akef_cards.images import DEFAULT_MB, ImageCache, art_bytes, load_art
 from akef_cards.live import Live
 from akef_cards.memo import Recent
 from akef_cards.monument import Event, Monument
@@ -25,13 +27,14 @@ from akef_cards.roster import Roster
 from akef_cards.sources.skport import (
     contract_detail_from_skport,
     contracts_from_skport,
+    exploration_from_skport,
     factory_from_skport,
     live_from_skport,
     monument_from_skport,
     pulls_from_skport,
     roster_from_skport,
 )
-from akef_cards.templates import CONTRACT, FACTORY, LIVE, PROFILES, PULLS, TEMPLATES, COMPARE, contract_detail, monument_board, monument_event, roster_board, wiki_board, wiki_pages
+from akef_cards.templates import CONTRACT, EXPLORATION, FACTORY, LIVE, PROFILES, PULLS, TEMPLATES, COMPARE, contract_detail, monument_board, monument_event, roster_board, wiki_board, wiki_pages
 
 
 def _short(lang: str) -> str:
@@ -61,7 +64,10 @@ class Cards:
         cache: bool = True,
         kept_cards: int = 8,
         cache_mb: float | None = DEFAULT_MB,
+        max_renders: int | None = None,
     ):
+        if max_renders is not None and max_renders < 1:
+            raise ValueError("max_renders has to be 1 or more, or None for no limit")
         try:
             language_code(lang)
         except ValueError:
@@ -75,6 +81,7 @@ class Cards:
         self.images = images or ImageCache(max_mb=cache_mb)
         self.cache = cache
         self._drawn = Recent(kept_cards if cache else 0)
+        self._slots = asyncio.Semaphore(max_renders) if max_renders else None
 
     def clear_cache(self) -> None:
         self.source.clear_cache()
@@ -89,10 +96,18 @@ class Cards:
         # the worker thread gets a copy of this context, so the template sees the language and the uid switch
         language.set(self.data.locale)
         blur_uid.set(bool(kwargs.get("hide_uid")))
-        image = await asyncio.to_thread(fn, *args, images, **kwargs)
+        image = await self._in_thread(fn, *args, images, **kwargs)
         if key is not None and all(u in images for u in urls if u):
             self._drawn.put(key, image)
         return image.copy()
+
+    async def _in_thread(self, fn, *args, **kwargs):
+        if self._slots is None:
+            return await asyncio.to_thread(fn, *args, **kwargs)
+        await self._slots.acquire()
+        job = asyncio.create_task(asyncio.to_thread(fn, *args, **kwargs))
+        job.add_done_callback(lambda _: self._slots.release())
+        return await asyncio.shield(job)
 
     async def __aenter__(self) -> "Cards":
         await self.data.load()
@@ -159,6 +174,15 @@ class Cards:
         return await self._draw(("factory", template, hidden, repr(factory)), factory.urls(), draw, factory,
                                 hide_uid=hidden)
 
+    def skport_exploration(self, card) -> Exploration:
+        return exploration_from_skport(card)
+
+    async def render_exploration(self, exploration: Exploration, *, template: int = 1,
+                                 hidden: bool = False) -> Image.Image:
+        draw = _pick(EXPLORATION, template, "exploration")
+        return await self._draw(("exploration", template, hidden, repr(exploration)), exploration.urls(), draw,
+                                exploration, hide_uid=hidden)
+
     async def skport_pulls(self, card, pulls, *, after=None) -> PullHistory:
         await self.data.load()
         return pulls_from_skport(self.data, card, pulls, after)
@@ -210,10 +234,38 @@ class Cards:
         wanted = [WikiPart(p) for p in parts] if parts else page.parts
         return [await self.render_wiki(page, part, template=template) for part in wanted]
 
-    async def render(self, build: Build, *, template: int = 1, art=None, hidden: bool = False) -> Image.Image:
+    async def render(self, build: Build, *, template: int = 1, art=None, hidden: bool = False,
+                     allow_remote: bool = False, allow_local: bool = False) -> Image.Image:
         module = _pick(TEMPLATES, template, "card")
-        key = ("card", template, hidden, art, repr(build)) if art is None or isinstance(art, str) else None
-        return await self._draw(key, build.urls(), _with_art, module, build, await load_art(art), hide_uid=hidden)
+        key = ("card", template, hidden, repr(build)) if art is None else None
+        picture = await load_art(art, allow_remote=allow_remote, allow_local=allow_local)
+        return await self._draw(key, build.urls(), _with_art, module, build, picture, hide_uid=hidden)
+
+    async def render_animated(self, build: Build, art, *, template: int = 1, hidden: bool = False,
+                              format: str = "WEBP", fit: str = "contain", width: int = 1000, quality: int = 80,
+                              frame_step: int = animate.FRAME_STEP,
+                              allow_remote: bool = False, allow_local: bool = False) -> io.BytesIO:
+        if template not in animate.LAYOUTS:
+            raise ValueError(f"no animated template {template!r}, pick one of {sorted(animate.LAYOUTS)}")
+        format = format.upper()
+        if format not in animate.FORMATS:
+            raise ValueError(f"format has to be one of {animate.FORMATS}")
+        if fit not in animate.FITS:
+            raise ValueError(f"fit has to be one of {animate.FITS}")
+        if frame_step < 1:
+            raise ValueError("frame_step has to be 1 or more, 1 keeps every frame")
+        if width < 200:
+            raise ValueError("width has to be 200 or more")
+        data = await art_bytes(art, allow_remote=allow_remote, allow_local=allow_local)
+        images = await self.images.get(build.urls())
+        language.set(self.data.locale)
+        blur_uid.set(hidden)
+        card = await self._in_thread(animate.render_card, build, data, images, template=template, how=fit, format=format, width=width,
+                                     quality=quality, frame_step=frame_step,
+                                     hide_uid=hidden)
+        out = io.BytesIO(card)
+        out.name = f"card.{format.lower()}"
+        return out
 
     async def render_compare(self, first, second, characters, *, template: int = 1,
                              hidden: bool = False) -> list[Image.Image]:
@@ -240,6 +292,7 @@ class Cards:
             Live: (self.render_live, "live"),
             Roster: (self.render_roster, "roster"),
             Factory: (self.render_factory, "factory"),
+            Exploration: (self.render_exploration, "exploration"),
             PullHistory: (self.render_pulls, "pulls"),
             Contracts: (self.render_contract, "contract"),
             ContractDetail: (self.render_contract_detail, "contract_detail"),

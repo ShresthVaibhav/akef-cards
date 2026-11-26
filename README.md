@@ -60,6 +60,7 @@ Each `render_*` gives back a Pillow image, or a list when theres more than one p
 | Monument | `render_monument(monument)` | 1 | skport |
 | Monument event | `render_monument_event(monument)` | 1 light, 2 dark | skport |
 | Factory | `render_factory(factory)` | 1 light, 2 dark | skport |
+| Exploration | `render_exploration(exploration)` | 1 to-do, 2 dark rings, 3 yellow poster | skport |
 | Contingency Contract | `render_contract(contracts)` | 1 light, 2 dark | skport |
 | Contract detail | `render_contract_detail(detail)` | 1 light, 2 dark | skport |
 | Wiki | `render_wiki_pages(page)` | 1 light, 2 dark | skport wiki |
@@ -92,11 +93,17 @@ Dont like the default splash? Pass `art=` with your own. A file path, a url, raw
 work, on both templates. On template 1 the art takes the whole left side, no circles behind it.
 
 ```py
-image = await cards.render(build, art="my_art.png")
-image = await cards.render(build, art="https://example.com/art.png")
+image = await cards.render(build, art=Path("my_art.png"))
+image = await cards.render(build, art="my_art.png", allow_local=True)
+image = await cards.render(build, art="https://example.com/art.png", allow_remote=True)
 image = await cards.render(build, art=attachment_bytes, template=2)   # from a bot upload
 image = await cards.render(build, art=pillow_image)                   # edit it first if you want
 ```
+
+Text urls and paths are off by default, so a bot cant be tricked into opening your files by whatever someone
+types. Dont turn on `allow_local` for user input, or wrap their text in `Path()`. With `allow_remote` private
+and local addresses are still blocked, downloads stop at 15 MB and 3 redirects, and proxy env vars arent used.
+Art over 40 megapixels is rejected.
 
 Custom art is never saved to the disk cache. Some image hosts block scripts, if a url fails download it
 yourself and pass the bytes. [`custom_art.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/custom_art.py) makes the ones below.
@@ -114,6 +121,22 @@ art by pigeonfight99
 
 art by kisaragi_pana
 </details>
+
+### Animated art
+
+Give it a gif or animated webp and the art moves, everything else stays put. Works on both templates,
+`template=2` for the dark one.
+
+```py
+card = await cards.render_animated(build, Path("art.gif"))          # BytesIO named card.webp
+card = await cards.render_animated(build, attachment_bytes, format="GIF")
+```
+
+WEBP is the default, its much smaller and looks better than GIF. `fit="contain"` (default) shows the whole
+animation with a blurred copy filling the rest, `fit="cover"` fills the panel and crops. `width=` sets the output
+width (1000 by default). Every 2nd frame is dropped to keep it small, same speed, just a bit less smooth.
+`frame_step=1` keeps them all. Text urls and paths need `allow_remote` / `allow_local` same as `art=`. Takes a few
+seconds and isnt cached. [`animated.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/animated.py)
 
 ## Compare
 
@@ -203,6 +226,16 @@ image = await cards.render_pulls(await cards.skport_pulls(card, pulls, after=dat
 ![pulls board](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/pulls_1.jpg)
 ![pulls poster](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/pulls_2.jpg)
 </details>
+
+## Exploration
+
+Its own card, with all six kinds counted per area. Template 1 gives unfinished areas the most room, 2 puts a ring on every
+area, 3 is a poster with your overall number.
+
+```py
+exploration = cards.skport_exploration(card)
+image = await cards.render_exploration(exploration, template=1)
+```
 
 ## Monument
 
@@ -326,6 +359,7 @@ pass with `art=` is never saved.
 cards = akef_cards.Cards(cache_mb=100, kept_cards=32)   # more room
 cards = akef_cards.Cards(cache_mb=None)                 # no size limit
 cards = akef_cards.Cards(cache=False)                   # always fetch and draw fresh
+cards = akef_cards.Cards(max_renders=3)                 # draw max 3 at once, off by default
 cards.clear_cache()
 ```
 
@@ -349,18 +383,21 @@ either you get `akef.MissingGameData`. Refresh by hand with `await cards.update(
 | `skport_live(card)` | sanity, dailies, weeklies, battle pass, echoes, contract |
 | `skport_roster(card)` | everyone you own with their training |
 | `skport_factory(card)` | regions, settlements and Dijiang |
+| `skport_exploration(card)` | every area with what youve found |
 | `skport_pulls(card, pulls, after=None)` | pull history ready to draw |
 | `skport_monument(card, monument)` | monument events and clears |
 | `skport_contract(card)` | contract summary |
 | `skport_contract_detail(card, detail)` | contract runs and teams |
 | `wiki(item, index=None)` | a readable wiki page |
 | `render(build, template, art, hidden)` | operator card |
+| `render_animated(build, art, template, ...)` | operator card w/ moving art, gives a file |
 | `render_bytes(card, format="PNG", ...)` | any card as a file for bots, `render_compare_bytes()` and `render_monument_event_bytes()` for those two |
 | `render_compare(a, b, names, template)` | two players side by side |
 | `render_profile(player, template, grid)` | profile pages |
 | `render_live(live, template)` | live status |
 | `render_roster(roster)` | roster board |
 | `render_factory(factory, template)` | factory |
+| `render_exploration(exploration, template)` | exploration |
 | `render_pulls(history, template)` | pull history |
 | `render_monument(monument)` | every monument event |
 | `render_monument_event(monument, event, template)` | one event, or a list |
@@ -392,6 +429,7 @@ and logged so you can see whats missing. Translators welcome, see [Languages](ht
 | [`every_card.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/every_card.py) | every card in every template |
 | [`caching.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/caching.py) | how fast the cache makes things |
 | [`custom_art.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/custom_art.py) | Gilberta with fan art from a path, bytes or pillow image |
+| [`animated.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/animated.py) | operator card with your gif as the art |
 | [`options.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/options.py) | hidden uid, bytes for bots, languages |
 
 Scripts that need SKPORT read the token from `SKPORT_TOKEN` or `~/.skport_token`.

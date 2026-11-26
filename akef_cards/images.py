@@ -2,19 +2,29 @@ from __future__ import annotations
 
 import asyncio
 import io
+import ipaddress
 import os
 import re
+import socket
+import tempfile
+import threading
 from collections import OrderedDict
+from contextlib import suppress
 from pathlib import Path
 from urllib.parse import urlparse
 
 import aiohttp
-from PIL import Image
+from aiohttp.resolver import ThreadedResolver
+from PIL import Image, UnidentifiedImageError
+from yarl import URL
 
 from akef_cards.errors import CardError
 
 MAX_SIDE = 1800
 DEFAULT_MB = 15
+MAX_ART_BYTES = 15 * 1024 * 1024
+MAX_ART_PIXELS = 40_000_000
+MAX_REDIRECTS = 3
 
 
 def default_path() -> Path:
@@ -32,6 +42,10 @@ class ImageCache:
         self.kept_in_memory = kept_in_memory
         self._timeout = aiohttp.ClientTimeout(total=timeout)
         self._memory: OrderedDict[str, Image.Image] = OrderedDict()
+        self._loading: dict[str, asyncio.Task] = {}
+        self._session: aiohttp.ClientSession | None = None
+        self._downloads = 0
+        self._trim_lock = threading.Lock()
 
     def _file(self, url: str) -> Path:
         return self.path / (name_of(url) + ".img")
@@ -43,22 +57,50 @@ class ImageCache:
         while len(self._memory) > self.kept_in_memory:
             self._memory.popitem(last=False)
 
+    def _stats(self) -> list[tuple[Path, os.stat_result]]:
+        found = []
+        for file in self.path.glob("*.img"):
+            try:
+                found.append((file, file.stat()))
+            except FileNotFoundError:
+                pass
+        return found
+
     def size(self) -> int:
-        return sum(f.stat().st_size for f in self.path.glob("*.img")) if self.path.exists() else 0
+        return sum(info.st_size for _, info in self._stats())
 
     def trim(self, keep=()) -> None:
         if self.max_bytes is None or not self.path.exists():
             return
         keep = {self._file(u) for u in keep}
-        files = sorted(self.path.glob("*.img"), key=lambda f: f.stat().st_mtime)
-        total = sum(f.stat().st_size for f in files)
-        for file in files:
-            if total <= self.max_bytes:
-                break
-            if file in keep:
-                continue
-            total -= file.stat().st_size
-            file.unlink(missing_ok=True)
+        with self._trim_lock:
+            files = sorted(self._stats(), key=lambda f: f[1].st_mtime)
+            total = sum(info.st_size for _, info in files)
+            for file, info in files:
+                if total <= self.max_bytes:
+                    break
+                if file in keep:
+                    continue
+                try:
+                    file.unlink(missing_ok=True)
+                except OSError:
+                    continue
+                total -= info.st_size
+
+    def _save(self, file: Path, data: bytes) -> None:
+        temp = None
+        try:
+            self.path.mkdir(parents=True, exist_ok=True)
+            handle, temp = tempfile.mkstemp(dir=self.path, suffix=".tmp")
+            with os.fdopen(handle, "wb") as out:
+                out.write(data)
+            os.replace(temp, file)
+        except OSError:
+            pass
+        finally:
+            if temp is not None:
+                with suppress(OSError):
+                    os.remove(temp)
 
     async def get(self, urls) -> dict[str, Image.Image]:
         wanted = {u for u in urls if u}
@@ -68,54 +110,70 @@ class ImageCache:
             if key in self._memory:
                 out[u] = self._memory[key]
                 self._memory.move_to_end(key)
-        on_disk, todo = [], []
-        for url in wanted - out.keys():
-            (on_disk if self._file(url).exists() else todo).append(url)
-
-        async def read(url):
-            file = self._file(url)
-            try:
-                img, small = await asyncio.to_thread(_decode, file.read_bytes())
-            except OSError:
-                todo.append(url)
-                return
-            if small is not None:
-                file.write_bytes(small)
-            else:
-                os.utime(file)
-            out[url] = img
-            self._remember(url, img)
-
-        await asyncio.gather(*(read(u) for u in on_disk))
-        if not todo:
-            await asyncio.to_thread(self.trim, wanted)
-            return out
-
-        self.path.mkdir(parents=True, exist_ok=True)
-        async with aiohttp.ClientSession(timeout=self._timeout, headers={"User-Agent": "akef-cards"}) as session:
-            async def one(url):
-                try:
-                    async with session.get(url) as resp:
-                        if resp.status != 200:
-                            return
-                        data = await resp.read()
-                    img, small = await asyncio.to_thread(_decode, data)
-                except (aiohttp.ClientError, asyncio.TimeoutError, OSError):
-                    return
-                self._file(url).write_bytes(small or data)
+        async def one(url):
+            task = self._loading.get(url)
+            if task is None:
+                task = self._loading[url] = asyncio.create_task(self._load(url))
+                task.add_done_callback(lambda _: self._loading.pop(url, None))
+            img = await asyncio.shield(task)
+            if img is not None:
                 out[url] = img
-                self._remember(url, img)
 
-            await asyncio.gather(*(one(u) for u in todo))
+        await asyncio.gather(*(one(u) for u in wanted - out.keys()))
         await asyncio.to_thread(self.trim, wanted)
         return out
+
+    async def _load(self, url: str) -> Image.Image | None:
+        img = await asyncio.to_thread(self._read, self._file(url))
+        if img is None:
+            return await self._download(url)
+        self._remember(url, img)
+        return img
+
+    def _read(self, file: Path) -> Image.Image | None:
+        try:
+            img, small = _decode(file.read_bytes())
+        except OSError:
+            return None
+        if small is not None:
+            self._save(file, small)
+        else:
+            with suppress(OSError):
+                os.utime(file)
+        return img
+
+    def _store(self, file: Path, data: bytes) -> Image.Image:
+        img, small = _decode(data)
+        self._save(file, small or data)
+        return img
+
+    async def _download(self, url: str) -> Image.Image | None:
+        if self._session is None:
+            self._session = aiohttp.ClientSession(timeout=self._timeout, headers={"User-Agent": "akef-cards"})
+        session = self._session
+        self._downloads += 1
+        try:
+            async with session.get(url) as resp:
+                if resp.status != 200:
+                    return None
+                data = await resp.read()
+            img = await asyncio.to_thread(self._store, self._file(url), data)
+            self._remember(url, img)
+            return img
+        except (aiohttp.ClientError, asyncio.TimeoutError, OSError):
+            return None
+        finally:
+            self._downloads -= 1
+            if not self._downloads:
+                self._session = None
+                await session.close()
 
     def clear(self) -> None:
         self._memory.clear()
         if self.path.exists():
-            for pattern in ("*.img", "*.png"):
+            for pattern in ("*.img", "*.png", "*.tmp"):
                 for file in self.path.glob(pattern):
-                    file.unlink()
+                    file.unlink(missing_ok=True)
 
 
 def name_of(url: str) -> str:
@@ -136,23 +194,106 @@ def _decode(data: bytes) -> tuple[Image.Image, bytes | None]:
     return img, out.getvalue()
 
 
-async def load_art(art) -> Image.Image | None:
+def _is_public(host: str) -> bool:
+    ip = ipaddress.ip_address(host.split("%")[0])
+    ip = getattr(ip, "ipv4_mapped", None) or ip
+    return ip.is_global and not ip.is_multicast
+
+
+def _check_url(url: URL) -> None:
+    if url.scheme not in ("http", "https") or not url.host:
+        raise CardError("art url has to be http or https")
+    try:
+        ok = _is_public(url.host)
+    except ValueError:
+        return
+    if not ok:
+        raise CardError("art url points to a private address, nope")
+
+
+class _PublicResolver(ThreadedResolver):
+    async def resolve(self, host, port=0, family=socket.AF_INET):
+        found = await super().resolve(host, port, family)
+        if not all(_is_public(r["host"]) for r in found):
+            raise CardError("art url points to a private address, nope")
+        return found
+
+
+async def _download_art(link: str) -> bytes:
+    too_big = f"art is too big, max is {MAX_ART_BYTES // (1024 * 1024)} MB"
+    try:
+        url = URL(link)
+        connector = aiohttp.TCPConnector(resolver=_PublicResolver())
+        async with aiohttp.ClientSession(connector=connector, timeout=aiohttp.ClientTimeout(total=40),
+                                         headers={"User-Agent": "akef-cards"}) as session:
+            for _ in range(MAX_REDIRECTS + 1):
+                _check_url(url)
+                async with session.get(url, allow_redirects=False) as resp:
+                    if resp.status in (301, 302, 303, 307, 308) and "Location" in resp.headers:
+                        url = url.join(URL(resp.headers["Location"]))
+                        continue
+                    resp.raise_for_status()
+                    data = bytearray()
+                    async for chunk in resp.content.iter_chunked(65536):
+                        data += chunk
+                        if len(data) > MAX_ART_BYTES:
+                            raise CardError(too_big)
+                    return bytes(data)
+    except (aiohttp.ClientError, asyncio.TimeoutError, ValueError) as exc:
+        raise CardError(f"couldn't download the art ({exc.__class__.__name__}), some hosts block scripts. "
+                        "download it yourself and pass the bytes instead") from exc
+    raise CardError("art url redirects too many times")
+
+
+def _open_art(source) -> Image.Image:
+    try:
+        with Image.open(source) as img:
+            if img.width * img.height > MAX_ART_PIXELS:
+                raise CardError("art has too many pixels")
+            return img.convert("RGBA")
+    except (UnidentifiedImageError, Image.DecompressionBombError) as exc:
+        raise CardError("couldn't read the art, is it an image?") from exc
+
+
+async def art_bytes(art, *, allow_remote: bool = False, allow_local: bool = False) -> bytes:
+    if isinstance(art, (bytes, bytearray)):
+        return bytes(art)
+    if not isinstance(art, os.PathLike):
+        text = str(art)
+        if text.lower().startswith(("http://", "https://")):
+            if not allow_remote:
+                raise CardError("art urls are off by default, pass allow_remote=True if you trust it")
+            return await _download_art(text)
+        if not allow_local:
+            raise CardError("file paths as text are off by default, pass allow_local=True or use pathlib.Path "
+                            "(only for paths you trust)")
+    return await asyncio.to_thread(_read_limited, Path(art))
+
+
+def _read_limited(path: Path) -> bytes:
+    with path.open("rb") as file:
+        data = file.read(MAX_ART_BYTES + 1)
+    if len(data) > MAX_ART_BYTES:
+        raise CardError(f"art is too big, max is {MAX_ART_BYTES // (1024 * 1024)} MB")
+    return data
+
+
+async def load_art(art, *, allow_remote: bool = False, allow_local: bool = False) -> Image.Image | None:
     if art is None:
         return None
     if isinstance(art, Image.Image):
-        return art.convert("RGBA")
+        return await asyncio.to_thread(art.convert, "RGBA")
     if isinstance(art, (bytes, bytearray)):
-        return Image.open(io.BytesIO(art)).convert("RGBA")
+        return await asyncio.to_thread(_open_art, io.BytesIO(art))
+    if isinstance(art, os.PathLike):
+        return await asyncio.to_thread(_open_art, art)
     text = str(art)
-    if text.startswith(("http://", "https://")):
-        try:
-            async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=40),
-                                             headers={"User-Agent": "akef-cards"}) as session:
-                async with session.get(text) as resp:
-                    resp.raise_for_status()
-                    data = await resp.read()
-        except (aiohttp.ClientError, asyncio.TimeoutError) as exc:
-            raise CardError(f"couldn't download the art ({exc.__class__.__name__}), some hosts block scripts. "
-                            "download it yourself and pass the bytes instead") from exc
-        return Image.open(io.BytesIO(data)).convert("RGBA")
-    return Image.open(text).convert("RGBA")
+    if text.lower().startswith(("http://", "https://")):
+        if not allow_remote:
+            raise CardError("art urls are off by default, pass allow_remote=True if you trust it")
+        data = await _download_art(text)
+        return await asyncio.to_thread(_open_art, io.BytesIO(data))
+    if not allow_local:
+        raise CardError("file paths as text are off by default, pass allow_local=True or use pathlib.Path "
+                        "(only for paths you trust)")
+    return await asyncio.to_thread(_open_art, text)

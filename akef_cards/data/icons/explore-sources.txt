@@ -1,0 +1,8 @@
+explore_*.png: exploration icons from SKPORT's player data UI
+(assets.skport.com, RegionExploreTable bundle).
+
+Copied from endfield-cards (https://github.com/MR-LORD-REX/endfield-cards), whose notes name that bundle
+as the source. Its file list also records them via https://github.com/yeci226/endfield-discord-bot
+(no license listed).
+
+Game art belongs to Hypergryph. These files are NOT covered by this project's MIT license.

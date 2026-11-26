@@ -1,0 +1,5 @@
+title: akef-cards
+description: Image cards for Arknights Endfield, from an Enka UID or a SKPORT account
+theme: jekyll-theme-cayman
+exclude:
+  - README.md

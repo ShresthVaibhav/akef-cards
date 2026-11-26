@@ -138,6 +138,13 @@ width (1000 by default). Every 2nd frame is dropped to keep it small, same speed
 `frame_step=1` keeps them all. Text urls and paths need `allow_remote` / `allow_local` same as `art=`. Takes a few
 seconds and isnt cached. [`animated.py`](https://github.com/ShresthVaibhav/akef-cards/blob/main/examples/animated.py)
 
+<details>
+<summary>Animated, template 1 and 2</summary>
+
+![animated operator light](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/animated_1.webp)
+![animated operator dark](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/animated_2.webp)
+</details>
+
 ## Compare
 
 Two UIDs and an operator, or a list of them. One card per operator that both players are showing. If only one
@@ -236,6 +243,24 @@ area, 3 is a poster with your overall number.
 exploration = cards.skport_exploration(card)
 image = await cards.render_exploration(exploration, template=1)
 ```
+
+<details>
+<summary>Template 1, to-do</summary>
+
+![exploration to-do](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/exploration_1.jpg)
+</details>
+
+<details>
+<summary>Template 2, rings</summary>
+
+![exploration rings](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/exploration_2.jpg)
+</details>
+
+<details>
+<summary>Template 3, poster</summary>
+
+![exploration poster](https://raw.githubusercontent.com/ShresthVaibhav/akef-cards/main/docs/images/exploration_3.jpg)
+</details>
 
 ## Monument
 

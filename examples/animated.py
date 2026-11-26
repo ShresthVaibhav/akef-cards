@@ -14,11 +14,20 @@ async def main():
     art = Path(sys.argv[1])
 
     async with akef_cards.Cards() as cards:
+        print(await cards.animation_info(art))
         gilberta = (await cards.enka(4727743200)).build("Gilberta")
-        for format in ("WEBP", "GIF"):
-            card = await cards.render_animated(gilberta, art, format=format)
-            (OUT / card.name).write_bytes(card.getvalue())
-            print("saved", OUT / card.name)
+
+        card = await cards.animated_card(gilberta, art, fit="auto")
+        await card.save(OUT / "animated.webp")
+        await card.save(OUT / "animated.gif")
+        await card.speed(0.75).hold(0.8).save(OUT / "slow.webp")
+        await card.bounce().save(OUT / "bounce.webp")
+        card.still(0.5).save(OUT / "thumb.png")
+
+        small = await card.fit_under(0.5)
+        (OUT / "small.webp").write_bytes(small.getvalue())
+        print("small one used", small.settings)
+        print("all in", OUT)
 
 
 asyncio.run(main())

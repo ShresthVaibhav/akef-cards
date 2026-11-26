@@ -1,4 +1,5 @@
 from akef_cards.client import Cards
+from akef_cards.clip import AnimatedCard, AnimationInfo
 from akef_cards.contract import ContractDetail, Contracts
 from akef_cards.errors import CardError
 from akef_cards.exploration import Exploration

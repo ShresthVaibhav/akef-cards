@@ -1,7 +1,6 @@
-from __future__ import annotations
-
 import asyncio
 import io
+import sys
 import warnings
 
 from PIL import Image
@@ -11,6 +10,7 @@ from akef.enka.gamedata import language as language_code
 from akef.wiki import WikiPage, WikiPart, wiki_page
 
 from akef_cards import animate
+from akef_cards.clip import AnimatedCard, AnimationInfo
 from akef_cards.contract import ContractDetail, Contracts
 from akef_cards.draw import blur_uid
 from akef_cards.errors import CardError
@@ -93,7 +93,7 @@ class Cards:
         if hit is not None:
             return hit.copy()
         images = await self.images.get(urls)
-        # the worker thread gets a copy of this context, so the template sees the language and the uid switch
+        # to_thread copies the context, so the thread sees these
         language.set(self.data.locale)
         blur_uid.set(bool(kwargs.get("hide_uid")))
         image = await self._in_thread(fn, *args, images, **kwargs)
@@ -241,31 +241,33 @@ class Cards:
         picture = await load_art(art, allow_remote=allow_remote, allow_local=allow_local)
         return await self._draw(key, build.urls(), _with_art, module, build, picture, hide_uid=hidden)
 
-    async def render_animated(self, build: Build, art, *, template: int = 1, hidden: bool = False,
-                              format: str = "WEBP", fit: str = "contain", width: int = 1000, quality: int = 80,
-                              frame_step: int = animate.FRAME_STEP,
-                              allow_remote: bool = False, allow_local: bool = False) -> io.BytesIO:
-        if template not in animate.LAYOUTS:
-            raise ValueError(f"no animated template {template!r}, pick one of {sorted(animate.LAYOUTS)}")
-        format = format.upper()
-        if format not in animate.FORMATS:
-            raise ValueError(f"format has to be one of {animate.FORMATS}")
+    async def animation_info(self, art, *, template: int = 1, allow_remote: bool = False,
+                             allow_local: bool = False) -> AnimationInfo:
+        _pick(animate.LAYOUTS, template, "animated")
+        data = await art_bytes(art, allow_remote=allow_remote, allow_local=allow_local)
+        frames, times = await asyncio.to_thread(animate.read_frames, data, 1, sys.maxsize)
+        width, height = frames[0].size
+        return AnimationInfo(width, height, len(frames), sum(times) / 1000, animate.pick_fit((width, height), template))
+
+    async def animated_card(self, build: Build, art, *, template: int = 1, hidden: bool = False,
+                            fit: str = "contain", focus: tuple[float, float] = (0.5, 0.5), width: int = 1000,
+                            frame_step: int = animate.FRAME_STEP, allow_remote: bool = False,
+                            allow_local: bool = False) -> AnimatedCard:
+        _pick(animate.LAYOUTS, template, "animated")
         if fit not in animate.FITS:
             raise ValueError(f"fit has to be one of {animate.FITS}")
-        if frame_step < 1:
-            raise ValueError("frame_step has to be 1 or more, 1 keeps every frame")
-        if width < 200:
-            raise ValueError("width has to be 200 or more")
         data = await art_bytes(art, allow_remote=allow_remote, allow_local=allow_local)
         images = await self.images.get(build.urls())
         language.set(self.data.locale)
         blur_uid.set(hidden)
-        card = await self._in_thread(animate.render_card, build, data, images, template=template, how=fit, format=format, width=width,
-                                     quality=quality, frame_step=frame_step,
-                                     hide_uid=hidden)
-        out = io.BytesIO(card)
-        out.name = f"card.{format.lower()}"
-        return out
+        frames, times = await self._in_thread(animate.compose, build, data, images, template=template, how=fit,
+                                              focus=focus, width=width, frame_step=frame_step, hide_uid=hidden)
+        return AnimatedCard(tuple(frames), tuple(times), self._in_thread)
+
+    async def render_animated(self, build: Build, art, *, format: str = "WEBP", quality: int = 80,
+                              **options) -> io.BytesIO:
+        card = await self.animated_card(build, art, **options)
+        return await card.to_bytes(format, quality)
 
     async def render_compare(self, first, second, characters, *, template: int = 1,
                              hidden: bool = False) -> list[Image.Image]:
@@ -319,7 +321,6 @@ def _encode(drawn, format: str, name: str):
     if isinstance(drawn, list):
         return [_encode(image, format, f"{name}{i}") for i, image in enumerate(drawn, 1)]
     out = io.BytesIO()
-    # jpeg has no transparency, saving rgba as jpeg raises
     if format.upper() in ("JPEG", "JPG") and drawn.mode != "RGB":
         drawn = drawn.convert("RGB")
     drawn.save(out, format="JPEG" if format.upper() == "JPG" else format, quality=92)

@@ -2,6 +2,7 @@ import asyncio
 import io
 import json
 import os
+import random
 import shutil
 import threading
 import time
@@ -74,7 +75,7 @@ async def test_enka_splash_gets_framed(profile):
     assert framed.getpixel((showcase.ART_W - 2, 700))[3] < 20
 
 
-def test_essence_badge_lands_on_the_dark_face():
+def test_essence_badge():
     capsule = Image.new("RGBA", (128, 128), (220, 230, 60, 255))
     capsule.paste((20, 20, 20, 255), (60, 30, 110, 80))
     badge = Image.new("RGBA", (64, 64), (0, 120, 255, 255))
@@ -84,10 +85,10 @@ def test_essence_badge_lands_on_the_dark_face():
     assert showcase._essence_image(capsule, None) is capsule
 
 
-def test_greek_and_roman_fall_back():
+def test_greek_fallback():
     d = canvas_draw(Image.new("RGB", (10, 10)))
     f = font(30)
-    # β comes from fira sans, Ⅱ is spelled out, neither should be a zero-width box
+    # β comes from fira sans and Ⅱ is spelled out, neither should be a blank box
     assert d.textlength("β", font=f) > 5
     assert d.textlength("Ⅱ", font=f) == d.textlength("II", font=f)
 
@@ -105,7 +106,7 @@ async def test_skport_player_pages():
 
 @pytest.mark.parametrize("number", [1, 2, 3])
 @pytest.mark.parametrize("grid", ["4x2", "3x3"])
-async def test_profile_templates_render_offline(profile, number, grid):
+async def test_profile_templates(profile, number, grid):
     from akef_cards.templates import PROFILES
 
     template = PROFILES[number]
@@ -115,13 +116,13 @@ async def test_profile_templates_render_offline(profile, number, grid):
         template.render(profile.player, {}, grid="5x5")
 
 
-async def test_enka_tiles_frame_the_face(profile):
+async def test_enka_tiles(profile):
     si = profile.player.roster[0]
     assert "/ui/ef/splash/" in si.portrait
     assert tile_crop(si) == tuple(json.loads((Path(akef_cards.__file__).parent / "data" / "faces.json").read_text())["chr_0036_jsspsi"])
 
 
-def test_live_card_renders_offline():
+def test_live_card():
     from akef_cards.sources.skport import live_from_skport
     from akef_cards.templates import LIVE
 
@@ -132,7 +133,7 @@ def test_live_card_renders_offline():
         assert draw(live, {}).size == (1600, 1000)
 
 
-def test_monument_cards_render_offline():
+def test_monument():
     from akef_cards.sources.skport import monument_from_skport
     from akef_cards.templates import monument_board
 
@@ -148,7 +149,7 @@ def test_monument_cards_render_offline():
 
 
 @pytest.mark.parametrize("number", [1, 2])
-def test_factory_templates_render_offline(number):
+def test_factory(number):
     from akef_cards.sources.skport import factory_from_skport
     from akef_cards.templates import FACTORY
 
@@ -159,7 +160,7 @@ def test_factory_templates_render_offline(number):
     assert FACTORY[number](factory, {}).width == 1600
 
 
-async def test_cards_keeps_drawn_cards(profile, tmp_path):
+async def test_card_cache(profile, tmp_path):
     cards = akef_cards.Cards(images=akef_cards.ImageCache(tmp_path))
     si = profile.build("Si")
     si.art, si.element_icon, si.skills, si.talents, si.gear, si.weapon = "", "", [], [], [], None
@@ -223,7 +224,7 @@ def test_cjk_falls_back(text):
     assert d.textlength(text, font=f) > 30 * len(text) * 0.6
 
 
-def test_labels_follow_the_language():
+def test_label_lang():
     from akef_cards.i18n import duration, language, t
 
     token = language.set("ja")
@@ -237,7 +238,7 @@ def test_labels_follow_the_language():
     assert t("GEAR") == "GEAR"
 
 
-async def test_cards_draw_in_another_language(profile, data, tmp_path):
+async def test_other_lang(profile, data, tmp_path):
     cards = akef_cards.Cards(data=data, images=akef_cards.ImageCache(tmp_path))
     data.locale = "de"
     try:
@@ -248,7 +249,7 @@ async def test_cards_draw_in_another_language(profile, data, tmp_path):
 
 
 @pytest.mark.parametrize("name", ["Abriegelungsartillerie", "Überschwänglicher Auslöser", "白けさせるない！胸中に成竹在り", "ใครก็ห้ามขัดจังหวะความสนุก"])
-def test_skill_names_stay_in_their_column(name):
+def test_skill_names_fit(name):
     d = canvas_draw(Image.new("RGB", (10, 10)))
     f = font(21, "semibold")
     lines = showcase._wrap(d, name, f, 130, 2)
@@ -256,13 +257,13 @@ def test_skill_names_stay_in_their_column(name):
     assert all(d.textlength(line, font=f) <= 130 for line in lines)
 
 
-def test_untranslated_labels_keep_enka_names():
+def test_untranslated_keeps_names():
     with pytest.warns(UserWarning, match="aren't translated"):
         cards = akef_cards.Cards(lang="ja")
     assert cards.data.locale == "ja"
 
 
-def test_unknown_language_falls_back_to_english():
+def test_unknown_lang():
     with pytest.warns(UserWarning, match="not supported"):
         cards = akef_cards.Cards(lang="klingon")
     assert cards.data.locale == "en"
@@ -317,7 +318,7 @@ async def test_wiki_pages_render(tmp_path):
 
 
 @pytest.mark.parametrize("template", [2])
-async def test_other_templates_render_offline(profile, template):
+async def test_other_templates(profile, template):
     from akef_cards.templates import TEMPLATES
 
     image = TEMPLATES[template](profile.build("Si"), {})
@@ -327,7 +328,7 @@ async def test_other_templates_render_offline(profile, template):
     TEMPLATES[template](bare, {})
 
 
-async def test_compare_renders_offline(profile):
+async def test_compare(profile):
     from akef_cards.templates import compare
 
     a, b = profile.build("Si"), profile.build("Si")
@@ -338,7 +339,7 @@ async def test_compare_renders_offline(profile):
 
 
 @pytest.mark.parametrize("template", [2])
-async def test_compare_styles_render_offline(profile, template):
+async def test_compare_styles(profile, template):
     from akef_cards.templates import COMPARE
 
     a, b = profile.build("Si"), profile.build("Si")
@@ -347,7 +348,7 @@ async def test_compare_styles_render_offline(profile, template):
     COMPARE[template](a, b, {}, hide_uid=True)
 
 
-def test_untranslated_labels_fall_back_to_english_and_log(caplog):
+def test_missing_label_logs(caplog):
     from akef_cards import i18n
 
     token = i18n.language.set("de")
@@ -360,7 +361,7 @@ def test_untranslated_labels_fall_back_to_english_and_log(caplog):
     assert any("Talents {}" in r.getMessage() for r in caplog.records)
 
 
-def test_image_cache_trims_the_least_recently_used(tmp_path):
+def test_cache_trim(tmp_path):
     import os
     import time
 
@@ -379,7 +380,7 @@ def test_image_cache_trims_the_least_recently_used(tmp_path):
     assert cache.size() <= 3 * 1024
 
 
-async def test_image_cache_keys_by_file_name(tmp_path):
+async def test_cache_keys(tmp_path):
     from akef_cards.images import ImageCache
 
     cache = ImageCache(tmp_path)
@@ -388,7 +389,7 @@ async def test_image_cache_keys_by_file_name(tmp_path):
     assert list(got) == ["https://b.example/20261105/abc123.png?expires=1"]
 
 
-async def test_art_that_wont_download_says_what_to_do(monkeypatch):
+async def test_art_download_error(monkeypatch):
     from akef_cards import images
 
     monkeypatch.setattr(images, "_is_public", lambda host: True)
@@ -396,7 +397,7 @@ async def test_art_that_wont_download_says_what_to_do(monkeypatch):
         await images.load_art("http://127.0.0.1:9/art.png", allow_remote=True)
 
 
-async def test_art_strings_need_an_opt_in(tmp_path):
+async def test_art_opt_in(tmp_path):
     from akef_cards.images import load_art
 
     file = tmp_path / "art.png"
@@ -417,14 +418,14 @@ async def test_art_strings_need_an_opt_in(tmp_path):
     "http://192.168.1.1/a.png", "http://169.254.169.254/latest", "http://0.0.0.0/a.png",
     "http://[::1]/a.png", "http://[::ffff:127.0.0.1]/a.png",
 ])
-async def test_art_url_cant_reach_private_addresses(url):
+async def test_art_private_ips(url):
     from akef_cards.images import load_art
 
     with pytest.raises(akef_cards.CardError, match="private address|InvalidUrl"):
         await load_art(url, allow_remote=True)
 
 
-async def test_art_download_checks_redirects_and_size(monkeypatch):
+async def test_art_redirects_n_size(monkeypatch):
     from aiohttp import web
     from akef_cards import images
 
@@ -459,7 +460,7 @@ async def test_art_download_checks_redirects_and_size(monkeypatch):
         await runner.cleanup()
 
 
-async def test_custom_art_cards_arent_cached(profile, tmp_path):
+async def test_custom_art_not_cached(profile, tmp_path):
     file = tmp_path / "art.png"
     Image.new("RGBA", (600, 900), (200, 80, 80, 255)).save(file)
     cards = akef_cards.Cards(images=akef_cards.ImageCache(tmp_path / "cache"))
@@ -481,7 +482,7 @@ async def test_custom_art_cards_arent_cached(profile, tmp_path):
     assert len(cards._drawn._data) == 1
 
 
-def test_detail_cards_render_offline():
+def test_detail_cards():
     from akef_cards.sources.skport import contract_detail_from_skport, monument_from_skport
     from akef_cards.templates import contract_detail, monument_event
 
@@ -497,7 +498,7 @@ def test_detail_cards_render_offline():
         assert draw(detail, {}).width == contract_detail.W
 
 
-def test_hidden_blurs_the_uid_digits():
+def test_hidden_uid():
     from akef_cards.draw import blur_uid, canvas_draw, font
 
     def draw(hidden):
@@ -514,14 +515,14 @@ def test_hidden_blurs_the_uid_digits():
     assert plain.crop((80, 0, 400, 60)).tobytes() != blurred.crop((80, 0, 400, 60)).tobytes()
 
 
-def test_wiki_cards_have_a_dark_style():
+def test_wiki_dark():
     from akef_cards.templates import wiki_board
 
     assert wiki_board.LIGHT["bg"] != wiki_board.DARK["bg"]
     assert wiki_board.P is wiki_board.LIGHT
 
 
-async def test_render_bytes_takes_every_card(tmp_path):
+async def test_render_bytes_all(tmp_path):
     card = akef.Card.model_validate(json.loads((DATA / "card_detail.json").read_text(encoding="utf-8"))["data"]["detail"])
     cards = akef_cards.Cards(images=akef_cards.ImageCache(tmp_path))
     live = await cards.render_bytes(cards.skport_live(card))
@@ -564,7 +565,7 @@ def _png():
     return out.getvalue()
 
 
-async def test_same_image_downloads_once(tmp_path):
+async def test_shared_download(tmp_path):
     from aiohttp import web
 
     hits, gate = [], asyncio.Event()
@@ -594,7 +595,7 @@ async def test_same_image_downloads_once(tmp_path):
     assert [f.name for f in tmp_path.iterdir()] == ["a.png.img"]
 
 
-async def test_failed_download_gets_retried(tmp_path):
+async def test_download_retry(tmp_path):
     from aiohttp import web
 
     hits = []
@@ -612,7 +613,7 @@ async def test_failed_download_gets_retried(tmp_path):
         await runner.cleanup()
 
 
-def test_failed_save_leaves_the_old_file(tmp_path, monkeypatch):
+def test_failed_save(tmp_path, monkeypatch):
     cache = akef_cards.ImageCache(tmp_path)
     file = tmp_path / "a.img"
     cache._save(file, b"old")
@@ -626,7 +627,7 @@ def test_failed_save_leaves_the_old_file(tmp_path, monkeypatch):
     assert list(tmp_path.iterdir()) == [file]
 
 
-def test_cleanup_survives_vanishing_files(tmp_path, monkeypatch):
+def test_trim_missing_files(tmp_path, monkeypatch):
     from concurrent.futures import ThreadPoolExecutor
 
     cache = akef_cards.ImageCache(tmp_path, max_mb=0)
@@ -658,7 +659,7 @@ async def test_render_limit(limit, most):
     assert peak[0] == most
 
 
-async def test_cancelled_render_keeps_its_slot_till_done():
+async def test_cancel_keeps_slot():
     cards = akef_cards.Cards(max_renders=1)
     started, finish, order = threading.Event(), threading.Event(), []
 
@@ -683,12 +684,12 @@ async def test_cancelled_render_keeps_its_slot_till_done():
     assert order == ["first", "second"]
 
 
-def test_render_limit_has_to_be_positive():
+def test_bad_render_limit():
     with pytest.raises(ValueError):
         akef_cards.Cards(max_renders=0)
 
 
-async def test_disk_work_stays_off_the_main_loop(tmp_path, monkeypatch):
+async def test_disk_in_threads(tmp_path, monkeypatch):
     from aiohttp import web
 
     async def pic(request):
@@ -723,7 +724,7 @@ def _card():
     return akef.Card.model_validate(raw["data"]["detail"])
 
 
-def test_exploration_keeps_each_kind():
+def test_exploration_kinds():
     from akef_cards.exploration import counted, missing, percent
 
     e = akef_cards.Cards().skport_exploration(_card())
@@ -757,7 +758,7 @@ async def test_exploration_templates_render(template):
         assert image.width == exploration_boards.W and image.height > 200
 
 
-async def test_exploration_through_the_client():
+async def test_exploration_client():
     cards = akef_cards.Cards()
 
     async def no_images(urls):
@@ -779,7 +780,7 @@ def _moving(frames=6, size=(160, 90), format="GIF"):
     return out.getvalue()
 
 
-def test_animation_frames_keep_their_timing():
+def test_frame_timing():
     from akef_cards.animate import read_frames
 
     for format in ("GIF", "WEBP"):
@@ -796,7 +797,7 @@ def test_animation_frames_keep_their_timing():
         assert len(frames) == 2 and sum(times) == tiny * 50
 
 
-def test_still_or_broken_art_cant_be_animated(monkeypatch):
+def test_bad_animation(monkeypatch):
     from akef_cards import animate
 
     for bad, error in ((_png(), "doesnt move"), (b"nope", "couldn't read")):
@@ -808,7 +809,7 @@ def test_still_or_broken_art_cant_be_animated(monkeypatch):
 
 
 @pytest.mark.parametrize("template", [1, 2])
-async def test_two_render_trick_matches_a_real_render(profile, template):
+async def test_compose_matches_render(profile, template):
     from PIL import ImageChops
     from akef_cards import animate
 
@@ -840,7 +841,7 @@ async def test_render_animated(profile, template, format, how):
         assert img.n_frames == 6
 
 
-async def test_animated_art_follows_the_same_rules(profile, tmp_path, monkeypatch):
+async def test_animated_art_rules(profile, tmp_path, monkeypatch):
     from akef_cards import images
 
     cards = akef_cards.Cards()
@@ -856,15 +857,15 @@ async def test_animated_art_follows_the_same_rules(profile, tmp_path, monkeypatc
     monkeypatch.setattr(images, "MAX_ART_BYTES", 10)
     with pytest.raises(akef_cards.CardError, match="too big"):
         await cards.render_animated(build, file)
-    for bad in ({"template": 3}, {"format": "MP4"}, {"fit": "stretch"}, {"width": 5}, {"frame_step": 0}):
+    for bad in ({"template": 3}, {"format": "MP4"}, {"fit": "stretch"}):
         with pytest.raises(ValueError):
             await cards.render_animated(build, _moving(), **bad)
 
 
 @pytest.mark.parametrize("format", ["GIF", "WEBP"])
-def test_smaller_animations_still_look_right(format):
+def test_small_anim_quality(format):
     from PIL import ImageChops
-    from akef_cards.animate import _encode
+    from akef_cards.animate import encode
 
     frames = []
     for x in (0, 40, 80, 0, 0, 120):
@@ -872,7 +873,7 @@ def test_smaller_animations_still_look_right(format):
         frame.paste((200, 40, 40), (x, 20, x + 30, 50))
         frames.append(frame)
     times = [40, 50, 60, 70, 80, 90]
-    with Image.open(io.BytesIO(_encode(frames, times, format, 90))) as img:
+    with Image.open(io.BytesIO(encode(frames, times, format, 90))) as img:
         shown, clock = [], 0
         for i in range(img.n_frames):
             img.seek(i)
@@ -886,3 +887,109 @@ def test_smaller_animations_still_look_right(format):
         off = ImageChops.difference(frame, got).convert("L")
         assert sum(i * n for i, n in enumerate(off.histogram())) / (200 * 80) < 3
         start += took
+
+
+def _clip(count=8, ms=50, size=(400, 200)):
+    async def run(fn, *args, **kwargs):
+        return await asyncio.to_thread(fn, *args, **kwargs)
+
+    frames = tuple(Image.new("RGB", size, (30 * i % 256, 90, 200 - 20 * i % 200)) for i in range(count))
+    return akef_cards.AnimatedCard(frames, (ms,) * count, run)
+
+
+def _read(data):
+    with Image.open(data) as img:
+        times = []
+        for i in range(img.n_frames):
+            img.seek(i)
+            img.load()
+            times.append(img.info.get("duration", 0))
+        return img.size, times, img.info.get("loop")
+
+
+def test_clip_edits():
+    card = _clip()
+    cut = card.trim(0.075, 0.275)
+    assert cut.times == (25, 50, 50, 50, 25) and cut.frames == card.frames[1:6]
+    assert card.speed(2).duration == 0.2 and card.speed(0.5).duration == 0.8
+    assert card.reverse().frames == card.frames[::-1]
+    bounced = card.bounce()
+    assert bounced.frame_count == 14 and bounced.frames[8] is card.frames[6] and bounced.frames[-1] is card.frames[1]
+    assert card._halved().times == (100,) * 4
+    assert card.hold(1).times[-1] == 1050 and card.hold(1, "start").times[0] == 1050
+    assert card.resize(300).size == (300, 150) and card.resize(900).size == (400, 200)
+    assert card.still(0.12).tobytes() == card.frames[2].tobytes()
+    assert card.still(99).tobytes() == card.frames[-1].tobytes()
+    assert card.frame_count == 8 and card.times == (50,) * 8 and card.width is None
+
+
+@pytest.mark.parametrize("bad", [
+    lambda c: c.trim(0.3, 0.2), lambda c: c.trim(9), lambda c: c.trim(0, 0.04), lambda c: c.speed(0),
+])
+def test_clip_bad_edits(bad):
+    with pytest.raises(ValueError):
+        bad(_clip())
+
+
+@pytest.mark.parametrize("format", ["WEBP", "GIF"])
+async def test_clip_export(format, tmp_path):
+    card = _clip().resize(300)
+    size, times, loop = _read(await card.to_bytes(format))
+    assert size == (300, 150) and sum(times) == 400 and loop == 0
+    once = _read(await card.loops(1).to_bytes(format))[2]
+    thrice = _read(await card.loops(3).to_bytes(format))[2]
+    assert (once, thrice) == ((None, 2) if format == "GIF" else (1, 3))
+    size, times, _ = _read(await _clip(40, 40).speed(5).to_bytes(format))
+    assert min(times) >= 20 and abs(sum(times) - 320) <= 10
+    path = await card.save(tmp_path / f"a.{format.lower()}")
+    assert _read(path)[0] == (300, 150)
+    with pytest.raises(ValueError):
+        await card.save(tmp_path / "a.mp4")
+
+
+async def test_parallel_exports():
+    card = _clip(12)
+    alone = [(await card.to_bytes(f)).getvalue() for f in ("WEBP", "GIF")]
+    together = await asyncio.gather(*(card.to_bytes(f) for f in ("WEBP", "GIF") * 4))
+    assert [t.getvalue() for t in together] == alone * 4
+
+
+async def test_fit_under():
+    rng = random.Random(1)
+    noisy = [Image.frombytes("RGB", (800, 400), rng.randbytes(800 * 400 * 3)) for _ in range(20)]
+    card = _clip().__class__(tuple(noisy), (40,) * 20, _clip().run)
+    full = len((await card.to_bytes()).getvalue())
+    limit = full * 0.4 / 1_000_000
+    out = await card.fit_under(limit, min_width=200)
+    assert len(out.getvalue()) <= limit * 1_000_000
+    assert out.settings["frames"] < 20 or out.settings["width"] < 800
+    assert _read(out)[0][0] == out.settings["width"]
+    with pytest.raises(akef_cards.CardError, match="smallest was"):
+        await card.fit_under(0.0001, min_width=700)
+
+
+async def test_animated_card_and_info(profile):
+    cards = akef_cards.Cards()
+
+    async def no_images(urls):
+        return {}
+
+    cards.images.get = no_images
+    info = await cards.animation_info(_moving(6, (370, 498)))
+    assert (info.width, info.height, info.frames, info.duration, info.fit) == (370, 498, 6, 0.3, "cover")
+    assert (await cards.animation_info(_moving(4, (498, 281)))).fit == "contain"
+    card = await cards.animated_card(profile.build("Si"), _moving(), fit="auto", width=400, frame_step=1)
+    assert isinstance(card, akef_cards.AnimatedCard) and card.frame_count == 6 and card.size[0] == 400
+    for bad in ({"fit": "nope"}, {"template": 9}):
+        with pytest.raises(ValueError):
+            await cards.animated_card(profile.build("Si"), _moving(), **bad)
+
+
+def test_focus():
+    from akef_cards.animate import _panel
+
+    wide = Image.new("RGBA", (300, 100), (255, 0, 0, 255))
+    wide.paste((0, 0, 255, 255), (150, 0, 300, 100))
+    left = _panel(wide, (100, 100), "cover", (0, 0.5))
+    right = _panel(wide, (100, 100), "cover", (1, 0.5))
+    assert left.getpixel((50, 50))[0] > 200 and right.getpixel((50, 50))[2] > 200

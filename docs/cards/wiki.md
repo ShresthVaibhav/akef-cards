@@ -1,9 +1,3 @@
----
-title: Wiki
-parent: Cards
-nav_order: 12
----
-
 # Wiki cards
 
 An operator's page from SKPORT's official wiki, split in six cards: overview, skills, talents, growth, profile
@@ -27,9 +21,13 @@ so no `hidden`.
 
 ## Overview
 
-![wiki light](../images/wiki_1.jpg)
+=== "Light"
 
-![wiki dark](../images/wiki_2.jpg)
+    ![wiki light](../images/wiki_1.jpg)
+
+=== "Dark"
+
+    ![wiki dark](../images/wiki_2.jpg)
 
 ## Talents
 

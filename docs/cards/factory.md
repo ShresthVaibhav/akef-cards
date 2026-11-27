@@ -1,9 +1,3 @@
----
-title: Factory
-parent: Cards
-nav_order: 7
----
-
 # Factory card
 
 SKPORT only.
@@ -18,10 +12,12 @@ stock, exploration per area, and the Dijiang cabins with their crew. `template` 
 
 For exploration on its own, with all six collectible kinds, use the [Exploration](exploration.md) card.
 
-## Template 1
+## Templates
 
-![factory light](../images/factory_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![factory light](../images/factory_1.jpg)
 
-![factory dark](../images/factory_2.jpg)
+=== "Template 2"
+
+    ![factory dark](../images/factory_2.jpg)

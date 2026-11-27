@@ -1,9 +1,3 @@
----
-title: Roster
-parent: Cards
-nav_order: 6
----
-
 # Roster card
 
 SKPORT only.

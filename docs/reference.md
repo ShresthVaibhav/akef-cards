@@ -1,8 +1,3 @@
----
-title: API reference
-nav_order: 9
----
-
 # API reference
 
 Everything is on `akef_cards.Cards` unless said otherwise. Methods marked async need `await`.

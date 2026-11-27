@@ -1,9 +1,3 @@
----
-title: Pull history
-parent: Cards
-nav_order: 9
----
-
 # Pull history card
 
 SKPORT only.
@@ -27,10 +21,12 @@ history you pass in.
 | `1` | light board |
 | `2` | yellow poster with your latest 6-star down the side |
 
-## Template 1
+## Templates
 
-![pulls board](../images/pulls_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![pulls board](../images/pulls_1.jpg)
 
-![pulls poster](../images/pulls_2.jpg)
+=== "Template 2"
+
+    ![pulls poster](../images/pulls_2.jpg)

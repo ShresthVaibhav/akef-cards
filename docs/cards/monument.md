@@ -1,9 +1,3 @@
----
-title: Monument
-parent: Cards
-nav_order: 10
----
-
 # Monument cards
 
 SKPORT only. Two cards: an overview of every event, and a big card for one event.
@@ -35,6 +29,10 @@ One event in full: the poster as a banner, the rules, and each stage with its bo
 that cleared it as big portraits. Agony clears get a red frame and tag. Events can be picked by name, index or
 an `Event`. `template` is `1` light or `2` dark.
 
-![monument event light](../images/monument_event_1.jpg)
+=== "Light"
 
-![monument event dark](../images/monument_event_2.jpg)
+    ![monument event light](../images/monument_event_1.jpg)
+
+=== "Dark"
+
+    ![monument event dark](../images/monument_event_2.jpg)

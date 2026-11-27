@@ -1,15 +1,15 @@
----
-title: Animated operator
-parent: Cards
-nav_order: 2
----
-
 # Animated operator card
 
 Give the operator card a gif or animated webp and the art moves, everything else stays put. Works on both
 templates.
 
-![animated operator](../images/animated_2.gif)
+=== "Template 2"
+
+    ![animated dark](../images/animated_2.gif)
+
+=== "Template 1"
+
+    ![animated light](../images/animated_1.webp)
 
 ## Quick way
 
@@ -86,6 +86,3 @@ Each try is a full export, so tight limits take a while. Exports run in threads 
 
 Frames that end up under 20ms get dropped, lots of players play those way too slow.
 
-## Both templates
-
-![animated light](../images/animated_1.webp)

@@ -1,9 +1,3 @@
----
-title: Profile
-parent: Cards
-nav_order: 4
----
-
 # Profile card
 
 ```py
@@ -23,14 +17,16 @@ Enka only has the showcase, so that's one page. SKPORT has the whole roster, so 
 pages. SKPORT profiles put the operators picked for the SKPORT profile first, then the rest by rarity, level
 and potential. Enka has no half-body portraits, so each tile is cut from the operator's splash around the face.
 
-## Template 1
+## Templates
 
-![profile light](../images/profile_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![profile light](../images/profile_1.jpg)
 
-![profile dark](../images/profile_2.jpg)
+=== "Template 2"
 
-## Template 3
+    ![profile dark](../images/profile_2.jpg)
 
-![profile poster](../images/profile_3.jpg)
+=== "Template 3"
+
+    ![profile poster](../images/profile_3.jpg)

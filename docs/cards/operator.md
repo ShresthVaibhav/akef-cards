@@ -1,9 +1,3 @@
----
-title: Operator
-parent: Cards
-nav_order: 1
----
-
 # Operator card
 
 ```py
@@ -36,10 +30,12 @@ build = await cards.skport(card, "Arcane")             # any operator on a SKPOR
 `skport()` takes a name (any case) or an operator from `card.chars`. Both give the same `Build`, so every
 option works the same for either. A build with no stats or gear still draws, those parts just come out empty.
 
-## Template 1
+## Templates
 
-![operator light](../images/operator_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![operator light](../images/operator_1.jpg)
 
-![operator dark](../images/operator_2.jpg)
+=== "Template 2"
+
+    ![operator dark](../images/operator_2.jpg)

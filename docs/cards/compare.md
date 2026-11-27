@@ -1,9 +1,3 @@
----
-title: Compare
-parent: Cards
-nav_order: 3
----
-
 # Compare card
 
 Two players' builds of the same operator side by side.
@@ -25,10 +19,12 @@ you get a `CardError`.
 | `1` | light, loadouts down the sides with stats and skills in the middle |
 | `2` | dark split: the art down the middle, each player's stats, skills, weapon and gear on their half |
 
-## Template 1
+## Templates
 
-![compare landscape](../images/compare_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![compare landscape](../images/compare_1.jpg)
 
-![compare split](../images/compare_2.jpg)
+=== "Template 2"
+
+    ![compare split](../images/compare_2.jpg)

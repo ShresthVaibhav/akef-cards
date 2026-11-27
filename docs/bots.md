@@ -1,8 +1,3 @@
----
-title: Using it in a bot
-nav_order: 5
----
-
 # Using it in a bot
 
 Keep one `Cards` for the whole bot instead of making one per message, it holds akef's game data and the

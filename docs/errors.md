@@ -1,8 +1,3 @@
----
-title: Errors
-nav_order: 8
----
-
 # Errors
 
 Getting data can fail, drawing barely can unless you bring your own art. Most errors come from akef, see

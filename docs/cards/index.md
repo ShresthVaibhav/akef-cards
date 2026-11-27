@@ -1,9 +1,3 @@
----
-title: Cards
-nav_order: 3
-has_children: true
----
-
 # Cards
 
 Every `render_*` method gives back a Pillow image, or a list when the card has more than one page.
@@ -21,7 +15,7 @@ image.save("card.png")
 | `template=` | picks the look, see each card's page for what's there |
 | `hidden=True` | blurs the UID on the card, the wiki cards don't have one |
 
-![hidden uid](images/hidden.jpg)
+![hidden uid](../images/hidden.jpg)
 
 ## Cards as files
 
@@ -46,4 +40,4 @@ same for those two cards.
 | Operators | the in-game showcase, max 4 | every operator on the account |
 | Cards | operator, animated, compare, profile | everything except compare |
 
-See [Getting started](getting-started.md) for both.
+See [Getting started](../getting-started.md) for both.

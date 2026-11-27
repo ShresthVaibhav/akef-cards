@@ -1,9 +1,3 @@
----
-title: Exploration
-parent: Cards
-nav_order: 8
----
-
 # Exploration card
 
 SKPORT only.
@@ -24,14 +18,16 @@ Every area per region with puzzles, chests, gear chests, fragments, blackboxes a
 All three show the six counts for every area. 1 and 2 also total them per region. `exploration.found`,
 `.total` and `.kind_totals()` give you the numbers without drawing.
 
-## Template 1, to-do
+## Templates
 
-![exploration to-do](../images/exploration_1.jpg)
+=== "Template 1, to-do"
 
-## Template 2, rings
+    ![exploration to-do](../images/exploration_1.jpg)
 
-![exploration rings](../images/exploration_2.jpg)
+=== "Template 2, rings"
 
-## Template 3, poster
+    ![exploration rings](../images/exploration_2.jpg)
 
-![exploration poster](../images/exploration_3.jpg)
+=== "Template 3, poster"
+
+    ![exploration poster](../images/exploration_3.jpg)

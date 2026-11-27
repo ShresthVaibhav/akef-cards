@@ -1,9 +1,3 @@
----
-title: Live status
-parent: Cards
-nav_order: 5
----
-
 # Live status card
 
 SKPORT only.
@@ -20,10 +14,12 @@ from SKPORT's own clock.
 `template` is `1` light or `2` dark. The numbers are on `live` too if you want them without a card, see
 [Data](../data.md).
 
-## Template 1
+## Templates
 
-![live light](../images/live_1.jpg)
+=== "Template 1"
 
-## Template 2
+    ![live light](../images/live_1.jpg)
 
-![live dark](../images/live_2.jpg)
+=== "Template 2"
+
+    ![live dark](../images/live_2.jpg)

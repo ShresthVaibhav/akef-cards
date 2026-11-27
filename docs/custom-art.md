@@ -1,8 +1,3 @@
----
-title: Custom art
-nav_order: 4
----
-
 # Custom art
 
 Don't like the default splash? Pass `art=` with your own. Works on both operator templates. On template 1 the
@@ -44,16 +39,22 @@ Custom art cards are never cached, the art behind a url can change. Icons still 
 
 ## Examples
 
-![custom art template 1](images/art_pigeonfight99_1.jpg)
+=== "pigeonfight99, template 1"
 
-![custom art template 2](images/art_pigeonfight99_2.jpg)
+    ![custom art template 1](images/art_pigeonfight99_1.jpg)
 
-art by pigeonfight99
+=== "pigeonfight99, template 2"
 
-![custom art template 1](images/art_kisaragi_pana_1.jpg)
+    ![custom art template 2](images/art_pigeonfight99_2.jpg)
 
-![custom art template 2](images/art_kisaragi_pana_2.jpg)
+=== "kisaragi_pana, template 1"
 
-art by kisaragi_pana. The fan art belongs to the artists and isn't covered by the MIT license.
+    ![custom art template 1](images/art_kisaragi_pana_1.jpg)
+
+=== "kisaragi_pana, template 2"
+
+    ![custom art template 2](images/art_kisaragi_pana_2.jpg)
+
+The fan art belongs to the artists and isn't covered by the MIT license.
 
 For a moving version see [Animated operator](cards/animated.md).

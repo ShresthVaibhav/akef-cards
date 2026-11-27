@@ -98,7 +98,7 @@ package, so names that come back from SKPORT in those languages still draw corre
 
 ### Looking for translators
 
-Every piece of text on the cards lives in [`akef_cards/data/text.json`](../akef_cards/data/text.json).
+Every piece of text on the cards lives in [`akef_cards/data/text.json`](https://github.com/ShresthVaibhav/akef-cards/blob/main/akef_cards/data/text.json).
 Official names are already filled in: stat names from Enka in all 14 of its languages, and
 elements, classes, weapon types, skill types and gear slots from SKPORT in Japanese, Korean and
 Traditional Chinese. Everything else is still English in every language.

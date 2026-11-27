@@ -186,28 +186,55 @@ body:has(.band) {
 .md-typeset .band .pip {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid #2f323b;
+  height: 2.7rem;
+  padding: 0 0.35rem 0 1rem;
+  background: #0e0f13;
+  border: 1px solid #2c2f38;
+  border-left: 3px solid var(--signal);
   border-radius: 6px;
-  padding: 0.15rem 0.3rem 0.15rem 0.2rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.82rem;
+}
+
+.md-typeset .band .pip .prompt {
+  color: var(--signal);
+  font-weight: 700;
+  margin-right: 0.7rem;
+  user-select: none;
 }
 
 .md-typeset .band .pip code {
   background: none;
-  color: #d9dbe1;
-  font-size: 0.78rem;
+  padding: 0;
+  font-size: inherit;
+  line-height: 1;
+  color: #e6e7eb;
+  white-space: nowrap;
 }
 
 .md-typeset .band .pip .md-clipboard {
   position: static;
-  width: 1.6em;
-  height: 1.6em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+  border-radius: 4px;
   color: #8d909a;
+  opacity: 1;
+  transition: background 0.15s, color 0.15s;
+}
+
+.md-typeset .band .pip .md-clipboard::after {
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
 }
 
 .md-typeset .band .pip .md-clipboard:hover {
   color: var(--signal);
+  background: rgba(255, 200, 0, 0.1);
 }
 
 .md-typeset .stack {

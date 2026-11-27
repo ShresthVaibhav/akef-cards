@@ -4,124 +4,101 @@ hide:
   - toc
 ---
 
-<div class="hero" markdown>
+<div class="band">
+<div class="band-inner">
+<div class="band-text">
+<span class="tag">ARKNIGHTS: ENDFIELD · PYTHON</span>
+<h1>akef-cards</h1>
+<p>Image cards from your Endfield account. Operator builds with final stats, profiles, pulls, exploration,
+endgame, and operator cards that move if you give it a gif.</p>
+<p class="band-buttons">
+<a class="md-button md-button--primary" href="getting-started/">Get started</a>
+<a class="md-button" href="cards/">All cards</a>
+</p>
+<code class="pip">pip install akef-cards</code>
+</div>
+<div class="stack">
+<img class="s1 no-zoom" src="images/profile_3.jpg" alt="profile card">
+<img class="s2 no-zoom" src="images/operator_1.jpg" alt="operator card, light">
+<img class="s3 no-zoom" src="images/operator_2.jpg" alt="operator card, dark">
+</div>
+</div>
+</div>
+
+<div class="home" markdown>
+
+## Every card
+
+<div class="shelf">
+<a href="cards/operator/"><img class="no-zoom" src="images/operator_1.jpg" alt=""><b>Operator</b><small>2 templates · custom art</small></a>
+<a href="cards/animated/"><img class="no-zoom" src="images/animated_2.gif" alt=""><b>Animated operator</b><small>gif or webp art</small></a>
+<a href="cards/compare/"><img class="no-zoom" src="images/compare_2.jpg" alt=""><b>Compare</b><small>2 templates</small></a>
+<a href="cards/profile/"><img class="no-zoom" src="images/profile_1.jpg" alt=""><b>Profile</b><small>3 templates</small></a>
+<a href="cards/pulls/"><img class="no-zoom" src="images/pulls_2.jpg" alt=""><b>Pull history</b><small>2 templates</small></a>
+<a href="cards/exploration/"><img class="no-zoom" src="images/exploration_3.jpg" alt=""><b>Exploration</b><small>3 templates</small></a>
+<a href="cards/live/"><img class="no-zoom" src="images/live_2.jpg" alt=""><b>Live status</b><small>2 templates</small></a>
+<a href="cards/roster/"><img class="no-zoom" src="images/roster.jpg" alt=""><b>Roster</b><small>1 template</small></a>
+<a href="cards/factory/"><img class="no-zoom" src="images/factory_2.jpg" alt=""><b>Factory</b><small>2 templates</small></a>
+<a href="cards/monument/"><img class="no-zoom" src="images/monument_event_2.jpg" alt=""><b>Monument</b><small>overview + 2 event templates</small></a>
+<a href="cards/contract/"><img class="no-zoom" src="images/contract_detail_2.jpg" alt=""><b>Contingency Contract</b><small>summary + detail</small></a>
+<a href="cards/wiki/"><img class="no-zoom" src="images/wiki_2.jpg" alt=""><b>Wiki</b><small>6 pages per operator</small></a>
+</div>
+
+## Got a gif? It moves
+
+<div class="split" markdown>
 
 <div markdown>
 
-# akef<span>-cards</span>
-
-Image cards for Arknights: Endfield. Operator builds, profiles, pulls, exploration and endgame, plus
-animated operator cards from your own gif.
-
-[Get started](getting-started.md){ .md-button .md-button--primary }
-[Every card](cards/index.md){ .md-button }
-
-</div>
-
-![operator card](images/operator_2.jpg){ .no-zoom }
-
-</div>
-
-```
-pip install akef-cards
-```
+Give the operator card a gif or animated webp and only the art moves, the stats stay put. Trim it, speed it up,
+bounce it, and squeeze it under Discord's upload limit before you send it.
 
 ```py
-import asyncio
-import akef_cards
-
-
-async def main():
-    async with akef_cards.Cards() as cards:
-        profile = await cards.enka(4727743200)
-        for build in profile.builds:
-            image = await cards.render(build)
-            image.save(f"{build.name}.png")
-
-
-asyncio.run(main())
+card = await cards.animated_card(build, Path("art.gif"), template=2)
+small = await card.speed(1.25).fit_under(10)
 ```
 
-Operator, compare and profile cards only need an Enka UID. Everything else reads a SKPORT account through
-[akef](https://github.com/ShresthVaibhav/akef), this library just draws.
-
-## The cards
-
-<div class="grid cards" markdown>
-
--   :material-account-star: **[Operator](cards/operator.md)**
-
-    Final stats, skills, talents, weapon and gear. 2 templates, custom art too.
-
-    ![](images/operator_1.jpg){ .no-zoom }
-
--   :material-movie-open: **[Animated operator](cards/animated.md)**
-
-    Your gif as the art. Trim, speed up, bounce, keep it under upload limits.
-
-    ![](images/animated_2.gif){ .no-zoom }
-
--   :material-scale-balance: **[Compare](cards/compare.md)**
-
-    Two players' builds of the same operator side by side.
-
-    ![](images/compare_2.jpg){ .no-zoom }
-
--   :material-card-account-details: **[Profile](cards/profile.md)**
-
-    Player info, medals and the roster, 3 templates.
-
-    ![](images/profile_3.jpg){ .no-zoom }
-
--   :material-heart-pulse: **[Live status](cards/live.md)**
-
-    Sanity, dailies, weeklies, battle pass and more.
-
-    ![](images/live_2.jpg){ .no-zoom }
-
--   :material-account-group: **[Roster](cards/roster.md)**
-
-    Everyone you own and how trained they are.
-
-    ![](images/roster.jpg){ .no-zoom }
-
--   :material-factory: **[Factory](cards/factory.md)**
-
-    Regions, settlements and the Dijiang cabins.
-
-    ![](images/factory_2.jpg){ .no-zoom }
-
--   :material-map-search: **[Exploration](cards/exploration.md)**
-
-    All six collectible kinds per area, 3 templates.
-
-    ![](images/exploration_3.jpg){ .no-zoom }
-
--   :material-dice-multiple: **[Pull history](cards/pulls.md)**
-
-    Every 6-star, luck and current pity.
-
-    ![](images/pulls_2.jpg){ .no-zoom }
-
--   :material-trophy: **[Monument](cards/monument.md)**
-
-    Every event at once, or one event with your teams.
-
-    ![](images/monument_event_2.jpg){ .no-zoom }
-
--   :material-sword-cross: **[Contingency Contract](cards/contract.md)**
-
-    The running contract and your best 4 battles.
-
-    ![](images/contract_detail_2.jpg){ .no-zoom }
-
--   :material-book-open-variant: **[Wiki](cards/wiki.md)**
-
-    An operator's official wiki page as six cards.
-
-    ![](images/wiki_2.jpg){ .no-zoom }
+[How it works](cards/animated.md)
 
 </div>
 
-Runnable scripts are in [examples](https://github.com/ShresthVaibhav/akef-cards/tree/main/examples), bot recipes and a
-FAQ in the [wiki](https://github.com/ShresthVaibhav/akef-cards/wiki).
+![animated operator card](images/animated_2.gif){ .no-zoom }
+
+</div>
+
+## Three lines to a card
+
+<div class="split" markdown>
+
+<div markdown>
+
+```py
+async with akef_cards.Cards() as cards:
+    build = (await cards.enka(4727743200)).build("Gilberta")
+    (await cards.render(build, template=2)).save("gilberta.png")
+```
+
+</div>
+
+<div markdown>
+
+| | Enka UID | SKPORT account |
+| --- | --- | --- |
+| Operators | the 4 in your showcase | everyone you own |
+| Cards | operator, animated, compare, profile | all of them except compare |
+
+The data side is [akef](https://github.com/ShresthVaibhav/akef), this one only draws.
+[Getting started](getting-started.md) has both.
+
+</div>
+
+</div>
+
+<p class="foot-links">
+<a href="https://github.com/ShresthVaibhav/akef-cards/tree/main/examples">examples</a> ·
+<a href="https://github.com/ShresthVaibhav/akef-cards/wiki">wiki</a> ·
+<a href="bots/">using it in a bot</a> ·
+<a href="reference/">api reference</a>
+</p>
+
+</div>

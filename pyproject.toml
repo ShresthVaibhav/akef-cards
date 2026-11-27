@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "akef-cards"
-version = "1.0.0"
+version = "1.0.1"
 description = "Image cards for Arknights: Endfield, from an Enka UID or a SKPORT account"
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE", "akef_cards/fonts/OFL.txt", "akef_cards/fonts/OFL-FiraSans.txt", "akef_cards/fonts/OFL-Noto.txt"]
 authors = [{ name = "SORA", email = "shresthvaibhav13@gmail.com" }]
 requires-python = ">=3.10"
-dependencies = ["Pillow>=10", "aiohttp>=3.9", "akef>=0.3"]
+dependencies = ["Pillow>=10", "aiohttp>=3.9", "akef>=1.0"]
 keywords = ["arknights", "endfield", "enka", "skport", "card", "image", "pillow"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",

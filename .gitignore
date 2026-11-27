@@ -9,5 +9,6 @@ dist/
 .idea/
 .vscode/
 cards/
+!docs/cards/
 skport_login.json
 .skport_token

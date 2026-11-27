@@ -141,7 +141,7 @@ width (1000 by default). Every 2nd frame is dropped to keep it small, same speed
 seconds and isnt cached. Bad or still files give a `CardError`.
 
 For more control, `animated_card()` gives you a card you can trim, speed up, reverse, bounce, loop or shrink
-to a size limit before exporting, see [animated card docs](https://github.com/ShresthVaibhav/akef-cards/blob/main/docs/cards.md#animated-card).
+to a size limit before exporting, see [animated card docs](https://github.com/ShresthVaibhav/akef-cards/blob/main/docs/cards/animated.md).
 
 ```py
 card = await cards.animated_card(build, Path("art.gif"), fit="auto")

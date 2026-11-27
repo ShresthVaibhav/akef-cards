@@ -1,3 +1,8 @@
+---
+title: Data
+nav_order: 7
+---
+
 # Data
 
 Builds, players, final stats and wiki pages are akef's, see its

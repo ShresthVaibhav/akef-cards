@@ -1,14 +1,30 @@
+---
+title: Home
+nav_order: 1
+---
+
 # akef-cards
 
-Image cards for Arknights: Endfield. Operator builds, profiles, pull history, endgame stuff and a few more,
-plus animated operator cards from your own gif.
+Image cards for Arknights: Endfield. Operator builds, profiles, pull history, exploration, endgame stuff and a
+few more, plus animated operator cards from your own gif.
+{: .fs-5 .fw-300 }
 
-Operator and profile cards only need an Enka UID. Everything else reads your SKPORT account through
-[akef](https://github.com/ShresthVaibhav/akef), this library just draws.
+[Get started](getting-started.md){: .btn .btn-primary .mr-2 } [Every card](cards.md){: .btn .mr-2 } [GitHub](https://github.com/ShresthVaibhav/akef-cards){: .btn }
+
+---
+
+![operator card](images/operator_2.jpg)
+
+## Install
 
 ```
 pip install akef-cards
 ```
+
+Python 3.10 or newer. It pulls in [akef](https://github.com/ShresthVaibhav/akef), which does all the data
+side (SKPORT, Enka, final stats, the wiki). This library only draws, if you just want the numbers use akef.
+
+## Quick start
 
 ```py
 import asyncio
@@ -26,25 +42,31 @@ async def main():
 asyncio.run(main())
 ```
 
-![operator card](images/operator_1.jpg)
+Operator, compare and profile cards only need an Enka UID. Everything else reads a SKPORT account.
 
-## Docs
+## What's in here
 
-- [Getting started](getting-started.md): Enka UID or SKPORT account, your first card, using it in a bot
-- [Cards](cards.md): every card, its templates and options, animated cards included
-- [Data](data.md): what the cards are drawn from
-- [Caching and game data](caching.md): what's kept where, and what happens after a patch
-- [Errors](errors.md)
+| Card | Templates | Needs |
+| --- | --- | --- |
+| [Operator](cards/operator.md) | 2 | Enka or SKPORT |
+| [Animated operator](cards/animated.md) | 2 | Enka or SKPORT |
+| [Compare](cards/compare.md) | 2 | Enka |
+| [Profile](cards/profile.md) | 3 | Enka or SKPORT |
+| [Live status](cards/live.md) | 2 | SKPORT |
+| [Roster](cards/roster.md) | 1 | SKPORT |
+| [Factory](cards/factory.md) | 2 | SKPORT |
+| [Exploration](cards/exploration.md) | 3 | SKPORT |
+| [Pull history](cards/pulls.md) | 2 | SKPORT |
+| [Monument](cards/monument.md) | 1 overview, 2 event | SKPORT |
+| [Contingency Contract](cards/contract.md) | 2 summary, 2 detail | SKPORT |
+| [Wiki](cards/wiki.md) | 2 | SKPORT wiki |
 
 ## Some cards
 
 | | |
 | --- | --- |
-| ![operator dark](images/operator_2.jpg) | ![profile](images/profile_1.jpg) |
-| ![pulls](images/pulls_2.jpg) | ![exploration](images/exploration_3.jpg) |
-| ![monument event](images/monument_event_2.jpg) | ![contract detail](images/contract_detail_1.jpg) |
+| ![profile](images/profile_3.jpg) | ![pulls](images/pulls_2.jpg) |
+| ![exploration](images/exploration_3.jpg) | ![monument event](images/monument_event_2.jpg) |
 
-Every card with all its templates is in the
-[README](https://github.com/ShresthVaibhav/akef-cards#every-card), runnable scripts are in
-[examples](https://github.com/ShresthVaibhav/akef-cards/tree/main/examples) and there's a
-[wiki](https://github.com/ShresthVaibhav/akef-cards/wiki) with bot recipes and a FAQ.
+Runnable scripts are in [examples](https://github.com/ShresthVaibhav/akef-cards/tree/main/examples), bot recipes and a
+FAQ in the [wiki](https://github.com/ShresthVaibhav/akef-cards/wiki).

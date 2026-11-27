@@ -1,3 +1,8 @@
+---
+title: Caching and game data
+nav_order: 6
+---
+
 # Caching and game data
 
 Three things are kept so cards come out fast, two in memory and one on disk.

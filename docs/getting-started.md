@@ -1,3 +1,8 @@
+---
+title: Getting started
+nav_order: 2
+---
+
 # Getting started
 
 ```
@@ -68,9 +73,7 @@ async def on_card_command(uid, name):
 ```
 
 Drawing runs in a worker thread, so the bot keeps answering other messages while a card is made.
-For a busy bot `Cards(max_renders=3)` caps how many draw at once. Animated cards from an upload work the
-same way, `render_animated(build, attachment_bytes)` gives a file too, and `animated_card(...).fit_under(10)`
-keeps it under an upload limit.
+Full discord.py and Telegram examples are in [Using it in a bot](bots.md).
 
 ## Languages
 

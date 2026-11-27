@@ -1,5 +1,24 @@
 title: akef-cards
 description: Image cards for Arknights Endfield, from an Enka UID or a SKPORT account
-theme: jekyll-theme-cayman
+remote_theme: just-the-docs/just-the-docs@v0.10.1
+plugins:
+  - jekyll-remote-theme
+color_scheme: dark
+search_enabled: true
+heading_anchors: true
+back_to_top: true
+back_to_top_text: "Back to top"
+aux_links:
+  GitHub: https://github.com/ShresthVaibhav/akef-cards
+  PyPI: https://pypi.org/project/akef-cards/
+  Wiki: https://github.com/ShresthVaibhav/akef-cards/wiki
+aux_links_new_tab: true
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: https://github.com/ShresthVaibhav/akef-cards
+gh_edit_branch: main
+gh_edit_source: docs
+gh_edit_view_mode: tree
+footer_content: "MIT licensed. Not affiliated with Hypergryph or Gryphline."
 exclude:
   - README.md

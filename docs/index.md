@@ -66,7 +66,7 @@ small = await card.speed(1.25).fit_under(10)
 
 </div>
 
-## Three lines to a card
+## A card in a few lines
 
 <div class="split" markdown>
 
@@ -74,8 +74,9 @@ small = await card.speed(1.25).fit_under(10)
 
 ```py
 async with akef_cards.Cards() as cards:
-    build = (await cards.enka(4727743200)).build("Gilberta")
-    (await cards.render(build, template=2)).save("gilberta.png")
+    profile = await cards.enka(4727743200)
+    image = await cards.render(profile.build("Gilberta"), template=2)
+    image.save("gilberta.png")
 ```
 
 </div>

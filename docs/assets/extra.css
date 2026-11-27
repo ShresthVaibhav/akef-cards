@@ -163,3 +163,8 @@
 .md-typeset__table table:not([class]) {
   display: table;
 }
+
+/* the home page reads better centered, only the docs pages go full width */
+.md-main__inner:has(.hero) {
+  max-width: 1220px;
+}

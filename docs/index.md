@@ -15,7 +15,7 @@ endgame, and operator cards that move if you give it a gif.</p>
 <a class="md-button md-button--primary" href="getting-started/">Get started</a>
 <a class="md-button" href="cards/">All cards</a>
 </p>
-<code class="pip">pip install akef-cards</code>
+<span class="pip"><code>pip install akef-cards</code><button class="md-clipboard md-icon" data-clipboard-text="pip install akef-cards" title="Copy to clipboard"></button></span>
 </div>
 <div class="stack">
 <img class="s1 no-zoom" src="images/profile_3.jpg" alt="profile card">

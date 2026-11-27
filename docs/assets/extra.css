@@ -184,11 +184,30 @@ body:has(.band) {
 }
 
 .md-typeset .band .pip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   background: rgba(0, 0, 0, 0.35);
   border: 1px solid #2f323b;
+  border-radius: 6px;
+  padding: 0.15rem 0.3rem 0.15rem 0.2rem;
+}
+
+.md-typeset .band .pip code {
+  background: none;
   color: #d9dbe1;
-  padding: 0.35rem 0.8rem;
   font-size: 0.78rem;
+}
+
+.md-typeset .band .pip .md-clipboard {
+  position: static;
+  width: 1.6em;
+  height: 1.6em;
+  color: #8d909a;
+}
+
+.md-typeset .band .pip .md-clipboard:hover {
+  color: var(--signal);
 }
 
 .md-typeset .stack {
